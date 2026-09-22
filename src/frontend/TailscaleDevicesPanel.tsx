@@ -5,7 +5,7 @@ import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import type { Host } from "@/types/ui-types";
 import { getTailscaleDevices } from "./tailscale-api";
-import { createQuickConnectHost } from "../../../src/ui/sidebar/quick-connect-host";
+import { createQuickConnectHost } from "../../../../src/ui/sidebar/quick-connect-host";
 
 interface TailscaleDevice {
   id: string;

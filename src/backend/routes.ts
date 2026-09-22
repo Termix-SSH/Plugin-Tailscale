@@ -4,15 +4,15 @@
 // direct reference to the app instance, the same way fleets does.
 
 import { Router } from "express";
-import { AuthManager } from "../../../src/backend/utils/auth-manager.js";
-import { PermissionManager } from "../../../src/backend/utils/permission-manager.js";
-import { apiLogger } from "../../../src/backend/utils/logger.js";
-import { fetchWithProxy } from "../../../src/backend/utils/proxy-agent.js";
-import { createCurrentSettingsRepository } from "../../../src/backend/database/repositories/factory.js";
+import { AuthManager } from "../../../../src/backend/utils/auth-manager.js";
+import { PermissionManager } from "../../../../src/backend/utils/permission-manager.js";
+import { apiLogger } from "../../../../src/backend/utils/logger.js";
+import { fetchWithProxy } from "../../../../src/backend/utils/proxy-agent.js";
+import { createCurrentSettingsRepository } from "../../../../src/backend/database/repositories/factory.js";
 import {
   registerTailscaleRouter,
   unregisterTailscaleRouter,
-} from "../../../src/backend/database/routes/tailscale-dispatch.js";
+} from "../../../../src/backend/database/routes/tailscale-dispatch.js";
 
 interface TailscaleDevice {
   id: string;
