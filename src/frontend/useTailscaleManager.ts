@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
-import { usePluginApi } from "@termix/plugin-sdk/frontend";
+import { usePluginApi } from "@termix-ssh/plugin-sdk/frontend";
 
 export interface ManagerError {
   message: string;

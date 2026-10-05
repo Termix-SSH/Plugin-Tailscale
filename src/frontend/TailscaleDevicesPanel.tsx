@@ -3,13 +3,13 @@ import {
   useToast,
   useTranslation,
   type HostDraft,
-} from "@termix/plugin-sdk/frontend";
+} from "@termix-ssh/plugin-sdk/frontend";
 import { Copy, Loader2, Plus, RefreshCw, Terminal } from "lucide-react";
-import { Button } from "@termix/plugin-sdk/ui";
-import { Input, PanelSearch } from "@termix/plugin-sdk/ui";
-import type { PluginHostRecord as Host } from "@termix/plugin-sdk/frontend";
+import { Button } from "@termix-ssh/plugin-sdk/ui";
+import { Input, PanelSearch } from "@termix-ssh/plugin-sdk/ui";
+import type { PluginHostRecord as Host } from "@termix-ssh/plugin-sdk/frontend";
 import { getTailscaleDevices } from "./tailscale-api";
-import { createQuickConnectHost } from "@termix/plugin-sdk/ui";
+import { createQuickConnectHost } from "@termix-ssh/plugin-sdk/ui";
 
 interface TailscaleDevice {
   id: string;

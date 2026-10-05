@@ -1,7 +1,7 @@
 import type {
   PluginContext,
   PluginSshAuthProvider,
-} from "@termix/plugin-sdk/backend";
+} from "@termix-ssh/plugin-sdk/backend";
 import {
   isTailscaleCheckCompleteBanner,
   parseTailscaleCheckBanner,

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { createFakeContext } from "@termix/plugin-sdk/testing";
+import { createFakeContext } from "@termix-ssh/plugin-sdk/testing";
 import { registerTailscaleSshAuth } from "../../src/backend/ssh-auth-provider.js";
 import { TAILSCALE_CHECK_TIMEOUT_MS } from "../../src/backend/tailscale-check.js";
 

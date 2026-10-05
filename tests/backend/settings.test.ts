@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
-import { parseManifest } from "@termix/plugin-sdk/manifest";
-import { createMockCtx } from "@termix/plugin-sdk/testing";
+import { parseManifest } from "@termix-ssh/plugin-sdk/manifest";
+import { createMockCtx } from "@termix-ssh/plugin-sdk/testing";
 
 /**
  * The API key and base URL are this plugin's own settings now.

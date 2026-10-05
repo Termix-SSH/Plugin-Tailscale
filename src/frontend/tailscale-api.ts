@@ -3,7 +3,7 @@
 // renders from the manifest. Only the device list is left here, because it is
 // this plugin's own route.
 
-import type { PluginApiClient } from "@termix/plugin-sdk/frontend";
+import type { PluginApiClient } from "@termix-ssh/plugin-sdk/frontend";
 
 export interface TailscaleDevicesResponse {
   devices: Array<{

@@ -1,7 +1,7 @@
 import type { Router } from "express";
 import type { Request, Response } from "express";
-import type { PluginContext } from "@termix/plugin-sdk/backend";
-import { execCommand, execElevated } from "@termix/plugin-sdk/host-commands";
+import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
+import { execCommand, execElevated } from "@termix-ssh/plugin-sdk/host-commands";
 import { withSshConnection } from "./ssh.js";
 
 export type TailscaleAction = "up" | "down";

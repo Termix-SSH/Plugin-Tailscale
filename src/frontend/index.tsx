@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import { Radar } from "lucide-react";
-import type { PanelProps, TermixApp } from "@termix/plugin-sdk/frontend";
-import type { PluginHostRecord as Host } from "@termix/plugin-sdk/frontend";
+import type { PanelProps, TermixApp } from "@termix-ssh/plugin-sdk/frontend";
+import type { PluginHostRecord as Host } from "@termix-ssh/plugin-sdk/frontend";
 import { TailscaleDevicesPanel } from "./TailscaleDevicesPanel";
 import { setTailscaleApi } from "./tailscale-api";
 import { TailscaleDevicesStatus } from "./TailscaleDevicesStatus";
