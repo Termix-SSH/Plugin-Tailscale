@@ -6,7 +6,7 @@ import {
 } from "@termix/plugin-sdk/frontend";
 import { Copy, Loader2, Plus, RefreshCw, Terminal } from "lucide-react";
 import { Button } from "@termix/plugin-sdk/ui";
-import { Input } from "@termix/plugin-sdk/ui";
+import { Input, PanelSearch } from "@termix/plugin-sdk/ui";
 import type { PluginHostRecord as Host } from "@termix/plugin-sdk/frontend";
 import { getTailscaleDevices } from "./tailscale-api";
 import { createQuickConnectHost } from "@termix/plugin-sdk/ui";
@@ -41,6 +41,7 @@ export function TailscaleDevicesPanel({
   const { t } = useTranslation();
   const toast = useToast();
   const [devices, setDevices] = useState<TailscaleDevice[]>([]);
+  const [query, setQuery] = useState("");
   const [hasApiKey, setHasApiKey] = useState(true);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -96,6 +97,15 @@ export function TailscaleDevicesPanel({
     onConnect(host, "terminal");
   }
 
+  const q = query.trim().toLowerCase();
+  const shown = q
+    ? devices.filter((device) =>
+        [device.hostname, device.name, device.os, ...device.addresses]
+          .filter(Boolean)
+          .some((value) => String(value).toLowerCase().includes(q)),
+      )
+    : devices;
+
   return (
     <div className="flex flex-col flex-1 min-h-0 overflow-y-auto">
       <div className="flex items-center justify-between px-3 py-2 border-b border-border">
@@ -112,6 +122,17 @@ export function TailscaleDevicesPanel({
           <RefreshCw className={`size-3 ${loading ? "animate-spin" : ""}`} />
         </Button>
       </div>
+
+      {!loading && hasApiKey && !error && devices.length > 0 && (
+        <div className="border-b border-border px-3 py-2">
+          <PanelSearch
+            value={query}
+            onChange={setQuery}
+            placeholder={t("tailscale.searchDevices")}
+            fill
+          />
+        </div>
+      )}
 
       <div className="flex flex-col gap-2 p-3">
         {loading && (
@@ -142,7 +163,17 @@ export function TailscaleDevicesPanel({
         {!loading &&
           hasApiKey &&
           !error &&
-          devices.map((device) => {
+          devices.length > 0 &&
+          shown.length === 0 && (
+            <p className="text-[10px] text-muted-foreground">
+              {t("tailscale.noDeviceMatches")}
+            </p>
+          )}
+
+        {!loading &&
+          hasApiKey &&
+          !error &&
+          shown.map((device) => {
             const ip = deviceIp(device);
             return (
               <div

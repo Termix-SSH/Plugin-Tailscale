@@ -85,5 +85,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Search devices",
+    "noDeviceMatches": "No devices match your search."
   }
 }
