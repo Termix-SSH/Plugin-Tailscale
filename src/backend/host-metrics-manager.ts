@@ -1,16 +1,19 @@
 import type { Router } from "express";
 import type { Request, Response } from "express";
 import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
-import { execCommand, execElevated } from "@termix-ssh/plugin-sdk/host-commands";
+import {
+  execCommand,
+  execElevated,
+} from "@termix-ssh/plugin-sdk/host-commands";
 import { withSshConnection } from "./ssh.js";
 
-export type TailscaleAction = "up" | "down";
+type TailscaleAction = "up" | "down";
 
-export function isValidTailscaleAction(a: unknown): a is TailscaleAction {
+function isValidTailscaleAction(a: unknown): a is TailscaleAction {
   return a === "up" || a === "down";
 }
 
-export interface TailscalePeer {
+interface TailscalePeer {
   hostname: string;
   tailscaleIPs: string[];
   online: boolean;

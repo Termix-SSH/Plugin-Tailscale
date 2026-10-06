@@ -12,7 +12,7 @@ export function setPluginSsh(ssh: PluginSsh | null): void {
   current = ssh;
 }
 
-export function pluginSsh(): PluginSsh {
+function pluginSsh(): PluginSsh {
   if (!current) throw new Error("The plugin is not active");
   return current;
 }

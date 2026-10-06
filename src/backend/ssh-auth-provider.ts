@@ -10,7 +10,7 @@ import {
 
 const AUTH_FAILED_PATTERN = /All configured authentication methods failed/i;
 
-export const tailscaleSshAuthProvider: PluginSshAuthProvider = {
+const tailscaleSshAuthProvider: PluginSshAuthProvider = {
   type: "tailscale",
   labelKey: "hosts.filterAuthTailscale",
   // Nothing host-specific to look up, so it works for an unsaved host.
