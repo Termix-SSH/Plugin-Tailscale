@@ -219,13 +219,13 @@ export function TailscaleDevicesPanel({
                   onKeyDown={(e) => {
                     if (e.key === "Enter") connect(device);
                   }}
-                  className="h-7 text-xs"
+                  className="h-8 text-xs"
                 />
                 <div className="flex gap-1.5">
                   <Button
                     onClick={() => connect(device)}
                     disabled={!ip}
-                    className="flex flex-1 items-center justify-center gap-1.5 h-7 border border-accent-brand/40 bg-accent-brand/10 text-accent-brand text-xs font-semibold hover:bg-accent-brand/20 transition-colors"
+                    className="flex-1 gap-1.5 border-accent-brand/40 text-xs text-accent-brand hover:bg-accent-brand/10 hover:text-accent-brand dark:border-accent-brand/40"
                     variant="outline"
                   >
                     <Terminal className="size-3.5" />
@@ -236,7 +236,7 @@ export function TailscaleDevicesPanel({
                       onClick={() => addHost(device)}
                       disabled={!ip}
                       variant="outline"
-                      className="h-7 gap-1 text-xs shrink-0"
+                      className="shrink-0 gap-1 text-xs"
                     >
                       <Plus className="size-3.5" />
                       {t("hosts.tailscaleAddHost")}
