@@ -10,6 +10,12 @@
   "repository": "https://github.com/Termix-SSH/Plugin-Tailscale",
   "category": "Networking",
   "icon": "Network",
+  "features": [
+    "Add tailnet devices as hosts in a couple of clicks",
+    "Connect with Tailscale SSH, with no credentials stored",
+    "Works with Headscale",
+    "A Tailscale card in Host Metrics"
+  ],
   "engine": {
     "termix": ">=26.10.0",
     "api": "1"
