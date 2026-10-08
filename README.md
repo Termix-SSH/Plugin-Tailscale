@@ -14,6 +14,8 @@
 
 Tailscale pulls the devices on your tailnet into Termix and lets you connect to them with Tailscale SSH, so your tailnet ACLs handle access.
 
+Read the [docs](https://docs.termix.site/plugins/tailscale) to set it up and use it.
+
 <br />
 
 ## Features

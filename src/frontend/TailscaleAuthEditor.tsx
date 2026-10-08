@@ -5,6 +5,7 @@ import {
 } from "@termix-ssh/plugin-sdk/frontend";
 import { Select2 } from "@termix-ssh/plugin-sdk/ui";
 import { getTailscaleDevices } from "./tailscale-api";
+import { docsUrl } from "./docs";
 
 interface Device {
   id: string;
@@ -65,7 +66,7 @@ export function TailscaleAuthEditor({ form, setField }: SshAuthEditorProps) {
           {t("hosts.tailscaleDeviceSelect")}
         </label>
         <a
-          href="https://docs.termix.site/features/networking/tailscale"
+          href={docsUrl("", "tailscale-ssh")}
           target="_blank"
           rel="noreferrer"
           className="text-[10px] text-accent-brand hover:underline"
