@@ -58,11 +58,6 @@
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "Refresh",
-    "retry": "Retry",
-    "sudoHint": "Set a sudo password for this host to allow elevated actions.",
-    "noData": "No data available",
-    "filter": "Filter...",
     "tsNotInstalled": "Tailscale is not installed on this host",
     "tsRunning": "Running",
     "tsStopped": "Stopped",

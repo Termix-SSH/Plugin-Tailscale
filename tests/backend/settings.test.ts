@@ -50,8 +50,8 @@ describe("tailscale settings contribution", () => {
     expect(settings?.user).toBeUndefined();
   });
 
-  it("keeps settings:read-core, which it still holds for core keys", () => {
-    expect(manifest.manifest?.capabilities).toContain("settings:read-core");
+  it("asks for no settings:read-core, since it reads no core keys", () => {
+    expect(manifest.manifest?.capabilities).not.toContain("settings:read-core");
   });
 });
 

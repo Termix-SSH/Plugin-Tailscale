@@ -23,7 +23,6 @@
   },
   "capabilities": [
     "hosts:read",
-    "settings:read-core",
     "network:outbound",
     "network:serve",
     "auth:provide",
