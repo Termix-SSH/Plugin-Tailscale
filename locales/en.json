@@ -58,6 +58,7 @@
   },
   "manager": {
     "title": "Tailscale",
+    "editRequired": "You need edit access to this host to change it",
     "tsNotInstalled": "Tailscale is not installed on this host",
     "tsRunning": "Running",
     "tsStopped": "Stopped",

@@ -1,21 +1,47 @@
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
-import { usePluginApi } from "@termix-ssh/plugin-sdk/frontend";
+import {
+  useCurrentUser,
+  useHost,
+  usePluginApi,
+  useTranslation,
+  type TranslateFn,
+} from "@termix-ssh/plugin-sdk/frontend";
 
 export interface ManagerError {
   message: string;
   code?: string;
 }
 
-function extractError(err: unknown): ManagerError {
+/** Set when the server refuses a change because the user lacks edit access. */
+export const HOST_EDIT_REQUIRED = "HOST_EDIT_REQUIRED";
+
+export function extractError(err: unknown, t?: TranslateFn): ManagerError {
   const e = err as {
     response?: { data?: { error?: string; code?: string } };
     message?: string;
   };
+  const code = e?.response?.data?.code;
+  if (code === HOST_EDIT_REQUIRED && t) {
+    return { message: t("manager.editRequired"), code };
+  }
   return {
     message: e?.response?.data?.error || e?.message || "Request failed",
-    code: e?.response?.data?.code,
+    code,
   };
+}
+
+/**
+ * Whether the user may bring Tailscale up or down on the host (edit access
+ * or more). Seeing its status only needs connect. The server checks it too.
+ */
+export function useCanEditHost(hostId: number | null): boolean {
+  const host = useHost(hostId ?? undefined);
+  const user = useCurrentUser();
+  if (hostId == null) return false;
+  if (user?.isAdmin) return true;
+  if (!host || !host.isShared) return true;
+  return host.permissionLevel === "edit" || host.permissionLevel === "manage";
 }
 
 /** Fetch the Tailscale manager card's status on mount + manual refresh. */
@@ -55,6 +81,7 @@ interface ActionResult {
 /** Runs the Tailscale manager card's up/down action with toast feedback. */
 export function useTailscaleAction(hostId: number | null) {
   const api = usePluginApi();
+  const { t } = useTranslation();
   const [busy, setBusy] = useState(false);
 
   const run = useCallback(
@@ -92,13 +119,13 @@ export function useTailscaleAction(hostId: number | null) {
         }
         return res.data;
       } catch (err) {
-        toast.error(extractError(err).message, { id });
+        toast.error(extractError(err, t).message, { id });
         return null;
       } finally {
         setBusy(false);
       }
     },
-    [hostId],
+    [hostId, t],
   );
 
   return { busy, run };

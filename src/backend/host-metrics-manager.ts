@@ -100,11 +100,17 @@ export function parseTailscaleData(output: string): TailscaleData {
 }
 
 class AccessDeniedError extends Error {
-  constructor(message = "No access to this host") {
+  constructor(
+    message = "No access to this host",
+    readonly code?: string,
+  ) {
     super(message);
     this.name = "AccessDeniedError";
   }
 }
+
+/** Code for a user who can reach a host but may not change it. */
+export const HOST_EDIT_REQUIRED = "HOST_EDIT_REQUIRED";
 
 class ManagerInputError extends Error {
   constructor(message: string) {
@@ -127,9 +133,22 @@ interface ManagerHost {
 async function resolveManagerHost(
   ctx: PluginContext,
   hostId: number,
+  level: "connect" | "edit" = "connect",
 ): Promise<ManagerHost> {
-  const access = await ctx.hosts.checkAccess(hostId, "connect");
-  if (!access.hasAccess) throw new AccessDeniedError();
+  const access = await ctx.hosts.checkAccess(hostId, level);
+  if (!access.hasAccess) {
+    // Changing the host needs edit; say so to someone who can still reach it.
+    if (
+      level === "edit" &&
+      (await ctx.hosts.checkAccess(hostId, "connect")).hasAccess
+    ) {
+      throw new AccessDeniedError(
+        "You need edit access to this host to change it",
+        HOST_EDIT_REQUIRED,
+      );
+    }
+    throw new AccessDeniedError();
+  }
   const host = await ctx.ssh.resolveHost(hostId);
   if (!host) throw new AccessDeniedError("Host not found");
   return {
@@ -148,7 +167,10 @@ function managerErrorResponse(
     return res.status(400).json({ error: error.message });
   }
   if (error instanceof AccessDeniedError) {
-    return res.status(403).json({ error: error.message });
+    return res.status(403).json({
+      error: error.message,
+      ...(error.code ? { code: error.code } : {}),
+    });
   }
   const message = error instanceof Error ? error.message : String(error);
   return res.status(500).json({ error: message || `${operation} failed` });
@@ -205,6 +227,7 @@ export function registerTailscaleHostMetricsManager(
    * /plugin-api/tailscale/host-metrics-manager/{id}/action:
    *   post:
    *     summary: Connect or disconnect Tailscale on a host
+   *     description: Needs edit access to the host.
    *     tags:
    *       - Tailscale
    *     parameters:
@@ -226,13 +249,15 @@ export function registerTailscaleHostMetricsManager(
    *     responses:
    *       200:
    *         description: Action result.
+   *       403:
+   *         description: No edit access to the host, or elevation denied.
    */
   router.post(
     "/host-metrics-manager/:id/action",
     async (req: Request, res: Response) => {
       const hostId = parseInt(String(req.params.id), 10);
       try {
-        const host = await resolveManagerHost(ctx, hostId);
+        const host = await resolveManagerHost(ctx, hostId, "edit");
         const { action } = req.body as { action: unknown };
         if (!isValidTailscaleAction(action)) {
           throw new ManagerInputError("Invalid action, must be 'up' or 'down'");

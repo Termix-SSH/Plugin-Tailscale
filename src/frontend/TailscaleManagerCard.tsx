@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Power } from "lucide-react";
 import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
-import { useTailscaleData, useTailscaleAction } from "./useTailscaleManager";
+import {
+  useCanEditHost,
+  useTailscaleData,
+  useTailscaleAction,
+} from "./useTailscaleManager";
 import { ManagerCardShell, ManagerSearch } from "@termix-ssh/plugin-sdk/ui";
 
 interface TailscalePeer {
@@ -25,6 +29,7 @@ export function TailscaleManagerCard({ hostId }: { hostId: number | null }) {
   const { data, loading, error, refresh } =
     useTailscaleData<TailscaleData>(hostId);
   const { busy, run } = useTailscaleAction(hostId);
+  const canEdit = useCanEditHost(hostId);
   const [query, setQuery] = useState("");
 
   const handleToggle = async () => {
@@ -89,22 +94,26 @@ export function TailscaleManagerCard({ hostId }: { hostId: number | null }) {
                 ))}
               </div>
             </div>
-            <div className="flex shrink-0 items-center">
-              <button
-                onClick={handleToggle}
-                disabled={busy || !data.installed}
-                title={
-                  data.running ? t("manager.tsDisable") : t("manager.tsEnable")
-                }
-                className={`flex size-6 items-center justify-center transition-colors disabled:opacity-40 ${
-                  data.running
-                    ? "text-accent-brand hover:bg-muted hover:text-destructive"
-                    : "text-muted-foreground hover:bg-muted hover:text-accent-brand"
-                }`}
-              >
-                <Power className="size-3.5" />
-              </button>
-            </div>
+            {canEdit && (
+              <div className="flex shrink-0 items-center">
+                <button
+                  onClick={handleToggle}
+                  disabled={busy || !data.installed}
+                  title={
+                    data.running
+                      ? t("manager.tsDisable")
+                      : t("manager.tsEnable")
+                  }
+                  className={`flex size-6 items-center justify-center transition-colors disabled:opacity-40 ${
+                    data.running
+                      ? "text-accent-brand hover:bg-muted hover:text-destructive"
+                      : "text-muted-foreground hover:bg-muted hover:text-accent-brand"
+                  }`}
+                >
+                  <Power className="size-3.5" />
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Exit node badge */}
