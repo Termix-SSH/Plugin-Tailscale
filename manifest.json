@@ -47,15 +47,11 @@
         "name": "devices.view",
         "titleKey": "permissions.devices.view.title",
         "descriptionKey": "permissions.devices.view.description",
-        "defaultRoles": [
-          "admin"
-        ]
+        "defaultRoles": ["admin"]
       }
     ],
     "auth": {
-      "sshAuthTypes": [
-        "tailscale"
-      ]
+      "sshAuthTypes": ["tailscale"]
     },
     "settings": {
       "admin": [
@@ -84,15 +80,8 @@
         }
       ]
     },
-    "uses": [
-      "host-metrics.managers",
-      "terminal.overlay"
-    ]
+    "uses": ["host-metrics.managers", "terminal.overlay"]
   },
   "locales": "locales",
-  "platforms": [
-    "linux",
-    "win32",
-    "darwin"
-  ]
+  "platforms": ["linux", "win32", "darwin"]
 }
