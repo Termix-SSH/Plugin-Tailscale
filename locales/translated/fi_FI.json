@@ -1,32 +1,38 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Näytä häntäverkon laitteet",
-      "description": "Katso laitteet yhdistetyssä häntäverkossa."
+    "devices": {
+      "view": {
+        "title": "Näytä tailnet-laitteet",
+        "description": "Näe yhdistetyn tailnetin laitteet."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "Tailscale-API",
-      "devices": "Hännänverkko"
+      "api": "Tailscale API",
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API-avain",
-      "description": "Käytetään laitettasi listaamaan häntäverkossasi. Toimii Tailscale- tai Headscale-näppäimellä.",
+      "description": "Käytetään listataksesi tailnetissäsi olevat laitteet. Toimii sekä Tailscale- että Headscale-avaimen kanssa.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "API-perus-URL",
-      "description": "Jätä tyhjäksi Tailscale-kohdassa. Aseta tämä osoittamaan Headscale-instanssiin.",
+      "label": "API:n perus-URL",
+      "description": "Jätä tyhjäksi Tailscalessa. Aseta osoittamaan Headscale-palvelimeen.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Laiteluettelo",
-      "checking": "Hännänverkon tarkistus...",
+      "checking": "Tarkistetaan tailnetiä...",
       "noKey": "API-avainta ei ole vielä asetettu.",
-      "error": "Hälytysverkkoon ei saatu yhteyttä. Tarkista API-avain.",
-      "count": "{{count}} laite tavoitettavissa",
-      "count_other": "{{count}} laitteita tavoitettavissa",
+      "error": "Tailnetiin ei saatu yhteyttä. Tarkista API-avain.",
+      "count": {
+        "one": "{{count}} laite tavoitettavissa",
+        "other": "{{count}} laitetta tavoitettavissa"
+      },
+      "count_one": "{{count}} laite tavoitettavissa",
+      "count_other": "{{count}} laitetta tavoitettavissa",
       "refresh": "Tarkista"
     }
   },
@@ -34,56 +40,56 @@
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Tämän on oltava Unix-käyttäjä, jolle Tailscale-identiteettisi on myönnetty tailnetin SSH ACL:ssä, ei välttämättä pääkäyttäjä.",
+    "tailscaleUsernameHint": "Tämän on oltava Unix-käyttäjä, jolle tailnetin SSH ACL:ssä on myönnetty Tailscale-identiteetti. Ei välttämättä root.",
     "tailscaleDeviceSelect": "Valitse Tailscale-laite",
     "tailscaleDeviceSelectPlaceholder": "Valitse laite...",
-    "tailscaleNoApiKey": "Tailscale API -avainta ei ole määritetty. Lisää sellainen järjestelmänvalvojan asetuksissa, jotta laitteiden löytäminen on mahdollista.",
-    "tailscaleDocsLink": "Näytä dokumentit",
-    "tailscaleLoadingDevices": "Laitteita ladataan...",
-    "tailscaleDeviceLoadFailed": "Tailscale-laitteiden lataus epäonnistui. Tarkista API-URL-osoite ja verkkoyhteys.",
-    "tailscaleNoDevices": "Hätäverkostasi ei löytynyt laitteita.",
-    "tailscaleDeviceAutoFill": "Laitteen valinta täyttää isännän IP-osoitteen automaattisesti.",
+    "tailscaleNoApiKey": "Tailscale API -avainta ei ole määritetty. Lisää yksi Hallinta-asetuksista ottaaksesi laitteenetsinnän käyttöön.",
+    "tailscaleDocsLink": "Näytä dokumentaatio",
+    "tailscaleLoadingDevices": "Ladataan laitteita...",
+    "tailscaleDeviceLoadFailed": "Tailscale-laitteiden lataaminen epäonnistui. Tarkista API-URL ja verkkoyhteys.",
+    "tailscaleNoDevices": "Tailnetistä ei löytynyt laitteita.",
+    "tailscaleDeviceAutoFill": "Laitteen valitseminen täyttää isäntäosoitteen automaattisesti.",
     "tailscaleAddHost": "Lisää isäntä",
-    "tailscaleCopyIp": "Kopioi Tailscale IP-osoite",
-    "tailscaleIpCopied": "IP-osoite kopioitu",
-    "tailscaleIpCopyFailed": "IP-osoitteen kopiointi epäonnistui",
+    "tailscaleCopyIp": "Kopioi Tailscale IP",
+    "tailscaleIpCopied": "IP kopioitu",
+    "tailscaleIpCopyFailed": "IP:n kopiointi epäonnistui",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Tailscale-todennus vaaditaan",
-    "tailscaleCheckDescription": "Tailscale SSH vaatii lisätarkistuksen. Jatka tunnistautumalla selaimessasi.",
+    "tailscaleCheckDescription": "Tailscale SSH vaatii lisätarkistuksen. Todenna selaimellasi jatkaaksesi.",
     "tailscaleCheckOpenBrowser": "Avaa selain todennusta varten",
-    "tailscaleCheckWaiting": "Odotetaan Tailscale-todennusta...",
+    "tailscaleCheckWaiting": "Odottaa Tailscale-todennusta...",
     "tailscaleCheckTimeout": "Tailscale-todennus aikakatkaistiin. Yritä uudelleen."
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "Päivitä",
-    "retry": "Yritä uudelleen",
-    "sudoHint": "Aseta tälle isännälle sudo-salasana, jotta voit sallia toiminnot laajentuneilla oikeuksilla.",
-    "noData": "Ei tietoja saatavilla",
-    "filter": "Suodattaa...",
-    "tsNotInstalled": "Tailscalea ei ole asennettu tälle isännälle",
-    "tsRunning": "Juoksu",
-    "tsStopped": "Pysähtynyt",
+    "editRequired": "Sinulla on oltava muokkausoikeudet tähän isäntään voidaksesi muuttaa sitä",
+    "tsNotInstalled": "Tailscalea ei ole asennettu tähän isäntään",
+    "tsRunning": "Käynnissä",
+    "tsStopped": "Pysäytetty",
     "tsEnable": "Yhdistä",
     "tsDisable": "Katkaise yhteys",
     "tsEnabling": "Yhdistetään Tailscaleen...",
-    "tsDisabling": "Yhteyden katkaiseminen Tailscaleen...",
-    "tsEnabled": "Tailscale yhdistetty",
-    "tsDisabled": "Tailscale irrotettu",
-    "tsExitNode": "Poistumissolmu",
-    "tsExitNodeActive": "Poistumissolmu aktiivinen"
+    "tsDisabling": "Katkaisee yhteyden Tailscalesta...",
+    "tsEnabled": "Tailscale on yhdistetty",
+    "tsDisabled": "Tailscale-yhteys katkaistu",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Exit node aktiivinen"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
         "connectToTerminal": "Yhdistä terminaaliin",
-        "usernameLabel": "Käyttäjätunnus"
+        "usernameLabel": "Käyttäjänimi"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Hae laitteita",
+    "noDeviceMatches": "Hakuun ei löytynyt laitteita."
   }
 }

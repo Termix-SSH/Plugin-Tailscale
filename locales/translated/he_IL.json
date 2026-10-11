@@ -1,89 +1,97 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "הצג התקני רשת אחורית",
-      "description": "ראה את המכשירים ברשת הזנב המחוברת."
+    "devices": {
+      "view": {
+        "title": "צפייה במכשירי tailnet",
+        "description": "הצגת המכשירים ב-tailnet המחובר."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "ממשק ה-API של Tailscale",
-      "devices": "טיילנט"
+      "api": "Tailscale API",
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "מפתח API",
-      "description": "משמש לרישום המכשירים ברשת הזנב שלך. עובד עם מפתח Tailscale או Headscale.",
+      "description": "משמש לרשימת המכשירים ב-tailnet שלך. עובד עם מפתח של Tailscale או Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "כתובת אתר בסיסית של ה-API",
-      "description": "השאר ריק עבור Tailscale. הגדר זאת כך שיפנה אל מופע Headscale.",
+      "label": "כתובת בסיס של API",
+      "description": "השאר ריק עבור Tailscale. הגדר זאת כדי להפנות למופע של Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
-      "label": "רשימת המכשירים",
-      "checking": "בודקים את רשת הזנב...",
-      "noKey": "עדיין לא הוגדר מפתח API.",
-      "error": "לא ניתן היה להגיע לרשת הזנב. בדוק את מפתח ה-API.",
-      "count": "ניתן להגיע למכשיר {{count}}",
+      "label": "רשימת מכשירים",
+      "checking": "בודק את ה-tailnet...",
+      "noKey": "לא הוגדר מפתח API עדיין.",
+      "error": "לא ניתן להגיע ל-tailnet. בדוק את מפתח ה-API.",
+      "count": {
+        "one": "{{count}} מכשיר נגיש",
+        "two": "{{count}} מכשירים נגישים",
+        "other": "{{count}} מכשירים נגישים"
+      },
+      "count_one": "{{count}} מכשיר נגיש",
+      "count_two": "{{count}} מכשירים נגישים",
       "count_other": "{{count}} מכשירים נגישים",
-      "refresh": "לִבדוֹק"
+      "refresh": "בדיקה"
     }
   },
   "nav": {
-    "tailscale": "קנה מידה זנב"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "זה חייב להיות משתמש יוניקס שזהות Tailscale שלך מוענקת לו ב-SSH ACL של tailnet, לאו דווקא root.",
-    "tailscaleDeviceSelect": "בחר מכשיר Tailscale",
+    "tailscaleUsernameHint": "זה חייב להיות משתמש Unix שהזהות שלך ב-Tailscale מורשית לו ב-SSH ACL של ה-tailnet, לא בהכרח root.",
+    "tailscaleDeviceSelect": "בחירת מכשיר Tailscale",
     "tailscaleDeviceSelectPlaceholder": "בחר מכשיר...",
-    "tailscaleNoApiKey": "לא הוגדר מפתח API של Tailscale. הוסף אחד בהגדרות הניהול כדי לאפשר גילוי מכשירים.",
-    "tailscaleDocsLink": "הצג מסמכים",
+    "tailscaleNoApiKey": "לא הוגדר מפתח API של Tailscale. הוסף אחד בהגדרות מנהל כדי לאפשר גילוי מכשירים.",
+    "tailscaleDocsLink": "צפייה בתיעוד",
     "tailscaleLoadingDevices": "טוען מכשירים...",
-    "tailscaleDeviceLoadFailed": "טעינת התקני Tailscale נכשלה. בדוק את כתובת ה-URL של ה-API ואת חיבור הרשת.",
-    "tailscaleNoDevices": "לא נמצאו מכשירים ברשת הזנב שלך.",
+    "tailscaleDeviceLoadFailed": "טעינת מכשירי Tailscale נכשלה. בדוק את כתובת ה-API ואת חיבור הרשת.",
+    "tailscaleNoDevices": "לא נמצאו מכשירים ב-tailnet שלך.",
     "tailscaleDeviceAutoFill": "בחירת מכשיר תמלא אוטומטית את כתובת ה-IP של המארח.",
-    "tailscaleAddHost": "הוסף מארח",
+    "tailscaleAddHost": "הוספת מארח",
     "tailscaleCopyIp": "העתקת כתובת IP של Tailscale",
-    "tailscaleIpCopied": "כתובת ה-IP הועתקה",
-    "tailscaleIpCopyFailed": "לא ניתן היה להעתיק את ה-IP",
-    "filterAuthTailscale": "קנה מידה זנב"
+    "tailscaleIpCopied": "ה-IP הועתק",
+    "tailscaleIpCopyFailed": "לא ניתן להעתיק את ה-IP",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "נדרש אימות Tailscale",
-    "tailscaleCheckDescription": "‏SSH של Tailscale דורש בדיקה נוספת. יש לבצע אימות בדפדפן כדי להמשיך.",
-    "tailscaleCheckOpenBrowser": "פתח את הדפדפן כדי לאמת",
+    "tailscaleCheckRequired": "נדרשת אימות Tailscale",
+    "tailscaleCheckDescription": "SSH של Tailscale דורש בדיקה נוספת. בצע אימות בדפדפן כדי להמשיך.",
+    "tailscaleCheckOpenBrowser": "פתיחת דפדפן לאימות",
     "tailscaleCheckWaiting": "ממתין לאימות Tailscale...",
-    "tailscaleCheckTimeout": "אימות Tailscale הסתיים. אנא נסה שוב."
+    "tailscaleCheckTimeout": "פג תוקף האימות של Tailscale. אנא נסה שוב."
   },
   "manager": {
-    "title": "קנה מידה זנב",
-    "refresh": "לְרַעֲנֵן",
-    "retry": "נסה שוב",
-    "sudoHint": "הגדר סיסמת sudo עבור מחשב מארח זה כדי לאפשר פעולות מוגברות.",
-    "noData": "אין נתונים זמינים",
-    "filter": "לְסַנֵן...",
-    "tsNotInstalled": "Tailscale אינו מותקן על מחשב אחסון זה",
-    "tsRunning": "רִיצָה",
-    "tsStopped": "נֶעצָר",
-    "tsEnable": "לְחַבֵּר",
-    "tsDisable": "לְנַתֵק",
+    "title": "Tailscale",
+    "editRequired": "נדרשת גישה לעריכה של מארח זה כדי לשנות אותו",
+    "tsNotInstalled": "Tailscale לא מותקן במארח זה",
+    "tsRunning": "פעיל",
+    "tsStopped": "עצור",
+    "tsEnable": "חיבור",
+    "tsDisable": "ניתוק",
     "tsEnabling": "מתחבר ל-Tailscale...",
     "tsDisabling": "מתנתק מ-Tailscale...",
-    "tsEnabled": "זנבסקאלה מחוברת",
-    "tsDisabled": "סולם הזנב מנותק",
+    "tsEnabled": "Tailscale מחובר",
+    "tsDisabled": "Tailscale מנותק",
     "tsExitNode": "צומת יציאה",
     "tsExitNodeActive": "צומת יציאה פעיל"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "התחברות לטרמינל",
+        "connectToTerminal": "חיבור לטרמינל",
         "usernameLabel": "שם משתמש"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "חיפוש מכשירים",
+    "noDeviceMatches": "אף מכשיר לא תואם את החיפוש שלך."
   }
 }

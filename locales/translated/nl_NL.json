@@ -1,8 +1,10 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Bekijk tailnet-apparaten",
-      "description": "Bekijk de apparaten op het aangesloten netwerk."
+    "devices": {
+      "view": {
+        "title": "Toestellen in tailnet bekijken",
+        "description": "Bekijk de apparaten in het verbonden tailnet."
+      }
     }
   },
   "settings": {
@@ -12,78 +14,82 @@
     },
     "apiKey": {
       "label": "API-sleutel",
-      "description": "Wordt gebruikt om de apparaten op uw tailnet weer te geven. Werkt met een Tailscale- of Headscale-sleutel.",
+      "description": "Wordt gebruikt om de apparaten in je tailnet op te vragen. Werkt met een Tailscale- of Headscale-sleutel.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
       "label": "API-basis-URL",
-      "description": "Laat dit veld leeg voor Tailscale. Stel dit in om naar een Headscale-instantie te verwijzen.",
+      "description": "Laat leeg voor Tailscale. Stel dit in om naar een Headscale-instantie te verwijzen.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
-      "label": "Apparatenlijst",
-      "checking": "Het staartnet controleren...",
+      "label": "Apparaatlijst",
+      "checking": "Tailnet controleren...",
       "noKey": "Er is nog geen API-sleutel ingesteld.",
-      "error": "Kon geen verbinding maken met het tailnet. Controleer de API-sleutel.",
-      "count": "{{count}} apparaat bereikbaar",
+      "error": "Kan geen verbinding maken met het tailnet. Controleer de API-sleutel.",
+      "count": {
+        "one": "{{count}} apparaat bereikbaar",
+        "other": "{{count}} apparaten bereikbaar"
+      },
+      "count_one": "{{count}} apparaat bereikbaar",
       "count_other": "{{count}} apparaten bereikbaar",
-      "refresh": "Rekening"
+      "refresh": "Controleren"
     }
   },
   "nav": {
-    "tailscale": "Staartschaal"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Dit moet een Unix-gebruiker zijn die aan uw Tailscale-identiteit is toegekend in de SSH-toegangsregel van het tailnet, niet per se root.",
-    "tailscaleDeviceSelect": "Selecteer het Tailscale-apparaat",
+    "tailscaleUsernameHint": "Dit moet een Unix-gebruiker zijn waaraan je Tailscale-identiteit toegang is verleend in de SSH-ACL van het tailnet, niet per se root.",
+    "tailscaleDeviceSelect": "Tailscale-apparaat selecteren",
     "tailscaleDeviceSelectPlaceholder": "Selecteer een apparaat...",
-    "tailscaleNoApiKey": "Er is geen Tailscale API-sleutel geconfigureerd. Voeg er een toe in de beheerdersinstellingen om apparaatdetectie in te schakelen.",
-    "tailscaleDocsLink": "Documenten bekijken",
+    "tailscaleNoApiKey": "Er is geen Tailscale API-sleutel geconfigureerd. Voeg er een toe in de beheerdersinstellingen om apparaatdetectie mogelijk te maken.",
+    "tailscaleDocsLink": "Documentatie bekijken",
     "tailscaleLoadingDevices": "Apparaten laden...",
     "tailscaleDeviceLoadFailed": "Het laden van Tailscale-apparaten is mislukt. Controleer de API-URL en de netwerkverbinding.",
-    "tailscaleNoDevices": "Geen apparaten gevonden in uw achternet.",
-    "tailscaleDeviceAutoFill": "Als je een apparaat selecteert, wordt het IP-adres van de host automatisch ingevuld.",
-    "tailscaleAddHost": "Voeg een host toe",
-    "tailscaleCopyIp": "Kopieer het Tailscale IP-adres",
-    "tailscaleIpCopied": "IP-adres gekopieerd",
-    "tailscaleIpCopyFailed": "Het IP-adres kon niet worden gekopieerd.",
-    "filterAuthTailscale": "Staartschaal"
+    "tailscaleNoDevices": "Geen apparaten gevonden in je tailnet.",
+    "tailscaleDeviceAutoFill": "Als je een apparaat selecteert, wordt het host-IP-adres automatisch ingevuld.",
+    "tailscaleAddHost": "Host toevoegen",
+    "tailscaleCopyIp": "Tailscale-IP kopiëren",
+    "tailscaleIpCopied": "IP gekopieerd",
+    "tailscaleIpCopyFailed": "Kan het IP niet kopiëren",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Tailscale-authenticatie vereist",
-    "tailscaleCheckDescription": "Tailscale SSH vereist een extra controle. Authenticeer in uw browser om verder te gaan.",
-    "tailscaleCheckOpenBrowser": "Open de browser om te authenticeren.",
+    "tailscaleCheckDescription": "Tailscale SSH vereist een extra controle. Authenticatie in je browser om door te gaan.",
+    "tailscaleCheckOpenBrowser": "Browser openen om te authenticeren",
     "tailscaleCheckWaiting": "Wachten op Tailscale-authenticatie...",
-    "tailscaleCheckTimeout": "De authenticatie bij Tailscale is mislukt vanwege een time-out. Probeer het opnieuw."
+    "tailscaleCheckTimeout": "Tailscale-authenticatie is verlopen. Probeer het opnieuw."
   },
   "manager": {
-    "title": "Staartschaal",
-    "refresh": "Vernieuwen",
-    "retry": "Opnieuw proberen",
-    "sudoHint": "Stel een sudo-wachtwoord in voor deze host om acties met verhoogde bevoegdheden toe te staan.",
-    "noData": "Geen gegevens beschikbaar",
-    "filter": "Filter...",
-    "tsNotInstalled": "Tailscale is niet geïnstalleerd op deze host.",
-    "tsRunning": "Rennen",
+    "title": "Tailscale",
+    "editRequired": "Je hebt bewerkingsrechten nodig voor deze host om deze te wijzigen",
+    "tsNotInstalled": "Tailscale is niet geïnstalleerd op deze host",
+    "tsRunning": "Actief",
     "tsStopped": "Gestopt",
     "tsEnable": "Verbinden",
     "tsDisable": "Verbinding verbreken",
-    "tsEnabling": "Verbinding maken met Tailscale...",
+    "tsEnabling": "Verbinden met Tailscale...",
     "tsDisabling": "Verbinding met Tailscale verbreken...",
-    "tsEnabled": "Aangesloten staartschaal",
-    "tsDisabled": "Staartschaal losgekoppeld",
-    "tsExitNode": "Uitgangsknooppunt",
-    "tsExitNodeActive": "Uitgangsknooppunt actief"
+    "tsEnabled": "Tailscale verbonden",
+    "tsDisabled": "Tailscale verbinding verbroken",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Exit node actief"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Verbinden met de terminal",
+        "connectToTerminal": "Verbinden met terminal",
         "usernameLabel": "Gebruikersnaam"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Apparaten zoeken",
+    "noDeviceMatches": "Geen apparaten gevonden die overeenkomen met je zoekopdracht."
   }
 }

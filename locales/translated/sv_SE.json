@@ -1,8 +1,10 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Visa tailnet-enheter",
-      "description": "Se enheterna på det anslutna tailnätet."
+    "devices": {
+      "view": {
+        "title": "Visa tailnet-enheter",
+        "description": "Se enheterna på det anslutna tailnetet."
+      }
     }
   },
   "settings": {
@@ -17,73 +19,77 @@
     },
     "apiBaseUrl": {
       "label": "API-bas-URL",
-      "description": "Lämna tomt för Tailscale. Ställ in detta för att peka på en Headscale-instans.",
+      "description": "Lämna tomt för Tailscale. Ange detta för att peka på en Headscale-instans.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Enhetslista",
-      "checking": "Kontrollerar baknätet...",
-      "noKey": "Ingen API-nyckel är ännu angiven.",
-      "error": "Kunde inte nå tailnet. Kontrollera API-nyckeln.",
-      "count": "{{count}} enhet nåbar",
+      "checking": "Kontrollerar tailnetet...",
+      "noKey": "Ingen API-nyckel har angivits ännu.",
+      "error": "Kunde inte nå tailnetet. Kontrollera API-nyckeln.",
+      "count": {
+        "one": "{{count}} enhet nåbar",
+        "other": "{{count}} enheter nåbara"
+      },
+      "count_one": "{{count}} enhet nåbar",
       "count_other": "{{count}} enheter nåbara",
       "refresh": "Kontrollera"
     }
   },
   "nav": {
-    "tailscale": "Svansskala"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Detta måste vara en Unix-användare som din Tailscale-identitet är beviljad i tailnätets SSH ACL, inte nödvändigtvis root.",
+    "tailscaleUsernameHint": "Detta måste vara en Unix-användare som din Tailscale-identitet har tillstånd för i tailnetets SSH-ACL, inte nödvändigtvis root.",
     "tailscaleDeviceSelect": "Välj Tailscale-enhet",
     "tailscaleDeviceSelectPlaceholder": "Välj en enhet...",
-    "tailscaleNoApiKey": "Ingen Tailscale API-nyckel konfigurerad. Lägg till en i administratörsinställningarna för att aktivera enhetsidentifiering.",
-    "tailscaleDocsLink": "Visa dokument",
+    "tailscaleNoApiKey": "Ingen Tailscale API-nyckel konfigurerad. Lägg till en i Admin-inställningarna för att aktivera enhetsupptäckt.",
+    "tailscaleDocsLink": "Visa dokumentation",
     "tailscaleLoadingDevices": "Laddar enheter...",
-    "tailscaleDeviceLoadFailed": "Misslyckades med att läsa in Tailscale-enheter. Kontrollera API-URL:en och nätverksanslutningen.",
+    "tailscaleDeviceLoadFailed": "Misslyckades med att ladda Tailscale-enheter. Kontrollera API-URL:en och nätverksanslutningen.",
     "tailscaleNoDevices": "Inga enheter hittades i ditt tailnet.",
-    "tailscaleDeviceAutoFill": "Om du väljer en enhet fylls värdens IP-adress automatiskt i.",
+    "tailscaleDeviceAutoFill": "När du väljer en enhet fylls värdens IP-adress i automatiskt.",
     "tailscaleAddHost": "Lägg till värd",
     "tailscaleCopyIp": "Kopiera Tailscale-IP",
-    "tailscaleIpCopied": "IP-adressen kopierades",
+    "tailscaleIpCopied": "IP kopierad",
     "tailscaleIpCopyFailed": "Kunde inte kopiera IP-adressen",
-    "filterAuthTailscale": "Svansskala"
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Tailscale-autentisering krävs",
-    "tailscaleCheckDescription": "Tailscale SSH kräver en ytterligare kontroll. Autentisera i din webbläsare för att fortsätta.",
-    "tailscaleCheckOpenBrowser": "Öppna webbläsaren för att autentisera",
+    "tailscaleCheckDescription": "Tailscale SSH kräver en extra kontroll. Autentisera i din webbläsare för att fortsätta.",
+    "tailscaleCheckOpenBrowser": "Öppna webbläsare för att autentisera",
     "tailscaleCheckWaiting": "Väntar på Tailscale-autentisering...",
-    "tailscaleCheckTimeout": "Tailscale-autentiseringen har gått ut. Försök igen."
+    "tailscaleCheckTimeout": "Tailscale-autentiseringen löpte ut. Försök igen."
   },
   "manager": {
-    "title": "Svansskala",
-    "refresh": "Uppdatera",
-    "retry": "Försöka igen",
-    "sudoHint": "Ange ett sudo-lösenord för den här värden för att tillåta förhöjda åtgärder.",
-    "noData": "Inga data tillgängliga",
-    "filter": "Filtrera...",
-    "tsNotInstalled": "Tailscale är inte installerat på den här värddatorn",
-    "tsRunning": "Spring",
-    "tsStopped": "Stoppad",
-    "tsEnable": "Ansluta",
+    "title": "Tailscale",
+    "editRequired": "Du behöver redigeringsbehörighet för denna värd för att ändra den",
+    "tsNotInstalled": "Tailscale är inte installerat på denna värd",
+    "tsRunning": "Aktiv",
+    "tsStopped": "Inaktiverad",
+    "tsEnable": "Anslut",
     "tsDisable": "Koppla från",
     "tsEnabling": "Ansluter till Tailscale...",
     "tsDisabling": "Kopplar från Tailscale...",
-    "tsEnabled": "Svanskalan ansluten",
-    "tsDisabled": "Svanskalan frånkopplad",
-    "tsExitNode": "Utgångsnod",
-    "tsExitNodeActive": "Avslutsnod aktiv"
+    "tsEnabled": "Tailscale ansluten",
+    "tsDisabled": "Tailscale kopplad från",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Exit node aktiv"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Anslut till terminalen",
+        "connectToTerminal": "Anslut till terminal",
         "usernameLabel": "Användarnamn"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Sök enheter",
+    "noDeviceMatches": "Inga enheter matchar din sökning."
   }
 }

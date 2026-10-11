@@ -1,48 +1,62 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "عرض أجهزة Tailnet",
-      "description": "اطلع على الأجهزة الموجودة على شبكة الاتصال اللاسلكية."
+    "devices": {
+      "view": {
+        "title": "عرض أجهزة الشبكة الداخلية",
+        "description": "عرض الأجهزة المتصلة بالشبكة الداخلية."
+      }
     }
   },
   "settings": {
     "group": {
       "api": "واجهة برمجة تطبيقات Tailscale",
-      "devices": "شبكة الذيل"
+      "devices": "الشبكة الداخلية"
     },
     "apiKey": {
-      "label": "مفتاح API",
-      "description": "يُستخدم لعرض قائمة الأجهزة الموجودة على شبكتك المحلية. يعمل مع مفتاح Tailscale أو Headscale.",
+      "label": "مفتاح واجهة برمجة التطبيقات",
+      "description": "يُستخدم لسرد الأجهزة على شبكتك الداخلية. يعمل مع مفتاح Tailscale أو Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "عنوان URL الأساسي لواجهة برمجة التطبيقات",
-      "description": "اترك حقل \"مقياس الذيل\" فارغًا. اضبط هذا الحقل ليشير إلى مثيل \"مقياس الرأس\".",
+      "label": "الرابط الأساسي لواجهة برمجة التطبيقات",
+      "description": "اتركه فارغًا لاستخدام Tailscale. قم بتعيينه للإشارة إلى مثيل Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "قائمة الأجهزة",
-      "checking": "فحص شبكة الذيل...",
-      "noKey": "لم يتم تعيين مفتاح API بعد.",
-      "error": "تعذر الوصول إلى شبكة الوصول. يرجى التحقق من مفتاح واجهة برمجة التطبيقات (API).",
-      "count": "{{count}} الجهاز قابل للوصول",
-      "count_other": "{{count}} الأجهزة التي يمكن الوصول إليها",
-      "refresh": "يفحص"
+      "checking": "جارٍ فحص الشبكة الداخلية...",
+      "noKey": "لم يتم تعيين مفتاح واجهة برمجة التطبيقات بعد.",
+      "error": "تعذر الوصول إلى الشبكة الداخلية. تحقق من مفتاح واجهة برمجة التطبيقات.",
+      "count": {
+        "zero": "لا توجد أجهزة يمكن الوصول إليها",
+        "one": "جهاز واحد يمكن الوصول إليه",
+        "two": "جهازان يمكن الوصول إليهما",
+        "few": "{{count}} أجهزة يمكن الوصول إليها",
+        "many": "{{count}} جهازًا يمكن الوصول إليها",
+        "other": "{{count}} أجهزة يمكن الوصول إليها"
+      },
+      "count_zero": "لا توجد أجهزة يمكن الوصول إليها",
+      "count_one": "جهاز واحد يمكن الوصول إليه",
+      "count_two": "جهازان يمكن الوصول إليهما",
+      "count_few": "{{count}} أجهزة يمكن الوصول إليها",
+      "count_many": "{{count}} جهازًا يمكن الوصول إليها",
+      "count_other": "{{count}} أجهزة يمكن الوصول إليها",
+      "refresh": "فحص"
     }
   },
   "nav": {
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "يجب أن يكون هذا مستخدمًا لنظام Unix، حيث يتم منح هوية Tailscale الخاصة بك في قائمة التحكم بالوصول SSH الخاصة بشبكة tailnet، وليس بالضرورة المستخدم الجذر.",
-    "tailscaleDeviceSelect": "اختيار جهاز Tailscale",
+    "tailscaleUsernameHint": "يجب أن يكون هذا مستخدمًا في نظام Unix مُمنوحًا له صلاحية في قائمة التحكم في الوصول (ACL) لـ SSH على الشبكة الداخلية، وليس بالضرورة المستخدم الجذر (root).",
+    "tailscaleDeviceSelect": "اختر جهاز Tailscale",
     "tailscaleDeviceSelectPlaceholder": "اختر جهازًا...",
-    "tailscaleNoApiKey": "لم يتم تكوين مفتاح API لـ Tailscale. أضف واحدًا في إعدادات المسؤول لتمكين اكتشاف الأجهزة.",
-    "tailscaleDocsLink": "عرض المستندات",
+    "tailscaleNoApiKey": "لم يتم تكوين مفتاح واجهة برمجة تطبيقات Tailscale. أضف واحدًا في إعدادات المسؤول لتمكين اكتشاف الأجهزة.",
+    "tailscaleDocsLink": "عرض التوثيق",
     "tailscaleLoadingDevices": "جارٍ تحميل الأجهزة...",
-    "tailscaleDeviceLoadFailed": "فشل تحميل أجهزة Tailscale. يرجى التحقق من عنوان URL الخاص بواجهة برمجة التطبيقات (API) واتصال الشبكة.",
-    "tailscaleNoDevices": "لم يتم العثور على أجهزة في tailnet الخاص بك.",
-    "tailscaleDeviceAutoFill": "سيؤدي تحديد جهاز إلى تعبئة عنوان IP للمضيف تلقائيًا.",
+    "tailscaleDeviceLoadFailed": "فشل تحميل أجهزة Tailscale. تحقق من رابط واجهة برمجة التطبيقات واتصال الشبكة.",
+    "tailscaleNoDevices": "لم يتم العثور على أجهزة في شبكتك الداخلية.",
+    "tailscaleDeviceAutoFill": "سيؤدي اختيار جهاز إلى ملء عنوان IP للمضيف تلقائيًا.",
     "tailscaleAddHost": "إضافة مضيف",
     "tailscaleCopyIp": "نسخ عنوان IP الخاص بـ Tailscale",
     "tailscaleIpCopied": "تم نسخ عنوان IP",
@@ -50,40 +64,40 @@
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "يلزم التحقق من الهوية على مستوى الذيل",
-    "tailscaleCheckDescription": "يتطلب Tailscale SSH إجراء فحص إضافي. قم بتسجيل الدخول إلى متصفحك للمتابعة.",
-    "tailscaleCheckOpenBrowser": "افتح المتصفح للمصادقة",
+    "tailscaleCheckRequired": "مطلوب مصادقة Tailscale",
+    "tailscaleCheckDescription": "يتطلب SSH الخاص بـ Tailscale فحصًا إضافيًا. قم بالمصادقة عبر متصفحك للمتابعة.",
+    "tailscaleCheckOpenBrowser": "فتح المتصفح للمصادقة",
     "tailscaleCheckWaiting": "في انتظار مصادقة Tailscale...",
     "tailscaleCheckTimeout": "انتهت مهلة مصادقة Tailscale. يرجى المحاولة مرة أخرى."
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "تحديث",
-    "retry": "إعادة المحاولة",
-    "sudoHint": "قم بتعيين كلمة مرور sudo لهذا المضيف للسماح بإجراءات ذات صلاحيات إدارية.",
-    "noData": "لا توجد بيانات",
-    "filter": "تصفية...",
+    "editRequired": "تحتاج إلى صلاحية التعديل لهذا المضيف لتغييره",
     "tsNotInstalled": "Tailscale غير مثبت على هذا المضيف",
-    "tsRunning": "قيد التشغيل",
+    "tsRunning": "يعمل",
     "tsStopped": "متوقف",
     "tsEnable": "اتصال",
-    "tsDisable": "افصل",
+    "tsDisable": "قطع الاتصال",
     "tsEnabling": "جارٍ الاتصال بـ Tailscale...",
-    "tsDisabling": "جارٍ قطع الاتصال بـ Tailscale...",
-    "tsEnabled": "Tailscale متصل",
-    "tsDisabled": "Tailscale غير متصل",
-    "tsExitNode": "عقدة خروج",
-    "tsExitNodeActive": "عقدة خروج نشطة"
+    "tsDisabling": "جارٍ قطع الاتصال عن Tailscale...",
+    "tsEnabled": "تم الاتصال بـ Tailscale",
+    "tsDisabled": "تم قطع الاتصال عن Tailscale",
+    "tsExitNode": "عقدة الخروج",
+    "tsExitNodeActive": "عقدة الخروج نشطة"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "اتصل بالطرفية",
+        "connectToTerminal": "الاتصال بالوحدة الطرفية",
         "usernameLabel": "اسم المستخدم"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "البحث عن الأجهزة",
+    "noDeviceMatches": "لا توجد أجهزة تطابق بحثك."
   }
 }

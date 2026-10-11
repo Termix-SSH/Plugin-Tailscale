@@ -1,79 +1,79 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "查看尾網設備",
-      "description": "查看已連接尾網上的裝置。"
+    "devices": {
+      "view": {
+        "title": "查看 Tailnet 裝置",
+        "description": "查看已連接 Tailnet 上的裝置。"
+      }
     }
   },
   "settings": {
     "group": {
       "api": "Tailscale API",
-      "devices": "尾網"
+      "devices": "Tailnet"
     },
     "apiKey": {
-      "label": "API金鑰",
-      "description": "用於列出尾網中的設備。可與 Tailscale 或 Headscale 金鑰搭配使用。",
+      "label": "API 金鑰",
+      "description": "用於列出您 Tailnet 上的裝置。支援 Tailscale 或 Headscale 金鑰。",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "API 基本 URL",
-      "description": "留空表示 Tailscale。設定此項可指向 Headscale 實例。",
+      "label": "API 基礎 URL",
+      "description": "若使用 Tailscale 請留空。若使用 Headscale，請設定為其實例地址。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
-      "label": "設備列表",
-      "checking": "檢查尾網…",
+      "label": "裝置列表",
+      "checking": "正在檢查 Tailnet...",
       "noKey": "尚未設定 API 金鑰。",
-      "error": "無法連接到尾網。請檢查API密鑰。",
-      "count": "{{count}} 設備可達",
-      "count_other": "{{count}} 設備可達",
-      "refresh": "查看"
+      "error": "無法連線至 Tailnet。請檢查 API 金鑰。",
+      "count": {
+        "other": "{{count}} 個裝置可連線"
+      },
+      "count_other": "{{count}} 個裝置可連線",
+      "refresh": "檢查"
     }
   },
   "nav": {
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "這必須是您在 Tailscale 身分中被授予的 Unix 用戶，但不一定是 root 用戶。",
-    "tailscaleDeviceSelect": "選取 Tailscale 裝置",
-    "tailscaleDeviceSelectPlaceholder": "選取裝置...",
-    "tailscaleNoApiKey": "未設定 Tailscale API 金鑰。請在管理設定中新增一個以啟用裝置探索。",
-    "tailscaleDocsLink": "檢視文件",
+    "tailscaleUsernameHint": "這必須是您在 Tailnet SSH ACL 中獲授權的 Unix 使用者，不一定是 root。",
+    "tailscaleDeviceSelect": "選擇 Tailscale 裝置",
+    "tailscaleDeviceSelectPlaceholder": "選擇一個裝置...",
+    "tailscaleNoApiKey": "未設定 Tailscale API 金鑰。請在管理設定中新增以啟用裝置發現功能。",
+    "tailscaleDocsLink": "查看說明文件",
     "tailscaleLoadingDevices": "正在載入裝置...",
-    "tailscaleDeviceLoadFailed": "載入 Tailscale 設備失敗。請檢查 API URL 和網路連線。",
-    "tailscaleNoDevices": "在您的 tailnet 中找不到裝置。",
-    "tailscaleDeviceAutoFill": "選取裝置將自動填入主機 IP 位址。",
+    "tailscaleDeviceLoadFailed": "無法載入 Tailscale 裝置。請檢查 API URL 與網路連線。",
+    "tailscaleNoDevices": "在您的 Tailnet 中未找到任何裝置。",
+    "tailscaleDeviceAutoFill": "選擇裝置後將自動填入主機 IP 位址。",
     "tailscaleAddHost": "新增主機",
     "tailscaleCopyIp": "複製 Tailscale IP",
-    "tailscaleIpCopied": "IP位址已複製",
-    "tailscaleIpCopyFailed": "無法複製IP位址",
+    "tailscaleIpCopied": "IP 已複製",
+    "tailscaleIpCopyFailed": "無法複製 IP",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "需要 Tailscale 身份驗證",
-    "tailscaleCheckDescription": "Tailscale SSH 需要額外的驗證。請在瀏覽器中進行身份驗證以繼續。",
-    "tailscaleCheckOpenBrowser": "開啟瀏覽器以進行驗證",
-    "tailscaleCheckWaiting": "正在等待 Tailscale 身份驗證…",
-    "tailscaleCheckTimeout": "Tailscale身份驗證逾時，請重試。"
+    "tailscaleCheckRequired": "需要 Tailscale 驗證",
+    "tailscaleCheckDescription": "Tailscale SSH 需要額外驗證。請在瀏覽器中完成驗證以繼續。",
+    "tailscaleCheckOpenBrowser": "開啟瀏覽器進行驗證",
+    "tailscaleCheckWaiting": "正在等待 Tailscale 驗證...",
+    "tailscaleCheckTimeout": "Tailscale 驗證逾時。請重試。"
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "重新整理",
-    "retry": "重試",
-    "sudoHint": "為該主機設定 sudo 密碼以允許執行提升權限的操作。",
-    "noData": "無可用資料",
-    "filter": "篩選...",
-    "tsNotInstalled": "此主機上未安裝 Tailscale",
+    "editRequired": "您需要對此主機擁有編輯權限才能進行變更",
+    "tsNotInstalled": "此主機未安裝 Tailscale",
     "tsRunning": "執行中",
     "tsStopped": "已停止",
     "tsEnable": "連線",
-    "tsDisable": "中斷連線",
+    "tsDisable": "斷開連線",
     "tsEnabling": "正在連線至 Tailscale...",
-    "tsDisabling": "正在中斷 Tailscale 連線...",
+    "tsDisabling": "正在斷開 Tailscale 連線...",
     "tsEnabled": "Tailscale 已連線",
-    "tsDisabled": "Tailscale 已中斷連線",
+    "tsDisabled": "Tailscale 已斷開連線",
     "tsExitNode": "出口節點",
-    "tsExitNodeActive": "出口節點作用中"
+    "tsExitNodeActive": "出口節點已啟用"
   },
   "newUi": {
     "sidebar": {
@@ -85,5 +85,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "搜尋裝置",
+    "noDeviceMatches": "沒有裝置符合您的搜尋條件。"
   }
 }

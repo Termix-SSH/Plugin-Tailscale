@@ -1,79 +1,79 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "テールネットデバイスを表示する",
-      "description": "接続されているテールネット上のデバイスを確認してください。"
+    "devices": {
+      "view": {
+        "title": "Tailnet デバイスを表示",
+        "description": "接続された Tailnet 上のデバイスを表示します。"
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "テールスケールAPI",
-      "devices": "テールネット"
+      "api": "Tailscale API",
+      "devices": "Tailnet"
     },
     "apiKey": {
-      "label": "APIキー",
-      "description": "テールネット上のデバイスを一覧表示するために使用します。TailscaleキーまたはHeadscaleキーと連携して動作します。",
+      "label": "API キー",
+      "description": "Tailnet 上のデバイスをリストするために使用されます。Tailscale キーまたは Headscale キーの両方に対応しています。",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "APIベースURL",
-      "description": "テールスケールの場合は空欄のままにしてください。ヘッドスケールインスタンスを指定する場合は、こちらを設定してください。",
+      "label": "API ベース URL",
+      "description": "Tailscale の場合は空のままにしてください。Headscale インスタンスを指定する場合は、ここに設定します。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
-      "label": "デバイスリスト",
-      "checking": "テールネットをチェック中...",
-      "noKey": "APIキーはまだ設定されていません。",
-      "error": "テールネットに接続できませんでした。APIキーを確認してください。",
-      "count": "{{count}} デバイスに到達可能",
-      "count_other": "{{count}} デバイスに到達可能",
-      "refresh": "チェック"
+      "label": "デバイス一覧",
+      "checking": "Tailnet を確認しています...",
+      "noKey": "API キーがまだ設定されていません。",
+      "error": "Tailnet に到達できません。API キーを確認してください。",
+      "count": {
+        "other": "{{count}} 台のデバイスに到達可能"
+      },
+      "count_other": "{{count}} 台のデバイスに到達可能",
+      "refresh": "確認"
     }
   },
   "nav": {
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "これは、tailnetのSSH ACLでTailscaleのIDが付与されているUnixユーザーである必要があり、必ずしもrootである必要はありません。",
-    "tailscaleDeviceSelect": "Tailscaleデバイスを選択",
+    "tailscaleUsernameHint": "これは、Tailnet の SSH ACL で Tailscale ID に付与されている Unix ユーザーである必要があります。root である必要はありません。",
+    "tailscaleDeviceSelect": "Tailscale デバイスを選択",
     "tailscaleDeviceSelectPlaceholder": "デバイスを選択...",
-    "tailscaleNoApiKey": "Tailscale APIキーが設定されていません。デバイス検出を有効にするには、管理者設定で追加してください。",
+    "tailscaleNoApiKey": "Tailscale API キーが設定されていません。デバイス検出を有効にするには、管理者設定でキーを追加してください。",
     "tailscaleDocsLink": "ドキュメントを表示",
-    "tailscaleLoadingDevices": "デバイスを読み込み中...",
-    "tailscaleDeviceLoadFailed": "Tailscaleデバイスの読み込みに失敗しました。API URLとネットワーク接続を確認してください。",
-    "tailscaleNoDevices": "テールネットにデバイスが見つかりません。",
-    "tailscaleDeviceAutoFill": "デバイスを選択するとホストIPアドレスが自動入力されます。",
+    "tailscaleLoadingDevices": "デバイスをロードしています...",
+    "tailscaleDeviceLoadFailed": "Tailscale デバイスのロードに失敗しました。API URL とネットワーク接続を確認してください。",
+    "tailscaleNoDevices": "Tailnet にデバイスが見つかりませんでした。",
+    "tailscaleDeviceAutoFill": "デバイスを選択すると、ホストの IP アドレスが自動入力されます。",
     "tailscaleAddHost": "ホストを追加",
-    "tailscaleCopyIp": "Tailscale IPをコピーする",
-    "tailscaleIpCopied": "IPアドレスがコピーされました",
-    "tailscaleIpCopyFailed": "IPアドレスをコピーできませんでした",
+    "tailscaleCopyIp": "Tailscale IP をコピー",
+    "tailscaleIpCopied": "IP をコピーしました",
+    "tailscaleIpCopyFailed": "IP のコピーに失敗しました",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "テールスケール認証が必要です",
-    "tailscaleCheckDescription": "TailscaleのSSH接続には追加の認証が必要です。ブラウザで認証を行ってから続行してください。",
+    "tailscaleCheckRequired": "Tailscale 認証が必要です",
+    "tailscaleCheckDescription": "Tailscale SSH には追加の確認が必要です。続行するにはブラウザで認証してください。",
     "tailscaleCheckOpenBrowser": "ブラウザを開いて認証",
-    "tailscaleCheckWaiting": "Tailscaleの認証を待っています...",
-    "tailscaleCheckTimeout": "Tailscaleの認証がタイムアウトしました。もう一度お試しください。"
+    "tailscaleCheckWaiting": "Tailscale 認証を待機しています...",
+    "tailscaleCheckTimeout": "Tailscale 認証がタイムアウトしました。もう一度お試しください。"
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "再読み込み",
-    "retry": "再試行",
-    "sudoHint": "このホストに対してsudoパスワードを設定し、管理者権限での操作を許可してください。",
-    "noData": "利用可能なデータはありません",
-    "filter": "フィルター...",
-    "tsNotInstalled": "このホストにTailscaleがインストールされていません",
+    "editRequired": "変更するには、このホストに対する編集権限が必要です",
+    "tsNotInstalled": "このホストには Tailscale がインストールされていません",
     "tsRunning": "実行中",
     "tsStopped": "停止中",
     "tsEnable": "接続",
     "tsDisable": "切断",
-    "tsEnabling": "Tailscaleに接続中...",
-    "tsDisabling": "Tailscaleから切断中...",
-    "tsEnabled": "Tailscale接続済み",
-    "tsDisabled": "Tailscale切断済み",
-    "tsExitNode": "Exitノード",
-    "tsExitNodeActive": "Exitノード有効"
+    "tsEnabling": "Tailscale に接続しています...",
+    "tsDisabling": "Tailscale から切断しています...",
+    "tsEnabled": "Tailscale に接続済み",
+    "tsDisabled": "Tailscale から切断済み",
+    "tsExitNode": "エグジットノード",
+    "tsExitNodeActive": "エグジットノードがアクティブ"
   },
   "newUi": {
     "sidebar": {
@@ -85,5 +85,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "デバイスを検索",
+    "noDeviceMatches": "検索条件に一致するデバイスがありません。"
   }
 }

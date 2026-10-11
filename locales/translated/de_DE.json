@@ -1,32 +1,38 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Tailnet-Geräte anzeigen",
-      "description": "Sehen Sie sich die Geräte im verbundenen Netzwerk an."
+    "devices": {
+      "view": {
+        "title": "Geräte im Tailnet anzeigen",
+        "description": "Zeigt die Geräte im verbundenen Tailnet an."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "Tailscale API",
+      "api": "Tailscale-API",
       "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API-Schlüssel",
-      "description": "Dient zur Auflistung der Geräte in Ihrem Tailscale-Netzwerk. Funktioniert mit einem Tailscale- oder Headscale-Schlüssel.",
+      "description": "Wird verwendet, um die Geräte in Ihrem Tailnet aufzulisten. Funktioniert mit einem Tailscale- oder Headscale-Schlüssel.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
       "label": "API-Basis-URL",
-      "description": "Lassen Sie das Feld „Tailscale“ leer. Stellen Sie diesen Wert so ein, dass er auf eine „Headscale“-Instanz verweist.",
+      "description": "Leer lassen für Tailscale. Geben Sie dies ein, um auf eine Headscale-Instanz zu verweisen.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Geräteliste",
-      "checking": "Überprüfung des Rücknetzes...",
-      "noKey": "Es wurde noch kein API-Schlüssel festgelegt.",
-      "error": "Das Tailnet konnte nicht erreicht werden. Bitte überprüfen Sie den API-Schlüssel.",
-      "count": "{{count}} erreichbares Gerät",
-      "count_other": "{{count}} erreichbare Geräte",
+      "checking": "Tailnet wird überprüft...",
+      "noKey": "Kein API-Schlüssel festgelegt.",
+      "error": "Das Tailnet konnte nicht erreicht werden. Überprüfen Sie den API-Schlüssel.",
+      "count": {
+        "one": "{{count}} Gerät erreichbar",
+        "other": "{{count}} Geräte erreichbar"
+      },
+      "count_one": "{{count}} Gerät erreichbar",
+      "count_other": "{{count}} Geräte erreichbar",
       "refresh": "Überprüfen"
     }
   },
@@ -34,42 +40,38 @@
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Dies muss ein Unix-Benutzer sein, dem Ihre Tailscale-Identität in der SSH-ACL des Tailnets gewährt wird, nicht unbedingt root.",
+    "tailscaleUsernameHint": "Dies muss ein Unix-Benutzer sein, dem Ihre Tailscale-Identität in der SSH-ACL des Tailnets Zugriff gewährt wurde, nicht unbedingt root.",
     "tailscaleDeviceSelect": "Tailscale-Gerät auswählen",
     "tailscaleDeviceSelectPlaceholder": "Gerät auswählen...",
-    "tailscaleNoApiKey": "Kein Tailscale API-Schlüssel konfiguriert. Fügen Sie einen in den Admin-Einstellungen hinzu, um die Geräteerkennung zu aktivieren.",
+    "tailscaleNoApiKey": "Kein Tailscale-API-Schlüssel konfiguriert. Fügen Sie einen in den Admin-Einstellungen hinzu, um die Gerätesuche zu aktivieren.",
     "tailscaleDocsLink": "Dokumentation anzeigen",
     "tailscaleLoadingDevices": "Geräte werden geladen...",
-    "tailscaleDeviceLoadFailed": "Die Tailscale-Geräte konnten nicht geladen werden. Bitte überprüfen Sie die API-URL und die Netzwerkverbindung.",
+    "tailscaleDeviceLoadFailed": "Tailscale-Geräte konnten nicht geladen werden. Überprüfen Sie die API-URL und die Netzwerkverbindung.",
     "tailscaleNoDevices": "Keine Geräte in Ihrem Tailnet gefunden.",
-    "tailscaleDeviceAutoFill": "Die Auswahl eines Geräts füllt die Host-IP-Adresse automatisch aus.",
+    "tailscaleDeviceAutoFill": "Wenn Sie ein Gerät auswählen, wird die Host-IP-Adresse automatisch ausgefüllt.",
     "tailscaleAddHost": "Host hinzufügen",
-    "tailscaleCopyIp": "Tailscale IP kopieren",
+    "tailscaleCopyIp": "Tailscale-IP kopieren",
     "tailscaleIpCopied": "IP kopiert",
-    "tailscaleIpCopyFailed": "Die IP-Adresse konnte nicht kopiert werden.",
+    "tailscaleIpCopyFailed": "IP konnte nicht kopiert werden",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Tailscale-Authentifizierung erforderlich",
     "tailscaleCheckDescription": "Tailscale SSH erfordert eine zusätzliche Überprüfung. Authentifizieren Sie sich in Ihrem Browser, um fortzufahren.",
-    "tailscaleCheckOpenBrowser": "Browser zum Authentifizieren öffnen",
+    "tailscaleCheckOpenBrowser": "Browser zur Authentifizierung öffnen",
     "tailscaleCheckWaiting": "Warten auf Tailscale-Authentifizierung...",
-    "tailscaleCheckTimeout": "Die Tailscale-Authentifizierung ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+    "tailscaleCheckTimeout": "Zeitüberschreitung bei der Tailscale-Authentifizierung. Bitte versuchen Sie es erneut."
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "Aktualisieren",
-    "retry": "Erneut versuchen",
-    "sudoHint": "Legen Sie ein sudo-Passwort für diesen Host fest, um erhöhte Aktionen zu ermöglichen.",
-    "noData": "Keine Daten verfügbar",
-    "filter": "Filtern...",
+    "editRequired": "Sie benötigen Schreibzugriff auf diesen Host, um ihn zu ändern",
     "tsNotInstalled": "Tailscale ist auf diesem Host nicht installiert",
-    "tsRunning": "Läuft",
+    "tsRunning": "Aktiv",
     "tsStopped": "Gestoppt",
     "tsEnable": "Verbinden",
     "tsDisable": "Trennen",
-    "tsEnabling": "Verbinde mit Tailscale...",
-    "tsDisabling": "Trenne von Tailscale...",
+    "tsEnabling": "Verbindung zu Tailscale wird hergestellt...",
+    "tsDisabling": "Verbindung zu Tailscale wird getrennt...",
     "tsEnabled": "Tailscale verbunden",
     "tsDisabled": "Tailscale getrennt",
     "tsExitNode": "Exit-Knoten",
@@ -85,5 +87,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Geräte durchsuchen",
+    "noDeviceMatches": "Keine Geräte entsprechen Ihrer Suche."
   }
 }

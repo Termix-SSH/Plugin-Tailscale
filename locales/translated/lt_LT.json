@@ -1,0 +1,99 @@
+{
+  "permissions": {
+    "devices": {
+      "view": {
+        "title": "Peržiūrėti tailnet įrenginius",
+        "description": "Peržiūrėti įrenginius prisijungusiame tailnet."
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "api": "Tailscale API",
+      "devices": "Tailnet"
+    },
+    "apiKey": {
+      "label": "API raktas",
+      "description": "Naudojama išvardinti įrenginius jūsų tailnet. Veikia su Tailscale arba Headscale raktu.",
+      "placeholder": "tskey-api-... / hskey-api-..."
+    },
+    "apiBaseUrl": {
+      "label": "API bazinis URL",
+      "description": "Palikite tuščią, jei naudojate Tailscale. Nustatykite tai, jei norite nukreipti į Headscale egzempliorių.",
+      "placeholder": "https://api.tailscale.com/api/v2"
+    },
+    "devices": {
+      "label": "Įrenginių sąrašas",
+      "checking": "Tikrinamas tailnet...",
+      "noKey": "API rakto dar nepasirinkta.",
+      "error": "Nepavyko pasiekti tailnet. Patikrinkite API raktą.",
+      "count": {
+        "one": "Pasiekiamas {{count}} įrenginys",
+        "few": "Pasiekiami {{count}} įrenginiai",
+        "many": "Pasiekiamas {{count}} įrenginių",
+        "other": "Pasiekiami {{count}} įrenginiai"
+      },
+      "count_one": "Pasiekiamas {{count}} įrenginys",
+      "count_few": "Pasiekiami {{count}} įrenginiai",
+      "count_many": "Pasiekiamas {{count}} įrenginių",
+      "count_other": "Pasiekiami {{count}} įrenginiai",
+      "refresh": "Patikrinti"
+    }
+  },
+  "nav": {
+    "tailscale": "Tailscale"
+  },
+  "hosts": {
+    "tailscaleUsernameHint": "Tai turi būti Unix vartotojas, kuriam jūsų Tailscale tapatybė suteikta tailnet SSH ACL, ne būtinai root.",
+    "tailscaleDeviceSelect": "Pasirinkti Tailscale įrenginį",
+    "tailscaleDeviceSelectPlaceholder": "Pasirinkite įrenginį...",
+    "tailscaleNoApiKey": "Tailscale API rakto nesukonfigūruota. Pridėkite vieną „Admin Settings“, kad įgalintumėte įrenginių paiešką.",
+    "tailscaleDocsLink": "Peržiūrėti dokumentaciją",
+    "tailscaleLoadingDevices": "Įkeliami įrenginiai...",
+    "tailscaleDeviceLoadFailed": "Nepavyko įkelti Tailscale įrenginių. Patikrinkite API URL ir tinklo ryšį.",
+    "tailscaleNoDevices": "Jūsų tailnet nerasta jokių įrenginių.",
+    "tailscaleDeviceAutoFill": "Pasirinkus įrenginį, automatiškai bus užpildytas host IP adresas.",
+    "tailscaleAddHost": "Pridėti host",
+    "tailscaleCopyIp": "Kopijuoti Tailscale IP",
+    "tailscaleIpCopied": "IP nukopijuotas",
+    "tailscaleIpCopyFailed": "Nepavyko nukopijuoti IP",
+    "filterAuthTailscale": "Tailscale"
+  },
+  "terminal": {
+    "tailscaleCheckRequired": "Reikalinga Tailscale autentifikacija",
+    "tailscaleCheckDescription": "Tailscale SSH reikalauja papildomo patikrinimo. Autentifikuokitės naršyklėje, kad tęstumėte.",
+    "tailscaleCheckOpenBrowser": "Atidaryti naršyklę autentifikacijai",
+    "tailscaleCheckWaiting": "Laukiama Tailscale autentifikacijos...",
+    "tailscaleCheckTimeout": "Tailscale autentifikacijos laikas baigėsi. Bandykite dar kartą."
+  },
+  "manager": {
+    "title": "Tailscale",
+    "editRequired": "Norint tai pakeisti, reikia redagavimo prieigos prie šio host",
+    "tsNotInstalled": "Tailscale nėra įdiegta šiame host",
+    "tsRunning": "Veikia",
+    "tsStopped": "Sustabdyta",
+    "tsEnable": "Prisijungti",
+    "tsDisable": "Atsijungti",
+    "tsEnabling": "Prisijungiama prie Tailscale...",
+    "tsDisabling": "Atsijungiama nuo Tailscale...",
+    "tsEnabled": "Tailscale prisijungta",
+    "tsDisabled": "Tailscale atsijungta",
+    "tsExitNode": "Išėjimo mazgas",
+    "tsExitNodeActive": "Išėjimo mazgas aktyvus"
+  },
+  "newUi": {
+    "sidebar": {
+      "quickConnect": {
+        "connectToTerminal": "Prisijungti prie terminalo",
+        "usernameLabel": "Vartotojo vardas"
+      }
+    }
+  },
+  "plugin": {
+    "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Ieškoti įrenginių",
+    "noDeviceMatches": "Jokie įrenginiai neatitinka jūsų paieškos."
+  }
+}

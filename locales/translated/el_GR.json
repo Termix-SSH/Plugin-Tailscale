@@ -1,89 +1,95 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Προβολή συσκευών tailnet",
-      "description": "Δείτε τις συσκευές στο συνδεδεμένο tailnet."
+    "devices": {
+      "view": {
+        "title": "Προβολή συσκευών tailnet",
+        "description": "Δείτε τις συσκευές στο συνδεδεμένο tailnet."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "API κλίμακας ουράς",
+      "api": "API Tailscale",
       "devices": "Tailnet"
     },
     "apiKey": {
       "label": "Κλειδί API",
-      "description": "Χρησιμοποιείται για την καταχώριση των συσκευών στο tailnet σας. Λειτουργεί με πλήκτρο Tailscale ή Headscale.",
+      "description": "Χρησιμοποιείται για την αναφορά των συσκευών στο tailnet σας. Λειτουργεί με κλειδί Tailscale ή Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "URL βάσης API",
-      "description": "Αφήστε το κενό για το Tailscale. Ορίστε το ώστε να δείχνει σε μια παρουσία Headscale.",
+      "label": "Βασική διεύθυνση API",
+      "description": "Αφήστε κενό για Tailscale. Ορίστε το για να δείχνει σε μια έκδοση Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Λίστα συσκευών",
-      "checking": "Έλεγχος του διχτυού...",
+      "checking": "Έλεγχος του tailnet...",
       "noKey": "Δεν έχει οριστεί ακόμη κλειδί API.",
-      "error": "Δεν ήταν δυνατή η επικοινωνία με το tailnet. Ελέγξτε το κλειδί API.",
-      "count": "{{count}} συσκευή προσβάσιμη",
+      "error": "Αδυναμία πρόσβασης στο tailnet. Ελέγξτε το κλειδί API.",
+      "count": {
+        "one": "{{count}} προσβάσιμη συσκευή",
+        "other": "{{count}} προσβάσιμες συσκευές"
+      },
+      "count_one": "{{count}} προσβάσιμη συσκευή",
       "count_other": "{{count}} προσβάσιμες συσκευές",
-      "refresh": "Ελεγχος"
+      "refresh": "Έλεγχος"
     }
   },
   "nav": {
-    "tailscale": "Κλίμακα ουράς"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Αυτός πρέπει να είναι χρήστης Unix. Η ταυτότητα Tailscale σας έχει εκχωρηθεί στο SSH ACL του tailnet, όχι απαραίτητα root.",
-    "tailscaleDeviceSelect": "Επιλογή συσκευής κλίμακας ουράς",
+    "tailscaleUsernameHint": "Πρέπει να είναι ένας χρήστης Unix στον οποίο έχει χορηγηθεί η ταυτότητα Tailscale στο SSH ACL του tailnet, όχι απαραίτητα ο root.",
+    "tailscaleDeviceSelect": "Επιλογή συσκευής Tailscale",
     "tailscaleDeviceSelectPlaceholder": "Επιλέξτε μια συσκευή...",
-    "tailscaleNoApiKey": "Δεν έχει ρυθμιστεί κλειδί API Tailscale. Προσθέστε ένα στις Ρυθμίσεις διαχειριστή για να ενεργοποιήσετε την ανακάλυψη συσκευών.",
-    "tailscaleDocsLink": "Προβολή εγγράφων",
+    "tailscaleNoApiKey": "Δεν έχει διαμορφωθεί κλειδί API Tailscale. Προσθέστε ένα στις Ρυθμίσεις Διαχειριστή για να ενεργοποιήσετε την ανακάλυψη συσκευών.",
+    "tailscaleDocsLink": "Προβολή τεκμηρίωσης",
     "tailscaleLoadingDevices": "Φόρτωση συσκευών...",
-    "tailscaleDeviceLoadFailed": "Αποτυχία φόρτωσης συσκευών Tailscale. Ελέγξτε τη διεύθυνση URL του API και τη σύνδεση δικτύου.",
+    "tailscaleDeviceLoadFailed": "Αποτυχία φόρτωσης συσκευών Tailscale. Ελέγξτε τη διεύθυνση API και τη σύνδεση δικτύου.",
     "tailscaleNoDevices": "Δεν βρέθηκαν συσκευές στο tailnet σας.",
-    "tailscaleDeviceAutoFill": "Η επιλογή μιας συσκευής θα συμπληρώσει αυτόματα τη διεύθυνση IP του κεντρικού υπολογιστή.",
-    "tailscaleAddHost": "Προσθήκη κεντρικού υπολογιστή",
-    "tailscaleCopyIp": "Αντιγραφή IP κλίμακας ουράς",
-    "tailscaleIpCopied": "Η διεύθυνση IP αντιγράφηκε",
-    "tailscaleIpCopyFailed": "Δεν ήταν δυνατή η αντιγραφή της IP",
-    "filterAuthTailscale": "Κλίμακα ουράς"
+    "tailscaleDeviceAutoFill": "Η επιλογή μιας συσκευής θα συμπληρώσει αυτόματα τη διεύθυνση IP του host.",
+    "tailscaleAddHost": "Προσθήκη host",
+    "tailscaleCopyIp": "Αντιγραφή IP Tailscale",
+    "tailscaleIpCopied": "Το IP αντιγράφηκε",
+    "tailscaleIpCopyFailed": "Αδυναμία αντιγραφής του IP",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Απαιτείται έλεγχος ταυτότητας κλίμακας ουράς",
-    "tailscaleCheckDescription": "Το Tailscale SSH απαιτεί έναν επιπλέον έλεγχο. Επαληθεύστε τον κωδικό σας στο πρόγραμμα περιήγησής σας για να συνεχίσετε.",
-    "tailscaleCheckOpenBrowser": "Άνοιγμα προγράμματος περιήγησης για έλεγχο ταυτότητας",
-    "tailscaleCheckWaiting": "Αναμονή για έλεγχο ταυτότητας Tailscale...",
-    "tailscaleCheckTimeout": "Το χρονικό όριο ελέγχου ταυτότητας κλίμακας έληξε. Δοκιμάστε ξανά."
+    "tailscaleCheckRequired": "Απαιτείται Επαλήθευση Tailscale",
+    "tailscaleCheckDescription": "Το SSH Tailscale απαιτεί επιπλέον έλεγχο. Επαληθεύστε στον περιηγητή σας για να συνεχίσετε.",
+    "tailscaleCheckOpenBrowser": "Άνοιγμα Περιηγητή για Επαλήθευση",
+    "tailscaleCheckWaiting": "Αναμονή για επαλήθευση Tailscale...",
+    "tailscaleCheckTimeout": "Λήξη χρόνου για την επαλήθευση Tailscale. Δοκιμάστε ξανά."
   },
   "manager": {
-    "title": "Κλίμακα ουράς",
-    "refresh": "Φρεσκάρω",
-    "retry": "Δοκιμάζω πάλι",
-    "sudoHint": "Ορίστε έναν κωδικό πρόσβασης sudo για αυτόν τον κεντρικό υπολογιστή για να επιτρέψετε ενέργειες με αυξημένα δικαιώματα.",
-    "noData": "Δεν υπάρχουν διαθέσιμα δεδομένα",
-    "filter": "Φίλτρο...",
-    "tsNotInstalled": "Το Tailscale δεν είναι εγκατεστημένο σε αυτόν τον κεντρικό υπολογιστή",
-    "tsRunning": "Τρέξιμο",
-    "tsStopped": "Σταμάτησε",
-    "tsEnable": "Συνδέω",
-    "tsDisable": "Αποσυνδέω",
-    "tsEnabling": "Σύνδεση με το Tailscale...",
+    "title": "Tailscale",
+    "editRequired": "Χρειάζεστε πρόσβαση επεξεργασίας σε αυτό το host για να το αλλάξετε",
+    "tsNotInstalled": "Το Tailscale δεν είναι εγκατεστημένο σε αυτό το host",
+    "tsRunning": "Ενεργό",
+    "tsStopped": "Σταματημένο",
+    "tsEnable": "Σύνδεση",
+    "tsDisable": "Αποσύνδεση",
+    "tsEnabling": "Σύνδεση στο Tailscale...",
     "tsDisabling": "Αποσύνδεση από το Tailscale...",
-    "tsEnabled": "Συνδεδεμένο με κλίμακα ουράς",
-    "tsDisabled": "Η κλίμακα ουράς αποσυνδέθηκε",
-    "tsExitNode": "Κόμβος εξόδου",
-    "tsExitNodeActive": "Κόμβος εξόδου ενεργός"
+    "tsEnabled": "Το Tailscale είναι συνδεδεμένο",
+    "tsDisabled": "Το Tailscale είναι αποσυνδεδεμένο",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Το exit node είναι ενεργό"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Σύνδεση με τερματικό",
+        "connectToTerminal": "Σύνδεση στο Terminal",
         "usernameLabel": "Όνομα χρήστη"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Αναζήτηση συσκευών",
+    "noDeviceMatches": "Καμία συσκευή δεν ταιριάζει με την αναζήτησή σας."
   }
 }

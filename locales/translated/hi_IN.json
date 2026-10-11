@@ -1,79 +1,81 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "टेलनेट उपकरणों को देखें",
-      "description": "कनेक्टेड टेलनेट पर मौजूद डिवाइस देखें।"
+    "devices": {
+      "view": {
+        "title": "टेलनेट डिवाइस देखें",
+        "description": "कनेक्टेड टेलनेट पर डिवाइस देखें।"
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "टेलस्केल एपीआई",
+      "api": "Tailscale API",
       "devices": "टेलनेट"
     },
     "apiKey": {
-      "label": "एपीआई कुंजी",
-      "description": "इसका उपयोग टेलनेट पर मौजूद उपकरणों की सूची बनाने के लिए किया जाता है। यह टेलस्केल या हेडस्केल कुंजी के साथ काम करता है।",
+      "label": "API कुंजी",
+      "description": "आपके टेलनेट पर डिवाइस सूचीबद्ध करने के लिए उपयोग किया जाता है। Tailscale या Headscale कुंजी के साथ काम करता है।",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "एपीआई आधारित यूआरएल",
-      "description": "टेलस्केल के लिए इसे खाली छोड़ दें। इसे हेडस्केल इंस्टेंस की ओर इंगित करने के लिए सेट करें।",
+      "label": "API बेस URL",
+      "description": "Tailscale के लिए खाली छोड़ दें। इसे Headscale इंस्टेंस की ओर इशारा करने के लिए सेट करें।",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "डिवाइस सूची",
-      "checking": "टेलनेट की जाँच कर रहा हूँ...",
-      "noKey": "अभी तक कोई एपीआई कुंजी सेट नहीं की गई है।",
-      "error": "टेलनेट तक नहीं पहुंच सका। कृपया एपीआई कुंजी की जांच करें।",
-      "count": "{{count}} डिवाइस पहुंच योग्य है",
-      "count_other": "{{count}} पहुंच योग्य उपकरण",
-      "refresh": "जाँच करना"
+      "checking": "टेलनेट की जांच हो रही है...",
+      "noKey": "अभी तक कोई API कुंजी सेट नहीं है।",
+      "error": "टेलनेट तक पहुंच नहीं पाया। API कुंजी की जांच करें।",
+      "count": {
+        "one": "{{count}} डिवाइस पहुंच योग्य",
+        "other": "{{count}} डिवाइस पहुंच योग्य"
+      },
+      "count_one": "{{count}} डिवाइस पहुंच योग्य",
+      "count_other": "{{count}} डिवाइस पहुंच योग्य",
+      "refresh": "जांचें"
     }
   },
   "nav": {
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "यह एक यूनिक्स उपयोगकर्ता होना चाहिए जिसे टेलनेट के एसएसएच एसीएल में आपकी टेलस्केल पहचान प्रदान की गई हो, जरूरी नहीं कि यह रूट हो।",
+    "tailscaleUsernameHint": "यह एक Unix उपयोगकर्ता होना चाहिए जिसके लिए आपके Tailscale पहचान को टेलनेट के SSH ACL में अनुमति दी गई है, जरूरी नहीं कि root हो।",
     "tailscaleDeviceSelect": "Tailscale डिवाइस चुनें",
     "tailscaleDeviceSelectPlaceholder": "एक डिवाइस चुनें...",
-    "tailscaleNoApiKey": "कोई Tailscale API कुंजी कॉन्फ़िगर नहीं की गई है। डिवाइस खोज सक्षम करने के लिए व्यवस्थापक सेटिंग में एक जोड़ें।",
+    "tailscaleNoApiKey": "कोई Tailscale API कुंजी कॉन्फ़िगर नहीं है। डिवाइस खोज को सक्षम करने के लिए एडमिन सेटिंग्स में एक जोड़ें।",
     "tailscaleDocsLink": "दस्तावेज़ देखें",
-    "tailscaleLoadingDevices": "उपकरण लोड हो रहे हैं...",
-    "tailscaleDeviceLoadFailed": "टेलस्केल डिवाइस लोड करने में विफल। कृपया एपीआई यूआरएल और नेटवर्क कनेक्शन की जांच करें।",
-    "tailscaleNoDevices": "आपके टेलनेट में कोई उपकरण नहीं मिला।",
-    "tailscaleDeviceAutoFill": "डिवाइस चुनने पर होस्ट IP पता स्वतः भर जाएगा।",
+    "tailscaleLoadingDevices": "डिवाइस लोड हो रहे हैं...",
+    "tailscaleDeviceLoadFailed": "Tailscale डिवाइस लोड करने में विफल। API URL और नेटवर्क कनेक्शन की जांच करें।",
+    "tailscaleNoDevices": "आपके टेलनेट में कोई डिवाइस नहीं मिला।",
+    "tailscaleDeviceAutoFill": "डिवाइस चुनने से होस्ट IP पता स्वचालित रूप से भर जाएगा।",
     "tailscaleAddHost": "होस्ट जोड़ें",
-    "tailscaleCopyIp": "टेलस्केल आईपी कॉपी करें",
-    "tailscaleIpCopied": "आईपी कॉपी हो गया",
-    "tailscaleIpCopyFailed": "आईपी कॉपी नहीं हो सकी",
+    "tailscaleCopyIp": "Tailscale IP कॉपी करें",
+    "tailscaleIpCopied": "IP कॉपी किया गया",
+    "tailscaleIpCopyFailed": "IP कॉपी नहीं कर पाया",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "टेलस्केल प्रमाणीकरण आवश्यक है",
-    "tailscaleCheckDescription": "Tailscale SSH के लिए एक अतिरिक्त जांच की आवश्यकता है। जारी रखने के लिए अपने ब्राउज़र में प्रमाणीकरण करें।",
+    "tailscaleCheckRequired": "Tailscale प्रमाणीकरण आवश्यक है",
+    "tailscaleCheckDescription": "Tailscale SSH को एक अतिरिक्त जांच की आवश्यकता है। जारी रखने के लिए अपने ब्राउज़र में प्रमाणीकरण करें।",
     "tailscaleCheckOpenBrowser": "प्रमाणीकरण के लिए ब्राउज़र खोलें",
-    "tailscaleCheckWaiting": "टेलस्केल प्रमाणीकरण की प्रतीक्षा की जा रही है...",
-    "tailscaleCheckTimeout": "टेलस्केल प्रमाणीकरण का समय समाप्त हो गया। कृपया पुनः प्रयास करें।"
+    "tailscaleCheckWaiting": "Tailscale प्रमाणीकरण की प्रतीक्षा हो रही है...",
+    "tailscaleCheckTimeout": "Tailscale प्रमाणीकरण का समय समाप्त हो गया। कृपया पुनः प्रयास करें।"
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "रीफ़्रेश",
-    "retry": "पुनः प्रयास करें",
-    "sudoHint": "इस होस्ट के लिए एक सूडो पासवर्ड सेट करें ताकि उच्च स्तरीय कार्रवाई की अनुमति मिल सके।",
-    "noData": "कोई डेटा उपलब्ध नहीं",
-    "filter": "फ़िल्टर...",
-    "tsNotInstalled": "Tailscale इस होस्ट पर स्थापित नहीं है",
-    "tsRunning": "चालू",
-    "tsStopped": "बंद",
-    "tsEnable": "कनेक्ट",
+    "editRequired": "इसे बदलने के लिए आपको इस होस्ट पर संपादन पहुंच की आवश्यकता है",
+    "tsNotInstalled": "इस होस्ट पर Tailscale इंस्टॉल नहीं है",
+    "tsRunning": "चल रहा है",
+    "tsStopped": "रोका गया",
+    "tsEnable": "कनेक्ट करें",
     "tsDisable": "डिस्कनेक्ट करें",
     "tsEnabling": "Tailscale से कनेक्ट हो रहा है...",
     "tsDisabling": "Tailscale से डिस्कनेक्ट हो रहा है...",
-    "tsEnabled": "Tailscale कनेक्टेड",
-    "tsDisabled": "Tailscale डिस्कनेक्टेड",
-    "tsExitNode": "एक्जिट नोड",
-    "tsExitNodeActive": "एक्जिट नोड सक्रिय"
+    "tsEnabled": "Tailscale कनेक्ट किया गया",
+    "tsDisabled": "Tailscale डिस्कनेक्ट किया गया",
+    "tsExitNode": "एग्जिट नोड",
+    "tsExitNodeActive": "एग्जिट नोड सक्रिय"
   },
   "newUi": {
     "sidebar": {
@@ -85,5 +87,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "डिवाइस खोजें",
+    "noDeviceMatches": "कोई डिवाइस आपकी खोज से मेल नहीं खाता।"
   }
 }

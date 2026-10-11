@@ -1,0 +1,99 @@
+{
+  "permissions": {
+    "devices": {
+      "view": {
+        "title": "Zobraziť zariadenia tailnetu",
+        "description": "Zobraziť zariadenia pripojené k tailnetu."
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "api": "Tailscale API",
+      "devices": "Tailnet"
+    },
+    "apiKey": {
+      "label": "API kľúč",
+      "description": "Používa sa na zoznamenie zariadení vo vašom tailnete. Funguje s kľúčom Tailscale alebo Headscale.",
+      "placeholder": "tskey-api-... / hskey-api-..."
+    },
+    "apiBaseUrl": {
+      "label": "Základná URL adresa API",
+      "description": "Pre Tailscale nechajte prázdne. Nastavte túto hodnotu pre pripojenie k inštancii Headscale.",
+      "placeholder": "https://api.tailscale.com/api/v2"
+    },
+    "devices": {
+      "label": "Zoznam zariadení",
+      "checking": "Kontrola tailnetu...",
+      "noKey": "API kľúč zatiaľ nie je nastavený.",
+      "error": "Nepodarilo sa pripojiť k tailnetu. Skontrolujte API kľúč.",
+      "count": {
+        "one": "{{count}} dostupné zariadenie",
+        "few": "{{count}} dostupné zariadenia",
+        "many": "{{count}} dostupných zariadení",
+        "other": "{{count}} dostupných zariadení"
+      },
+      "count_one": "{{count}} dostupné zariadenie",
+      "count_few": "{{count}} dostupné zariadenia",
+      "count_many": "{{count}} dostupných zariadení",
+      "count_other": "{{count}} dostupných zariadení",
+      "refresh": "Skontrolovať"
+    }
+  },
+  "nav": {
+    "tailscale": "Tailscale"
+  },
+  "hosts": {
+    "tailscaleUsernameHint": "Toto musí byť Unixový používateľ, ktorému je vaša identita Tailscale udelená v SSH ACL tailnetu, nie nutne root.",
+    "tailscaleDeviceSelect": "Vybrať zariadenie Tailscale",
+    "tailscaleDeviceSelectPlaceholder": "Vyberte zariadenie...",
+    "tailscaleNoApiKey": "Nie je nakonfigurovaný žiadny API kľúč Tailscale. Pridajte ho v Administratívnych nastaveniach pre povolenie objavovania zariadení.",
+    "tailscaleDocsLink": "Zobraziť dokumentáciu",
+    "tailscaleLoadingDevices": "Načítavanie zariadení...",
+    "tailscaleDeviceLoadFailed": "Nepodarilo sa načítať zariadenia Tailscale. Skontrolujte URL adresu API a sieťové pripojenie.",
+    "tailscaleNoDevices": "Vo vašom tailnete neboli nájdené žiadne zariadenia.",
+    "tailscaleDeviceAutoFill": "Vybraním zariadenia sa automaticky vyplní IP adresa hostiteľa.",
+    "tailscaleAddHost": "Pridať hostiteľa",
+    "tailscaleCopyIp": "Kopírovať IP adresu Tailscale",
+    "tailscaleIpCopied": "IP adresa skopírovaná",
+    "tailscaleIpCopyFailed": "Nepodarilo sa skopírovať IP adresu",
+    "filterAuthTailscale": "Tailscale"
+  },
+  "terminal": {
+    "tailscaleCheckRequired": "Vyžaduje sa overenie Tailscale",
+    "tailscaleCheckDescription": "SSH cez Tailscale vyžaduje dodatočnú kontrolu. Pre pokračovanie sa overte vo svojom prehliadači.",
+    "tailscaleCheckOpenBrowser": "Otvoriť prehliadač pre overenie",
+    "tailscaleCheckWaiting": "Čaká sa na overenie Tailscale...",
+    "tailscaleCheckTimeout": "Časový limit overenia Tailscale vypršal. Skúste to znova."
+  },
+  "manager": {
+    "title": "Tailscale",
+    "editRequired": "Na zmenu tohto hostiteľa potrebujete prístup na úpravu",
+    "tsNotInstalled": "Tailscale nie je na tomto hostiteľovi nainštalovaný",
+    "tsRunning": "Beží",
+    "tsStopped": "Zastavené",
+    "tsEnable": "Pripojiť",
+    "tsDisable": "Odpojiť",
+    "tsEnabling": "Pripájanie k Tailscale...",
+    "tsDisabling": "Odpojovanie od Tailscale...",
+    "tsEnabled": "Tailscale pripojený",
+    "tsDisabled": "Tailscale odpojený",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Exit node aktívny"
+  },
+  "newUi": {
+    "sidebar": {
+      "quickConnect": {
+        "connectToTerminal": "Pripojiť sa k terminálu",
+        "usernameLabel": "Používateľské meno"
+      }
+    }
+  },
+  "plugin": {
+    "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Hľadať zariadenia",
+    "noDeviceMatches": "Žiadne zariadenia nevyhovujú vášmu vyhľadávaniu."
+  }
+}

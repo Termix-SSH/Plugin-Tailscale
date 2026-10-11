@@ -1,0 +1,93 @@
+{
+  "permissions": {
+    "devices": {
+      "view": {
+        "title": "Lihat peranti tailnet",
+        "description": "Lihat peranti pada tailnet yang disambungkan."
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "api": "API Tailscale",
+      "devices": "Tailnet"
+    },
+    "apiKey": {
+      "label": "Kunci API",
+      "description": "Digunakan untuk menyenaraikan peranti pada tailnet anda. Berfungsi dengan kunci Tailscale atau Headscale.",
+      "placeholder": "tskey-api-... / hskey-api-..."
+    },
+    "apiBaseUrl": {
+      "label": "URL asas API",
+      "description": "Biarkan kosong untuk Tailscale. Tetapkan ini untuk menunjuk ke pelayan Headscale.",
+      "placeholder": "https://api.tailscale.com/api/v2"
+    },
+    "devices": {
+      "label": "Senarai peranti",
+      "checking": "Memeriksa tailnet...",
+      "noKey": "Tiada kunci API ditetapkan lagi.",
+      "error": "Tidak dapat menghubungi tailnet. Periksa kunci API.",
+      "count": {
+        "other": "{{count}} peranti boleh dicapai"
+      },
+      "count_other": "{{count}} peranti boleh dicapai",
+      "refresh": "Periksa"
+    }
+  },
+  "nav": {
+    "tailscale": "Tailscale"
+  },
+  "hosts": {
+    "tailscaleUsernameHint": "Ini mestilah pengguna Unix yang identiti Tailscale anda diberi akses dalam ACL SSH tailnet, tidak semestinya root.",
+    "tailscaleDeviceSelect": "Pilih peranti Tailscale",
+    "tailscaleDeviceSelectPlaceholder": "Pilih peranti...",
+    "tailscaleNoApiKey": "Tiada kunci API Tailscale dikonfigurasi. Tambahkan satu dalam Tetapan Admin untuk membolehkan penemuan peranti.",
+    "tailscaleDocsLink": "Lihat dokumentasi",
+    "tailscaleLoadingDevices": "Memuatkan peranti...",
+    "tailscaleDeviceLoadFailed": "Gagal memuatkan peranti Tailscale. Periksa URL API dan sambungan rangkaian.",
+    "tailscaleNoDevices": "Tiada peranti ditemui dalam tailnet anda.",
+    "tailscaleDeviceAutoFill": "Memilih peranti akan mengisi alamat IP hos secara automatik.",
+    "tailscaleAddHost": "Tambah hos",
+    "tailscaleCopyIp": "Salin IP Tailscale",
+    "tailscaleIpCopied": "IP disalin",
+    "tailscaleIpCopyFailed": "Tidak dapat menyalin IP",
+    "filterAuthTailscale": "Tailscale"
+  },
+  "terminal": {
+    "tailscaleCheckRequired": "Pengesahan Tailscale Diperlukan",
+    "tailscaleCheckDescription": "SSH Tailscale memerlukan pemeriksaan tambahan. Sahkan dalam pelayar web anda untuk meneruskan.",
+    "tailscaleCheckOpenBrowser": "Buka Pelayar untuk Pengesahan",
+    "tailscaleCheckWaiting": "Menunggu pengesahan Tailscale...",
+    "tailscaleCheckTimeout": "Pengesahan Tailscale tamat masa. Sila cuba lagi."
+  },
+  "manager": {
+    "title": "Tailscale",
+    "editRequired": "Anda memerlukan akses sunting ke hos ini untuk mengubahnya",
+    "tsNotInstalled": "Tailscale tidak dipasang pada hos ini",
+    "tsRunning": "Berjalan",
+    "tsStopped": "Berhenti",
+    "tsEnable": "Sambung",
+    "tsDisable": "Putuskan sambungan",
+    "tsEnabling": "Menyambung ke Tailscale...",
+    "tsDisabling": "Memutuskan sambungan dari Tailscale...",
+    "tsEnabled": "Tailscale disambungkan",
+    "tsDisabled": "Tailscale diputuskan sambungan",
+    "tsExitNode": "Nod keluar",
+    "tsExitNodeActive": "Nod keluar aktif"
+  },
+  "newUi": {
+    "sidebar": {
+      "quickConnect": {
+        "connectToTerminal": "Sambung ke Terminal",
+        "usernameLabel": "Nama pengguna"
+      }
+    }
+  },
+  "plugin": {
+    "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Cari peranti",
+    "noDeviceMatches": "Tiada peranti sepadan dengan carian anda."
+  }
+}

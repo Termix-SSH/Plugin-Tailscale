@@ -1,89 +1,95 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Вижте устройствата за мрежата на задната част",
-      "description": "Вижте устройствата в свързаната мрежа за пренос на данни (tailnet)."
+    "devices": {
+      "view": {
+        "title": "Преглед на устройствата в tailnet",
+        "description": "Вижте устройствата в свързания tailnet."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "API за Tailscale",
-      "devices": "Опашка"
+      "api": "Tailscale API",
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API ключ",
-      "description": "Използва се за изброяване на устройствата във вашата tailnet мрежа. Работи с ключ Tailscale или Headscale.",
+      "description": "Използва се за изброяване на устройствата във вашия tailnet. Работи с ключ на Tailscale или Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "Базов URL адрес на API",
-      "description": "Оставете празно за Tailscale. Задайте това да сочи към екземпляр на Headscale.",
+      "label": "Базов URL на API",
+      "description": "Оставете празно за Tailscale. Задайте това, за да посочите инстанция на Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Списък с устройства",
-      "checking": "Проверка на мрежата на опашката...",
+      "checking": "Проверка на tailnet...",
       "noKey": "Все още не е зададен API ключ.",
-      "error": "Не можа да се достигне tailnet. Проверете API ключа.",
-      "count": "{{count}} устройство е достъпно",
-      "count_other": "{{count}} устройства са достъпни",
-      "refresh": "Проверете"
+      "error": "Не може да се достигне до tailnet. Проверете API ключа.",
+      "count": {
+        "one": "{{count}} достъпно устройство",
+        "other": "{{count}} достъпни устройства"
+      },
+      "count_one": "{{count}} достъпно устройство",
+      "count_other": "{{count}} достъпни устройства",
+      "refresh": "Провери"
     }
   },
   "nav": {
-    "tailscale": "Задна скала"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Това трябва да е Unix потребител, чиято самоличност на Tailscale е предоставена в SSH ACL на tailnet, не е задължително root.",
-    "tailscaleDeviceSelect": "Изберете устройство за Tailscale",
+    "tailscaleUsernameHint": "Това трябва да бъде Unix потребител, на когото е предоставен достъп чрез вашата Tailscale идентичност в SSH ACL на tailnet, не непременно root.",
+    "tailscaleDeviceSelect": "Изберете устройство на Tailscale",
     "tailscaleDeviceSelectPlaceholder": "Изберете устройство...",
-    "tailscaleNoApiKey": "Няма конфигуриран ключ за Tailscale API. Добавете такъв в настройките на администратора, за да активирате откриването на устройства.",
-    "tailscaleDocsLink": "Преглед на документи",
+    "tailscaleNoApiKey": "Не е конфигуриран API ключ за Tailscale. Добавете такъв в Настройките за администратор, за да активирате откриването на устройства.",
+    "tailscaleDocsLink": "Вижте документацията",
     "tailscaleLoadingDevices": "Зареждане на устройства...",
-    "tailscaleDeviceLoadFailed": "Зареждането на устройствата Tailscale не бе успешно. Проверете URL адреса на API и мрежовата връзка.",
-    "tailscaleNoDevices": "Няма намерени устройства във вашата мрежа за контакт.",
+    "tailscaleDeviceLoadFailed": "Грешка при зареждане на устройствата на Tailscale. Проверете URL адреса на API и мрежовата връзка.",
+    "tailscaleNoDevices": "Не са намерени устройства във вашия tailnet.",
     "tailscaleDeviceAutoFill": "Избирането на устройство ще попълни автоматично IP адреса на хоста.",
-    "tailscaleAddHost": "Добавяне на хост",
-    "tailscaleCopyIp": "Копиране на IP адрес на Tailscale",
-    "tailscaleIpCopied": "IP адресът е копиран",
-    "tailscaleIpCopyFailed": "Не можа да се копира IP адресът",
-    "filterAuthTailscale": "Задна скала"
+    "tailscaleAddHost": "Добави хост",
+    "tailscaleCopyIp": "Копирай Tailscale IP",
+    "tailscaleIpCopied": "IP копиран",
+    "tailscaleIpCopyFailed": "Не може да се копира IP адресът",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Изисква се удостоверяване на Tailscale",
-    "tailscaleCheckDescription": "Tailscale SSH изисква допълнителна проверка. Удостоверете се в браузъра си, за да продължите.",
-    "tailscaleCheckOpenBrowser": "Отворете браузъра за удостоверяване",
-    "tailscaleCheckWaiting": "Чака се удостоверяване на Tailscale...",
-    "tailscaleCheckTimeout": "Времето за изчакване на удостоверяването на Tailscale изтече. Моля, опитайте отново."
+    "tailscaleCheckRequired": "Изисква се автентикация на Tailscale",
+    "tailscaleCheckDescription": "Tailscale SSH изисква допълнителна проверка. Автентикирайте се в браузъра си, за да продължите.",
+    "tailscaleCheckOpenBrowser": "Отвори браузър за автентикация",
+    "tailscaleCheckWaiting": "Изчакване на автентикация на Tailscale...",
+    "tailscaleCheckTimeout": "Автентикацията на Tailscale изтече. Моля, опитайте отново."
   },
   "manager": {
-    "title": "Задна скала",
-    "refresh": "Обновяване",
-    "retry": "Опитай отново",
-    "sudoHint": "Задайте парола за sudo за този хост, за да разрешите действия с повишени права.",
-    "noData": "Няма налични данни",
-    "filter": "Филтър...",
+    "title": "Tailscale",
+    "editRequired": "Нуждаете се от достъп за редактиране на този хост, за да го промените",
     "tsNotInstalled": "Tailscale не е инсталиран на този хост",
-    "tsRunning": "Бягане",
-    "tsStopped": "Спряно",
-    "tsEnable": "Свържете се",
-    "tsDisable": "Изключване",
+    "tsRunning": "Активно",
+    "tsStopped": "Спрено",
+    "tsEnable": "Свържи",
+    "tsDisable": "Прекъсни връзката",
     "tsEnabling": "Свързване с Tailscale...",
-    "tsDisabling": "Изключване от Tailscale...",
-    "tsEnabled": "Свързана опашка",
-    "tsDisabled": "Задната скала е изключена",
+    "tsDisabling": "Прекъсване на връзката с Tailscale...",
+    "tsEnabled": "Tailscale е свързан",
+    "tsDisabled": "Tailscale е прекъснат",
     "tsExitNode": "Изходен възел",
     "tsExitNodeActive": "Изходният възел е активен"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Свързване с терминала",
+        "connectToTerminal": "Свържи се с терминала",
         "usernameLabel": "Потребителско име"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Търсене на устройства",
+    "noDeviceMatches": "Няма устройства, които да съвпадат с търсенето ви."
   }
 }

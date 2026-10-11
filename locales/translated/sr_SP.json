@@ -1,89 +1,97 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Погледајте уређаје са задње мреже",
-      "description": "Погледајте уређаје на повезаној задњој мрежи."
+    "devices": {
+      "view": {
+        "title": "Прикажи уређаје у tailnet-у",
+        "description": "Прикажи уређаје на повезаном tailnet-у."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "API за таилскејл",
-      "devices": "Мрежа за реп"
+      "api": "Tailscale API",
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API кључ",
-      "description": "Користи се за навођење уређаја на вашој мрежи. Ради са кључем Tailscale или Headscale.",
-      "placeholder": "тскеј-апи-... / хскеј-апи-..."
+      "description": "Користи се за набрајање уређаја у вашем tailnet-у. Ради са Tailscale или Headscale кључем.",
+      "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "Основни URL API-ја",
-      "description": "Оставите празно за Tailscale. Поставите ово да показује на инстанцу Headscale-а.",
-      "placeholder": "хттпс://апи.таилсцале.цом/апи/в2"
+      "label": "Основна URL адреса API-ја",
+      "description": "Оставите празно за Tailscale. Поставите ово да указује на Headscale инстанцу.",
+      "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Листа уређаја",
-      "checking": "Провера мреже на задњем делу...",
-      "noKey": "Још увек није подешен API кључ.",
-      "error": "Није могуће доћи до мреже Tailnet. Проверите API кључ.",
-      "count": "{{count}} уређај је доступан",
-      "count_other": "{{count}} уређаја доступних",
+      "checking": "Провера tailnet-а...",
+      "noKey": "API кључ још није подешен.",
+      "error": "Не могу да приступим tailnet-у. Проверите API кључ.",
+      "count": {
+        "one": "{{count}} уређај је доступан",
+        "few": "{{count}} уређаја су доступна",
+        "other": "{{count}} уређаја је доступно"
+      },
+      "count_one": "{{count}} уређај је доступан",
+      "count_few": "{{count}} уређаја су доступна",
+      "count_other": "{{count}} уређаја је доступно",
       "refresh": "Провери"
     }
   },
   "nav": {
-    "tailscale": "Репна скала"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Ово мора бити Unix корисник чији је идентитет на Tailscale-у додељен у SSH ACL-у Tailnet-а, не нужно root.",
-    "tailscaleDeviceSelect": "Изаберите уређај Tailscale",
+    "tailscaleUsernameHint": "Ово мора бити Unix корисник коме је ваша Tailscale идентичност додељена у SSH ACL tailnet-а, не нужно root.",
+    "tailscaleDeviceSelect": "Изаберите Tailscale уређај",
     "tailscaleDeviceSelectPlaceholder": "Изаберите уређај...",
-    "tailscaleNoApiKey": "Није конфигурисан Tailscale API кључ. Додајте га у администраторским подешавањима да бисте омогућили откривање уређаја.",
-    "tailscaleDocsLink": "Прикажи документе",
+    "tailscaleNoApiKey": "Није конфигурисан Tailscale API кључ. Додајте га у Админ подешавањима да бисте омогућили откривање уређаја.",
+    "tailscaleDocsLink": "Прикажи документацију",
     "tailscaleLoadingDevices": "Учитавање уређаја...",
-    "tailscaleDeviceLoadFailed": "Учитавање Tailscale уређаја није успело. Проверите API URL и мрежну везу.",
-    "tailscaleNoDevices": "Није пронађен ниједан уређај у вашој мрежи.",
-    "tailscaleDeviceAutoFill": "Избором уређаја ће се аутоматски попунити ИП адреса хоста.",
-    "tailscaleAddHost": "Додај хоста",
-    "tailscaleCopyIp": "Копирај ИП адресу Tailscale-а",
-    "tailscaleIpCopied": "ИП адреса је копирана",
-    "tailscaleIpCopyFailed": "Није могуће копирати ИП адресу",
-    "filterAuthTailscale": "Репна скала"
+    "tailscaleDeviceLoadFailed": "Неуспешно учитавање Tailscale уређаја. Проверите API URL и мрежну везу.",
+    "tailscaleNoDevices": "Није пронађен ниједан уређај у вашем tailnet-у.",
+    "tailscaleDeviceAutoFill": "Изабрањем уређаја ће се аутоматски попунити IP адреса хоста.",
+    "tailscaleAddHost": "Додај хост",
+    "tailscaleCopyIp": "Копирај Tailscale IP",
+    "tailscaleIpCopied": "IP копиран",
+    "tailscaleIpCopyFailed": "Не могу да копирам IP",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Потребна је аутентификација на таилскалу",
+    "tailscaleCheckRequired": "Потребна је Tailscale аутентификација",
     "tailscaleCheckDescription": "Tailscale SSH захтева додатну проверу. Аутентификујте се у прегледачу да бисте наставили.",
-    "tailscaleCheckOpenBrowser": "Отворите прегледач за аутентификацију",
+    "tailscaleCheckOpenBrowser": "Отвори прегледач за аутентификацију",
     "tailscaleCheckWaiting": "Чекање на Tailscale аутентификацију...",
-    "tailscaleCheckTimeout": "Временско ограничење за аутентификацију Tailscale-а је истекло. Молимо покушајте поново."
+    "tailscaleCheckTimeout": "Време за Tailscale аутентификацију је истекло. Покушајте поново."
   },
   "manager": {
-    "title": "Репна скала",
-    "refresh": "Освежи",
-    "retry": "Покушај поново",
-    "sudoHint": "Поставите sudo лозинку за овај хост да бисте омогућили акције са повишеним привилегијама.",
-    "noData": "Нема доступних података",
-    "filter": "Филтер...",
+    "title": "Tailscale",
+    "editRequired": "Потребан вам је приступ за уређивање овог хоста да бисте га променили",
     "tsNotInstalled": "Tailscale није инсталиран на овом хосту",
-    "tsRunning": "Трчање",
+    "tsRunning": "Активно",
     "tsStopped": "Заустављено",
-    "tsEnable": "Повежи се",
+    "tsEnable": "Повези",
     "tsDisable": "Прекини везу",
     "tsEnabling": "Повезивање са Tailscale-ом...",
-    "tsDisabling": "Искључивање из мреже Tailscale...",
-    "tsEnabled": "Повезана је задња скала",
-    "tsDisabled": "Реалскале су искључене",
+    "tsDisabling": "Прекидање везе са Tailscale-ом...",
+    "tsEnabled": "Tailscale је повезан",
+    "tsDisabled": "Tailscale је прекинут",
     "tsExitNode": "Излазни чвор",
     "tsExitNodeActive": "Излазни чвор је активан"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Повежи се са терминалом",
+        "connectToTerminal": "Повези се са терминалом",
         "usernameLabel": "Корисничко име"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Претрага уређаја",
+    "noDeviceMatches": "Ниједан уређај не одговара вашој претрази."
   }
 }

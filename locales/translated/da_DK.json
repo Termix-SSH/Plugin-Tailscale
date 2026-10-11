@@ -1,14 +1,16 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Se tailnet-enheder",
-      "description": "Se enhederne på det tilsluttede halenet."
+    "devices": {
+      "view": {
+        "title": "Se tailnet-enheder",
+        "description": "Se enhederne på det tilsluttede tailnet."
+      }
     }
   },
   "settings": {
     "group": {
       "api": "Tailscale API",
-      "devices": "Halenet"
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API-nøgle",
@@ -17,73 +19,77 @@
     },
     "apiBaseUrl": {
       "label": "API-basis-URL",
-      "description": "Lad være tom for Tailscale. Indstil dette til at pege på en Headscale-instans.",
+      "description": "Lad være tomt for Tailscale. Indstil dette for at pege på en Headscale-instans.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Enhedsliste",
-      "checking": "Tjekker bagnettet...",
-      "noKey": "Ingen API-nøgle angivet endnu.",
+      "checking": "Tjekker tailnet...",
+      "noKey": "Ingen API-nøgle er indstillet endnu.",
       "error": "Kunne ikke nå tailnet. Tjek API-nøglen.",
-      "count": "{{count}} enhed tilgængelig",
+      "count": {
+        "one": "{{count}} enhed tilgængelig",
+        "other": "{{count}} enheder tilgængelige"
+      },
+      "count_one": "{{count}} enhed tilgængelig",
       "count_other": "{{count}} enheder tilgængelige",
-      "refresh": "Check"
+      "refresh": "Tjek"
     }
   },
   "nav": {
-    "tailscale": "Haleskala"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Dette skal være en Unix-bruger, som din Tailscale-identitet er tildelt i tailnets SSH ACL, ikke nødvendigvis root.",
+    "tailscaleUsernameHint": "Dette skal være en Unix-bruger, som din Tailscale-identitet har adgang til i tailnets SSH ACL, ikke nødvendigvis root.",
     "tailscaleDeviceSelect": "Vælg Tailscale-enhed",
     "tailscaleDeviceSelectPlaceholder": "Vælg en enhed...",
-    "tailscaleNoApiKey": "Ingen Tailscale API-nøgle konfigureret. Tilføj en i administratorindstillinger for at aktivere enhedsregistrering.",
-    "tailscaleDocsLink": "Se dokumenter",
+    "tailscaleNoApiKey": "Ingen Tailscale API-nøgle er konfigureret. Tilføj en i Admin-indstillinger for at aktivere enhedsopdagelse.",
+    "tailscaleDocsLink": "Se dokumentation",
     "tailscaleLoadingDevices": "Indlæser enheder...",
-    "tailscaleDeviceLoadFailed": "Kunne ikke indlæse Tailscale-enheder. Kontroller API-URL'en og netværksforbindelsen.",
+    "tailscaleDeviceLoadFailed": "Kunne ikke indlæse Tailscale-enheder. Tjek API-URL'en og netværksforbindelsen.",
     "tailscaleNoDevices": "Ingen enheder fundet i dit tailnet.",
-    "tailscaleDeviceAutoFill": "Hvis du vælger en enhed, udfyldes værtens IP-adresse automatisk.",
+    "tailscaleDeviceAutoFill": "Når du vælger en enhed, udfyldes værtens IP-adresse automatisk.",
     "tailscaleAddHost": "Tilføj vært",
-    "tailscaleCopyIp": "Kopiér Tailscale IP",
+    "tailscaleCopyIp": "Kopiér Tailscale-IP",
     "tailscaleIpCopied": "IP kopieret",
     "tailscaleIpCopyFailed": "Kunne ikke kopiere IP-adressen",
-    "filterAuthTailscale": "Haleskala"
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Tailscale-godkendelse påkrævet",
-    "tailscaleCheckDescription": "Tailscale SSH kræver en yderligere kontrol. Godkend i din browser for at fortsætte.",
-    "tailscaleCheckOpenBrowser": "Åbn browseren for at godkende",
-    "tailscaleCheckWaiting": "Venter på Tailscale-godkendelse...",
-    "tailscaleCheckTimeout": "Tailscale-godkendelsen er udløbet. Prøv igen."
+    "tailscaleCheckRequired": "Tailscale-autentificering påkrævet",
+    "tailscaleCheckDescription": "Tailscale SSH kræver en ekstra kontrol. Autentificer i din browser for at fortsætte.",
+    "tailscaleCheckOpenBrowser": "Åbn browser for at autentificere",
+    "tailscaleCheckWaiting": "Venter på Tailscale-autentificering...",
+    "tailscaleCheckTimeout": "Tailscale-autentificeringen udløb. Prøv venligst igen."
   },
   "manager": {
-    "title": "Haleskala",
-    "refresh": "Opfriske",
-    "retry": "Prøv igen",
-    "sudoHint": "Indstil en sudo-adgangskode til denne vært for at tillade handlinger med administratorrettigheder.",
-    "noData": "Ingen data tilgængelige",
-    "filter": "Filter...",
+    "title": "Tailscale",
+    "editRequired": "Du skal have redigeringsadgang til denne vært for at ændre den",
     "tsNotInstalled": "Tailscale er ikke installeret på denne vært",
-    "tsRunning": "Løb",
-    "tsStopped": "Stoppet",
-    "tsEnable": "Forbinde",
-    "tsDisable": "Afbryde",
+    "tsRunning": "Kører",
+    "tsStopped": "Stopet",
+    "tsEnable": "Forbind",
+    "tsDisable": "Afbryd",
     "tsEnabling": "Forbinder til Tailscale...",
-    "tsDisabling": "Afbryder forbindelsen til Tailscale...",
-    "tsEnabled": "Haleskala forbundet",
-    "tsDisabled": "Haleskalaen er afbrudt",
-    "tsExitNode": "Udgangsnode",
-    "tsExitNodeActive": "Afslut node aktiv"
+    "tsDisabling": "Afbryder forbindelse til Tailscale...",
+    "tsEnabled": "Tailscale forbundet",
+    "tsDisabled": "Tailscale afbrudt",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Exit node aktiv"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Opret forbindelse til terminalen",
+        "connectToTerminal": "Forbind til terminal",
         "usernameLabel": "Brugernavn"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Søg i enheder",
+    "noDeviceMatches": "Ingen enheder matcher din søgning."
   }
 }

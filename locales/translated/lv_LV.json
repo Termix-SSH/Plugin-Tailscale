@@ -1,0 +1,97 @@
+{
+  "permissions": {
+    "devices": {
+      "view": {
+        "title": "Apskatīt tailnet ierīces",
+        "description": "Apskatīt ierīces pieslēgtajā tailnet."
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "api": "Tailscale API",
+      "devices": "Tailnet"
+    },
+    "apiKey": {
+      "label": "API atslēga",
+      "description": "Izmanto, lai uzskaitītu ierīces jūsu tailnet. Darbojas gan ar Tailscale, gan Headscale atslēgu.",
+      "placeholder": "tskey-api-... / hskey-api-..."
+    },
+    "apiBaseUrl": {
+      "label": "API bāzes URL",
+      "description": "Atstājiet tukšu, ja izmantojat Tailscale. Iestatiet šo, lai norādītu uz Headscale instanci.",
+      "placeholder": "https://api.tailscale.com/api/v2"
+    },
+    "devices": {
+      "label": "Ierīču saraksts",
+      "checking": "Pārbauda tailnet...",
+      "noKey": "API atslēga vēl nav iestatīta.",
+      "error": "Nevarēja sasniegt tailnet. Pārbaudiet API atslēgu.",
+      "count": {
+        "zero": "Nav sasniedzamu ierīču",
+        "one": "Sasniedzama {{count}} ierīce",
+        "other": "Sasniedzamas {{count}} ierīces"
+      },
+      "count_zero": "Nav sasniedzamu ierīču",
+      "count_one": "Sasniedzama {{count}} ierīce",
+      "count_other": "Sasniedzamas {{count}} ierīces",
+      "refresh": "Pārbaudīt"
+    }
+  },
+  "nav": {
+    "tailscale": "Tailscale"
+  },
+  "hosts": {
+    "tailscaleUsernameHint": "Šim ir jābūt Unix lietotājam, kuram jūsu Tailscale identitātei ir piekļuve tailnet SSH ACL, ne obligāti root.",
+    "tailscaleDeviceSelect": "Izvēlieties Tailscale ierīci",
+    "tailscaleDeviceSelectPlaceholder": "Izvēlieties ierīci...",
+    "tailscaleNoApiKey": "Nav konfigurēta Tailscale API atslēga. Pievienojiet vienu Administrācijas iestatījumos, lai iespējotu ierīču atklāšanu.",
+    "tailscaleDocsLink": "Apskatīt dokumentāciju",
+    "tailscaleLoadingDevices": "Ielādē ierīces...",
+    "tailscaleDeviceLoadFailed": "Neizdevās ielādēt Tailscale ierīces. Pārbaudiet API URL un tīkla savienojumu.",
+    "tailscaleNoDevices": "Jūsu tailnet nav atrasta neviena ierīce.",
+    "tailscaleDeviceAutoFill": "Izvēloties ierīci, hosta IP adrese tiks aizpildīta automātiski.",
+    "tailscaleAddHost": "Pievienot hostu",
+    "tailscaleCopyIp": "Kopēt Tailscale IP",
+    "tailscaleIpCopied": "IP nokopēts",
+    "tailscaleIpCopyFailed": "Neizdevās nokopēt IP",
+    "filterAuthTailscale": "Tailscale"
+  },
+  "terminal": {
+    "tailscaleCheckRequired": "Nepieciešama Tailscale autentifikācija",
+    "tailscaleCheckDescription": "Tailscale SSH prasa papildu pārbaudi. Autentificējieties pārlūkprogrammā, lai turpinātu.",
+    "tailscaleCheckOpenBrowser": "Atvērt pārlūkprogrammu autentifikācijai",
+    "tailscaleCheckWaiting": "Gaida Tailscale autentifikāciju...",
+    "tailscaleCheckTimeout": "Tailscale autentifikācijas laiks beidzies. Lūdzu, mēģiniet vēlreiz."
+  },
+  "manager": {
+    "title": "Tailscale",
+    "editRequired": "Lai to mainītu, jums ir nepieciešama rediģēšanas piekļuve šim hostam",
+    "tsNotInstalled": "Tailscale nav instalēts šajā hostā",
+    "tsRunning": "Darbojas",
+    "tsStopped": "Apturēts",
+    "tsEnable": "Pieslēgties",
+    "tsDisable": "Atslēgties",
+    "tsEnabling": "Pieslēdzas Tailscale...",
+    "tsDisabling": "Atslēdzas no Tailscale...",
+    "tsEnabled": "Tailscale pieslēgts",
+    "tsDisabled": "Tailscale atslēgts",
+    "tsExitNode": "Izejas mezgls",
+    "tsExitNodeActive": "Izejas mezgls aktīvs"
+  },
+  "newUi": {
+    "sidebar": {
+      "quickConnect": {
+        "connectToTerminal": "Pieslēgties terminālim",
+        "usernameLabel": "Lietotājvārds"
+      }
+    }
+  },
+  "plugin": {
+    "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Meklēt ierīces",
+    "noDeviceMatches": "Nav ierīču, kas atbilstu jūsu meklējumam."
+  }
+}

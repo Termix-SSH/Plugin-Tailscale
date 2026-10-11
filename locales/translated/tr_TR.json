@@ -1,89 +1,95 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Kuyruk ağı cihazlarını görüntüle",
-      "description": "Bağlı kuyruk ağındaki cihazları inceleyin."
+    "devices": {
+      "view": {
+        "title": "Tailnet cihazlarını görüntüle",
+        "description": "Bağlı tailnet'teki cihazları görüntüler."
+      }
     }
   },
   "settings": {
     "group": {
       "api": "Tailscale API",
-      "devices": "Kuyruk ağı"
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API anahtarı",
-      "description": "Tailnet'inizdeki cihazları listelemek için kullanılır. Tailscale veya Headscale anahtarıyla çalışır.",
+      "description": "Tailnet'inizdeki cihazları listelemek için kullanılır. Tailscale veya Headscale anahtarı ile çalışır.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
       "label": "API temel URL'si",
-      "description": "Tailscale için boş bırakın. Bunu bir Headscale örneğine işaret edecek şekilde ayarlayın.",
+      "description": "Tailscale için boş bırakın. Bir Headscale örneğine işaret etmek için bunu ayarlayın.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Cihaz listesi",
-      "checking": "Kuyruk ağını kontrol ediyoruz...",
-      "noKey": "Henüz bir API anahtarı ayarlanmadı.",
+      "checking": "Tailnet kontrol ediliyor...",
+      "noKey": "Henüz API anahtarı ayarlanmadı.",
       "error": "Tailnet'e ulaşılamadı. API anahtarını kontrol edin.",
-      "count": "{{count}} cihaza erişilebilir",
-      "count_other": "{{count}} erişilebilir cihaz",
-      "refresh": "Kontrol etmek"
+      "count": {
+        "one": "{{count}} cihaza ulaşılabiliyor",
+        "other": "{{count}} cihaza ulaşılabiliyor"
+      },
+      "count_one": "{{count}} cihaza ulaşılabiliyor",
+      "count_other": "{{count}} cihaza ulaşılabiliyor",
+      "refresh": "Kontrol et"
     }
   },
   "nav": {
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Bu, Tailscale kimliğinizin tailnet'in SSH erişim kontrol listesinde (ACL) verildiği bir Unix kullanıcısı olmalıdır, mutlaka root olması gerekmez.",
+    "tailscaleUsernameHint": "Bu, tailnet'in SSH ACL'sinde Tailscale kimliğinize verilen bir Unix kullanıcısı olmalıdır, mutlaka root olmak zorunda değildir.",
     "tailscaleDeviceSelect": "Tailscale cihazı seçin",
     "tailscaleDeviceSelectPlaceholder": "Bir cihaz seçin...",
-    "tailscaleNoApiKey": "Tailscale API anahtarı yapılandırılmamış. Cihaz keşfini etkinleştirmek için Yönetici Ayarları'ndan bir tane ekleyin.",
+    "tailscaleNoApiKey": "Tailscale API anahtarı yapılandırılmadı. Cihaz keşfini etkinleştirmek için Yönetici Ayarları'ndan bir tane ekleyin.",
     "tailscaleDocsLink": "Dokümanları görüntüle",
-    "tailscaleLoadingDevices": "Aygıtlar yükleniyor...",
+    "tailscaleLoadingDevices": "Cihazlar yükleniyor...",
     "tailscaleDeviceLoadFailed": "Tailscale cihazları yüklenemedi. API URL'sini ve ağ bağlantısını kontrol edin.",
-    "tailscaleNoDevices": "Tailnet'inizde aygıt bulunamadı.",
-    "tailscaleDeviceAutoFill": "Bir aygıt seçmek, host IP adresini otomatik dolduracaktır.",
-    "tailscaleAddHost": "Sunucu ekle",
-    "tailscaleCopyIp": "Tailscale IP adresini kopyala",
+    "tailscaleNoDevices": "Tailnet'inizde cihaz bulunamadı.",
+    "tailscaleDeviceAutoFill": "Bir cihaz seçildiğinde ana bilgisayar IP adresi otomatik olarak doldurulur.",
+    "tailscaleAddHost": "Ana bilgisayar ekle",
+    "tailscaleCopyIp": "Tailscale IP'sini kopyala",
     "tailscaleIpCopied": "IP kopyalandı",
-    "tailscaleIpCopyFailed": "IP adresi kopyalanamadı.",
+    "tailscaleIpCopyFailed": "IP kopyalanamadı",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Tailscale Kimlik Doğrulaması Gerekli",
-    "tailscaleCheckDescription": "Tailscale SSH ek bir doğrulama gerektiriyor. Devam etmek için tarayıcınızda kimlik doğrulaması yapın.",
-    "tailscaleCheckOpenBrowser": "Kimlik Doğrulaması için Tarayıcı Aç",
-    "tailscaleCheckWaiting": "Tailscale kimlik doğrulamasının tamamlanmasını bekliyoruz...",
-    "tailscaleCheckTimeout": "Tailscale kimlik doğrulama işlemi zaman aşımına uğradı. Lütfen tekrar deneyin."
+    "tailscaleCheckDescription": "Tailscale SSH, ek bir kontrol gerektirir. Devam etmek için tarayıcınızda kimlik doğrulaması yapın.",
+    "tailscaleCheckOpenBrowser": "Kimlik Doğrulama İçin Tarayıcıyı Aç",
+    "tailscaleCheckWaiting": "Tailscale kimlik doğrulaması bekleniyor...",
+    "tailscaleCheckTimeout": "Tailscale kimlik doğrulaması zaman aşımına uğradı. Lütfen tekrar deneyin."
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "Yenile",
-    "retry": "Yeniden dene",
-    "sudoHint": "Bu sunucu için sudo parolası belirleyerek üst düzey işlemlere izin verin.",
-    "noData": "Veri yok",
-    "filter": "Filtrele...",
-    "tsNotInstalled": "Bu sunucuda Tailscale yüklü değil",
+    "editRequired": "Değiştirmek için bu ana bilgisayara düzenleme erişiminiz gerekiyor",
+    "tsNotInstalled": "Tailscale bu ana bilgisayara yüklü değil",
     "tsRunning": "Çalışıyor",
     "tsStopped": "Durduruldu",
     "tsEnable": "Bağlan",
     "tsDisable": "Bağlantıyı kes",
-    "tsEnabling": "Tailscale'e bağlanıyor...",
+    "tsEnabling": "Tailscale'e bağlanılıyor...",
     "tsDisabling": "Tailscale bağlantısı kesiliyor...",
     "tsEnabled": "Tailscale bağlandı",
     "tsDisabled": "Tailscale bağlantısı kesildi",
     "tsExitNode": "Çıkış düğümü",
-    "tsExitNodeActive": "Çıkış düğümü etkin"
+    "tsExitNodeActive": "Çıkış düğümü aktif"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
         "connectToTerminal": "Terminale Bağlan",
-        "usernameLabel": "Kullanıcı Adı"
+        "usernameLabel": "Kullanıcı adı"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Cihazları ara",
+    "noDeviceMatches": "Aramanıza uygun cihaz bulunamadı."
   }
 }

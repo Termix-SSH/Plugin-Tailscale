@@ -1,77 +1,79 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Tailnet eszközök megtekintése",
-      "description": "Tekintse meg a csatlakoztatott hátsó hálózaton lévő eszközöket."
+    "devices": {
+      "view": {
+        "title": "Tailnet eszközök megtekintése",
+        "description": "A csatlakozott tailneten lévő eszközök megtekintése."
+      }
     }
   },
   "settings": {
     "group": {
       "api": "Tailscale API",
-      "devices": "Farokháló"
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "API-kulcs",
-      "description": "A farokhálózaton lévő eszközök listázására szolgál. Tailscale vagy Headscale kulccsal működik.",
+      "description": "A tailneten lévő eszközök listázásához használják. Tailscale- vagy Headscale-kulccsal is működik.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "API alap URL",
-      "description": "Tailscale esetén hagyja üresen. Állítsa be úgy, hogy egy Headscale példányra mutasson.",
+      "label": "API alap-URL",
+      "description": "Hagyja üresen a Tailscale esetén. Állítsa be egy Headscale példány megadásához.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Eszközlista",
-      "checking": "A farokháló ellenőrzése...",
-      "noKey": "Még nincs beállítva API-kulcs.",
-      "error": "Nem sikerült elérni a farokhálózatot. Ellenőrizze az API-kulcsot.",
-      "count": "{{count}} eszköz elérhető",
-      "count_other": "{{count}} elérhető eszközök",
+      "checking": "A tailnet ellenőrzése...",
+      "noKey": "Még nincs API-kulcs beállítva.",
+      "error": "Nem érhető el a tailnet. Ellenőrizze az API-kulcsot.",
+      "count": {
+        "one": "{{count}} eszköz elérhető",
+        "other": "{{count}} eszköz elérhető"
+      },
+      "count_one": "{{count}} eszköz elérhető",
+      "count_other": "{{count}} eszköz elérhető",
       "refresh": "Ellenőrzés"
     }
   },
   "nav": {
-    "tailscale": "Farokskála"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Ennek Unix felhasználónak kell lennie, akinek a Tailscale identitását a tailnet SSH ACL-jében adták meg, nem feltétlenül root felhasználónak.",
+    "tailscaleUsernameHint": "Ez egy Unix felhasználónévnek kell lennie, amelyet a tailnet SSH ACL-je engedélyez a Tailscale identitásának, nem feltétlenül a root.",
     "tailscaleDeviceSelect": "Tailscale eszköz kiválasztása",
     "tailscaleDeviceSelectPlaceholder": "Válasszon egy eszközt...",
-    "tailscaleNoApiKey": "Nincs konfigurálva Tailscale API-kulcs. Adjon hozzá egyet az adminisztrátori beállításokban az eszközfelderítés engedélyezéséhez.",
-    "tailscaleDocsLink": "Dokumentumok megtekintése",
+    "tailscaleNoApiKey": "Nincs konfigurált Tailscale API-kulcs. Adjon hozzá egyet az Admin beállításokban az eszközfeltárás engedélyezéséhez.",
+    "tailscaleDocsLink": "Dokumentáció megtekintése",
     "tailscaleLoadingDevices": "Eszközök betöltése...",
     "tailscaleDeviceLoadFailed": "Nem sikerült betölteni a Tailscale eszközöket. Ellenőrizze az API URL-t és a hálózati kapcsolatot.",
-    "tailscaleNoDevices": "Nem találhatók eszközök a hátsó hálózatban.",
-    "tailscaleDeviceAutoFill": "Egy eszköz kiválasztása automatikusan kitölti a gazdagép IP-címét.",
+    "tailscaleNoDevices": "Nem található eszköz a tailnetben.",
+    "tailscaleDeviceAutoFill": "Az eszköz kiválasztása automatikusan kitölti a gazdagép IP-címét.",
     "tailscaleAddHost": "Gazdagép hozzáadása",
     "tailscaleCopyIp": "Tailscale IP másolása",
-    "tailscaleIpCopied": "IP-cím lemásolva",
+    "tailscaleIpCopied": "IP másolva",
     "tailscaleIpCopyFailed": "Nem sikerült másolni az IP-címet",
-    "filterAuthTailscale": "Farokskála"
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Tailscale hitelesítés szükséges",
-    "tailscaleCheckDescription": "A Tailscale SSH további ellenőrzést igényel. A folytatáshoz hitelesítse magát a böngészőjében.",
+    "tailscaleCheckDescription": "A Tailscale SSH további ellenőrzést igényel. Hitelesítsen a böngészőben a folytatáshoz.",
     "tailscaleCheckOpenBrowser": "Böngésző megnyitása a hitelesítéshez",
-    "tailscaleCheckWaiting": "Tailscale hitelesítésre várunk...",
-    "tailscaleCheckTimeout": "A farokskálázási hitelesítés időtúllépést okozott. Próbálja újra."
+    "tailscaleCheckWaiting": "Várakozás a Tailscale hitelesítésre...",
+    "tailscaleCheckTimeout": "A Tailscale hitelesítés időtúllépése. Kérjük, próbálja újra."
   },
   "manager": {
-    "title": "Farokskála",
-    "refresh": "Frissítés",
-    "retry": "Újrapróbálkozás",
-    "sudoHint": "Állítson be egy sudo jelszót ehhez a gazdagéphez a magasabb szintű műveletek engedélyezéséhez.",
-    "noData": "Nincsenek elérhető adatok",
-    "filter": "Szűrő...",
-    "tsNotInstalled": "A Tailscale nincs telepítve erre a gazdagépre",
-    "tsRunning": "Futás",
+    "title": "Tailscale",
+    "editRequired": "Szerkesztési hozzáférésre van szüksége ehhez a gazdagéphez a módosításhoz",
+    "tsNotInstalled": "A Tailscale nincs telepítve ezen a gazdagépen",
+    "tsRunning": "Fut",
     "tsStopped": "Leállítva",
     "tsEnable": "Csatlakozás",
     "tsDisable": "Leválasztás",
-    "tsEnabling": "Kapcsolódás a Tailscale-hez...",
-    "tsDisabling": "Lecsatlakozás a Tailscale-ről...",
-    "tsEnabled": "Farokméret csatlakoztatva",
-    "tsDisabled": "Farokváz leválasztva",
+    "tsEnabling": "Csatlakozás a Tailscale-hez...",
+    "tsDisabling": "Leválasztás a Tailscale-ról...",
+    "tsEnabled": "Tailscale csatlakoztatva",
+    "tsDisabled": "Tailscale leválasztva",
     "tsExitNode": "Kilépési csomópont",
     "tsExitNodeActive": "Kilépési csomópont aktív"
   },
@@ -85,5 +87,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Eszközök keresése",
+    "noDeviceMatches": "Nincs eszköz, amely illeszkedne a kereséshez."
   }
 }

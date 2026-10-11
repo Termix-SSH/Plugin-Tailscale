@@ -1,0 +1,95 @@
+{
+  "permissions": {
+    "devices": {
+      "view": {
+        "title": "Vaata tailneti seadmeid",
+        "description": "Kuva ühendatud tailneti seadmed."
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "api": "Tailscale'i API",
+      "devices": "Tailnet"
+    },
+    "apiKey": {
+      "label": "API- võti",
+      "description": "Kasutatakse sinu tailneti seadmete loetlemiseks. Töötab nii Tailscale'i kui ka Headscale'i võtmega.",
+      "placeholder": "tskey-api-... / hskey-api-..."
+    },
+    "apiBaseUrl": {
+      "label": "API baas-URL",
+      "description": "Jäta tühjaks Tailscale'i puhul. Määra see, kui kasutad Headscale'i instantsi.",
+      "placeholder": "https://api.tailscale.com/api/v2"
+    },
+    "devices": {
+      "label": "Seadmete nimekiri",
+      "checking": "Tailneti kontrollimine...",
+      "noKey": "API-võtit pole veel määratud.",
+      "error": "Tailnetiga ei õnnestunud ühendust saada. Kontrolli API-võtit.",
+      "count": {
+        "one": "{{count}} seade on saadaval",
+        "other": "{{count}} seadet on saadaval"
+      },
+      "count_one": "{{count}} seade on saadaval",
+      "count_other": "{{count}} seadet on saadaval",
+      "refresh": "Kontrolli"
+    }
+  },
+  "nav": {
+    "tailscale": "Tailscale"
+  },
+  "hosts": {
+    "tailscaleUsernameHint": "See peab olema Unixi kasutaja, kellele on tailneti SSH ACL-is antud Tailscale'i identiteet, mitte tingimata root.",
+    "tailscaleDeviceSelect": "Vali Tailscale'i seade",
+    "tailscaleDeviceSelectPlaceholder": "Vali seade...",
+    "tailscaleNoApiKey": "Tailscale'i API-võtit ei ole konfigureeritud. Lisa see haldaja seadetes, et lubada seadmete avastamine.",
+    "tailscaleDocsLink": "Vaata dokumentatsiooni",
+    "tailscaleLoadingDevices": "Seadmete laadimine...",
+    "tailscaleDeviceLoadFailed": "Tailscale'i seadmete laadimine ebaõnnestus. Kontrolli API-URL-i ja võrguühendust.",
+    "tailscaleNoDevices": "Sinu tailnetist ei leitud ühtegi seadet.",
+    "tailscaleDeviceAutoFill": "Seadme valimine täidab hosti IP-aadressi automaatselt.",
+    "tailscaleAddHost": "Lisa host",
+    "tailscaleCopyIp": "Kopeeri Tailscale'i IP",
+    "tailscaleIpCopied": "IP kopeeritud",
+    "tailscaleIpCopyFailed": "IP-d ei õnnestunud kopeerida",
+    "filterAuthTailscale": "Tailscale"
+  },
+  "terminal": {
+    "tailscaleCheckRequired": "Tailscale'i autentimine on nõutud",
+    "tailscaleCheckDescription": "Tailscale'i SSH nõuab täiendavat kontrolli. Autendige oma brauseris, et jätkata.",
+    "tailscaleCheckOpenBrowser": "Ava brauser autentimiseks",
+    "tailscaleCheckWaiting": "Ootame Tailscale'i autentimist...",
+    "tailscaleCheckTimeout": "Tailscale'i autentumine aegus. Palun proovi uuesti."
+  },
+  "manager": {
+    "title": "Tailscale",
+    "editRequired": "Selle hosti muutmiseks on sul vaja muutmise õigusi",
+    "tsNotInstalled": "Tailscale'i ei ole sellel hostil installitud",
+    "tsRunning": "Töötab",
+    "tsStopped": "Peatatud",
+    "tsEnable": "Ühenda",
+    "tsDisable": "Katkesta ühendus",
+    "tsEnabling": "Ühendamine Tailscale'iga...",
+    "tsDisabling": "Ühenduse katkestamine Tailscale'iga...",
+    "tsEnabled": "Tailscale on ühendatud",
+    "tsDisabled": "Tailscale'i ühendus on katkestatud",
+    "tsExitNode": "Väljumissõlm",
+    "tsExitNodeActive": "Väljumissõlm on aktiivne"
+  },
+  "newUi": {
+    "sidebar": {
+      "quickConnect": {
+        "connectToTerminal": "Ühenda terminaliga",
+        "usernameLabel": "Kasutajanimi"
+      }
+    }
+  },
+  "plugin": {
+    "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Otsi seadmeid",
+    "noDeviceMatches": "Ükski seade ei vasta sinu otsingule."
+  }
+}

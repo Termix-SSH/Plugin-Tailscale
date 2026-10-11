@@ -1,71 +1,75 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Visualizza i dispositivi tailnet",
-      "description": "Visualizza i dispositivi sulla tailnet connessa."
+    "devices": {
+      "view": {
+        "title": "Visualizza i dispositivi della tailnet",
+        "description": "Visualizza i dispositivi sulla tailnet connessa."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "API di Tailscale",
+      "api": "API Tailscale",
       "devices": "Tailnet"
     },
     "apiKey": {
       "label": "Chiave API",
-      "description": "Utilizzato per elencare i dispositivi presenti nella tua rete di coda. Funziona con una chiave Tailscale o Headscale.",
+      "description": "Utilizzata per elencare i dispositivi sulla tua tailnet. Funziona con una chiave Tailscale o Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
-      "label": "URL di base dell'API",
-      "description": "Lascia vuoto per Tailscale. Imposta questo campo in modo che punti a un'istanza di Headscale.",
+      "label": "URL base API",
+      "description": "Lascia vuoto per Tailscale. Imposta questo valore per puntare a un'istanza Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
-      "label": "Elenco dei dispositivi",
-      "checking": "Controllo della rete di coda...",
-      "noKey": "Non è ancora stata impostata alcuna chiave API.",
-      "error": "Impossibile raggiungere la rete locale. Verificare la chiave API.",
-      "count": "{{count}} dispositivo raggiungibile",
+      "label": "Elenco dispositivi",
+      "checking": "Verifica della tailnet in corso...",
+      "noKey": "Nessuna chiave API impostata.",
+      "error": "Impossibile raggiungere la tailnet. Controlla la chiave API.",
+      "count": {
+        "one": "{{count}} dispositivo raggiungibile",
+        "many": "{{count}} dispositivi raggiungibili",
+        "other": "{{count}} dispositivi raggiungibili"
+      },
+      "count_one": "{{count}} dispositivo raggiungibile",
+      "count_many": "{{count}} dispositivi raggiungibili",
       "count_other": "{{count}} dispositivi raggiungibili",
-      "refresh": "Controllo"
+      "refresh": "Verifica"
     }
   },
   "nav": {
     "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Deve trattarsi di un utente Unix a cui è concessa l'identità Tailscale nell'ACL SSH di Tailnet, non necessariamente root.",
+    "tailscaleUsernameHint": "Questo deve essere un utente Unix a cui la tua identità Tailscale è stata concessa nell'ACL SSH della tailnet, non necessariamente root.",
     "tailscaleDeviceSelect": "Seleziona dispositivo Tailscale",
     "tailscaleDeviceSelectPlaceholder": "Seleziona un dispositivo...",
-    "tailscaleNoApiKey": "Nessuna chiave API Tailscale configurata. Aggiungine una in Impostazioni amministratore per abilitare il rilevamento dispositivi.",
+    "tailscaleNoApiKey": "Nessuna chiave API Tailscale configurata. Aggiungine una nelle Impostazioni amministratore per abilitare la scoperta dei dispositivi.",
     "tailscaleDocsLink": "Visualizza documentazione",
     "tailscaleLoadingDevices": "Caricamento dispositivi...",
-    "tailscaleDeviceLoadFailed": "Impossibile caricare i dispositivi Tailscale. Verificare l'URL dell'API e la connessione di rete.",
-    "tailscaleNoDevices": "Nessun dispositivo trovato nel tuo tailnet.",
-    "tailscaleDeviceAutoFill": "Selezionando un dispositivo l'indirizzo IP dell'host verrà compilato automaticamente.",
+    "tailscaleDeviceLoadFailed": "Impossibile caricare i dispositivi Tailscale. Controlla l'URL API e la connessione di rete.",
+    "tailscaleNoDevices": "Nessun dispositivo trovato nella tua tailnet.",
+    "tailscaleDeviceAutoFill": "Selezionando un dispositivo, l'indirizzo IP dell'host verrà compilato automaticamente.",
     "tailscaleAddHost": "Aggiungi host",
-    "tailscaleCopyIp": "Copia la proprietà intellettuale di Tailscale",
+    "tailscaleCopyIp": "Copia IP Tailscale",
     "tailscaleIpCopied": "IP copiato",
-    "tailscaleIpCopyFailed": "Impossibile copiare l'indirizzo IP",
+    "tailscaleIpCopyFailed": "Impossibile copiare l'IP",
     "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
     "tailscaleCheckRequired": "Autenticazione Tailscale richiesta",
-    "tailscaleCheckDescription": "Tailscale SSH richiede un controllo aggiuntivo. Autenticati nel tuo browser per continuare.",
+    "tailscaleCheckDescription": "SSH Tailscale richiede un controllo aggiuntivo. Autenticati nel browser per continuare.",
     "tailscaleCheckOpenBrowser": "Apri il browser per autenticarti",
-    "tailscaleCheckWaiting": "In attesa dell'autenticazione di Tailscale...",
-    "tailscaleCheckTimeout": "Autenticazione di Tailscale scaduta. Riprova."
+    "tailscaleCheckWaiting": "In attesa dell'autenticazione Tailscale...",
+    "tailscaleCheckTimeout": "Timeout dell'autenticazione Tailscale. Riprova."
   },
   "manager": {
     "title": "Tailscale",
-    "refresh": "Aggiorna",
-    "retry": "Riprova",
-    "sudoHint": "Imposta una password sudo per questo host per consentire azioni con privilegi elevati.",
-    "noData": "Nessun dato disponibile",
-    "filter": "Filtra...",
+    "editRequired": "È necessario avere l'accesso in modifica a questo host per apportare modifiche",
     "tsNotInstalled": "Tailscale non è installato su questo host",
     "tsRunning": "In esecuzione",
-    "tsStopped": "Arrestato",
+    "tsStopped": "Fermato",
     "tsEnable": "Connetti",
     "tsDisable": "Disconnetti",
     "tsEnabling": "Connessione a Tailscale in corso...",
@@ -85,5 +89,9 @@
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Cerca dispositivi",
+    "noDeviceMatches": "Nessun dispositivo corrisponde alla tua ricerca."
   }
 }

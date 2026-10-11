@@ -1,89 +1,97 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Veure dispositius de xarxa de cua",
-      "description": "Veureu els dispositius de la xarxa de cua connectada."
+    "devices": {
+      "view": {
+        "title": "Veure els dispositius del tailnet",
+        "description": "Veure els dispositius del tailnet connectat."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "API de tailscal",
-      "devices": "Xarxa de cua"
+      "api": "API de Tailscale",
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "Clau API",
-      "description": "S'utilitza per llistar els dispositius de la xarxa de tailnet. Funciona amb una clau Tailscale o Headscale.",
+      "description": "S'utilitza per llistar els dispositius del vostre tailnet. Funciona amb una clau de Tailscale o Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
       "label": "URL base de l'API",
-      "description": "Deixeu-ho en blanc per a Tailscale. Defineu-ho perquè apunti a una instància de Headscale.",
+      "description": "Deixeu-ho buit per a Tailscale. Establiu-ho per apuntar a una instància de Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Llista de dispositius",
-      "checking": "Revisant la xarxa de cua...",
-      "noKey": "Encara no s'ha definit cap clau API.",
-      "error": "No s'ha pogut accedir a la xarxa de cua. Comproveu la clau API.",
-      "count": "dispositiu {{count}} accessible",
-      "count_other": "dispositius accessibles {{count}}",
+      "checking": "Comprovant el tailnet...",
+      "noKey": "Encara no s'ha configurat cap clau API.",
+      "error": "No s'ha pogut accedir al tailnet. Comproveu la clau API.",
+      "count": {
+        "one": "{{count}} dispositiu accessible",
+        "many": "{{count}} dispositius accessibles",
+        "other": "{{count}} dispositius accessibles"
+      },
+      "count_one": "{{count}} dispositiu accessible",
+      "count_many": "{{count}} dispositius accessibles",
+      "count_other": "{{count}} dispositius accessibles",
       "refresh": "Comprovar"
     }
   },
   "nav": {
-    "tailscale": "Escala de cua"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Aquest ha de ser un usuari d'Unix; la teva identitat Tailscale està atorgada a l'ACL SSH de la xarxa principal, no necessàriament un usuari root.",
-    "tailscaleDeviceSelect": "Selecciona el dispositiu Tailscale",
-    "tailscaleDeviceSelectPlaceholder": "Selecciona un dispositiu...",
-    "tailscaleNoApiKey": "No hi ha cap clau d'API de Tailscale configurada. Afegeix-ne una a la configuració de l'administrador per habilitar la detecció de dispositius.",
-    "tailscaleDocsLink": "Veure documents",
-    "tailscaleLoadingDevices": "S'estan carregant els dispositius...",
-    "tailscaleDeviceLoadFailed": "No s'han pogut carregar els dispositius Tailscale. Comproveu l'URL de l'API i la connexió de xarxa.",
-    "tailscaleNoDevices": "No s'han trobat dispositius a la xarxa de cua.",
-    "tailscaleDeviceAutoFill": "En seleccionar un dispositiu, l'adreça IP de l'amfitrió s'omplirà automàticament.",
-    "tailscaleAddHost": "Afegeix un amfitrió",
-    "tailscaleCopyIp": "Copia IP de tailscal",
+    "tailscaleUsernameHint": "Això ha de ser un usuari Unix al qual s'ha concedit la identitat de Tailscale a l'ACL d'SSH del tailnet, no necessàriament root.",
+    "tailscaleDeviceSelect": "Seleccioneu un dispositiu de Tailscale",
+    "tailscaleDeviceSelectPlaceholder": "Seleccioneu un dispositiu...",
+    "tailscaleNoApiKey": "No s'ha configurat cap clau API de Tailscale. Afegiu-ne una a la Configuració d'administrador per habilitar la detecció de dispositius.",
+    "tailscaleDocsLink": "Veure la documentació",
+    "tailscaleLoadingDevices": "Carregant dispositius...",
+    "tailscaleDeviceLoadFailed": "No s'han pogut carregar els dispositius de Tailscale. Comproveu l'URL de l'API i la connexió de xarxa.",
+    "tailscaleNoDevices": "No s'han trobat dispositius al vostre tailnet.",
+    "tailscaleDeviceAutoFill": "En seleccionar un dispositiu, s'omplirà automàticament l'adreça IP de l'amfitrió.",
+    "tailscaleAddHost": "Afegir amfitrió",
+    "tailscaleCopyIp": "Copiar l'IP de Tailscale",
     "tailscaleIpCopied": "IP copiada",
-    "tailscaleIpCopyFailed": "No s'ha pogut copiar la IP",
-    "filterAuthTailscale": "Escala de cua"
+    "tailscaleIpCopyFailed": "No s'ha pogut copiar l'IP",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Autenticació a escala final requerida",
-    "tailscaleCheckDescription": "L'SSH a escala de punta requereix una comprovació addicional. Autentiqueu-vos al navegador per continuar.",
-    "tailscaleCheckOpenBrowser": "Obre el navegador per autenticar-te",
+    "tailscaleCheckRequired": "Es requereix l'autenticació de Tailscale",
+    "tailscaleCheckDescription": "L'SSH de Tailscale requereix una comprovació addicional. Autentiqueu-vos al navegador per continuar.",
+    "tailscaleCheckOpenBrowser": "Obrir el navegador per autenticar-se",
     "tailscaleCheckWaiting": "Esperant l'autenticació de Tailscale...",
-    "tailscaleCheckTimeout": "S'ha esgotat el temps d'espera de l'autenticació a escala final. Torna-ho a provar."
+    "tailscaleCheckTimeout": "L'autenticació de Tailscale ha caducat. Torneu-ho a intentar."
   },
   "manager": {
-    "title": "Escala de cua",
-    "refresh": "Actualitza",
-    "retry": "Torna-ho a intentar",
-    "sudoHint": "Estableix una contrasenya sudo per a aquest host per permetre accions amb privilegis elevats.",
-    "noData": "No hi ha dades disponibles",
-    "filter": "Filtra...",
+    "title": "Tailscale",
+    "editRequired": "Necessiteu accés d'edició a aquest amfitrió per modificar-lo",
     "tsNotInstalled": "Tailscale no està instal·lat en aquest amfitrió",
-    "tsRunning": "Córrer",
+    "tsRunning": "En execució",
     "tsStopped": "Aturat",
-    "tsEnable": "Connecta",
-    "tsDisable": "Desconnecta",
+    "tsEnable": "Connectar",
+    "tsDisable": "Desconnectar",
     "tsEnabling": "Connectant a Tailscale...",
     "tsDisabling": "Desconnectant de Tailscale...",
-    "tsEnabled": "Escala de cua connectada",
-    "tsDisabled": "Escala de cua desconnectada",
+    "tsEnabled": "Tailscale connectat",
+    "tsDisabled": "Tailscale desconnectat",
     "tsExitNode": "Node de sortida",
     "tsExitNodeActive": "Node de sortida actiu"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Connecta't al terminal",
+        "connectToTerminal": "Connectar al terminal",
         "usernameLabel": "Nom d'usuari"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Cercar dispositius",
+    "noDeviceMatches": "Cap dispositiu no coincideix amb la cerca."
   }
 }

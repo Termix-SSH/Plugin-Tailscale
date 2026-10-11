@@ -1,0 +1,97 @@
+{
+  "permissions": {
+    "devices": {
+      "view": {
+        "title": "Pregled uređaja u tailnetu",
+        "description": "Prikaži uređaje u povezanom tailnetu."
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "api": "Tailscale API",
+      "devices": "Tailnet"
+    },
+    "apiKey": {
+      "label": "API ključ",
+      "description": "Koristi se za izlistavanje uređaja u vašem tailnetu. Radi s Tailscale ili Headscale ključem.",
+      "placeholder": "tskey-api-... / hskey-api-..."
+    },
+    "apiBaseUrl": {
+      "label": "Osnovni URL API-ja",
+      "description": "Ostavite prazno za Tailscale. Postavite ovo za povezivanje na Headscale instancu.",
+      "placeholder": "https://api.tailscale.com/api/v2"
+    },
+    "devices": {
+      "label": "Popis uređaja",
+      "checking": "Provjera tailneta...",
+      "noKey": "API ključ još nije postavljen.",
+      "error": "Nije moguće doseći tailnet. Provjerite API ključ.",
+      "count": {
+        "one": "{{count}} uređaj dostupan",
+        "few": "{{count}} uređaja dostupna",
+        "other": "{{count}} uređaja dostupno"
+      },
+      "count_one": "{{count}} uređaj dostupan",
+      "count_few": "{{count}} uređaja dostupna",
+      "count_other": "{{count}} uređaja dostupno",
+      "refresh": "Provjeri"
+    }
+  },
+  "nav": {
+    "tailscale": "Tailscale"
+  },
+  "hosts": {
+    "tailscaleUsernameHint": "Ovo mora biti Unix korisnik kojem je vaš Tailscale identitet dodijeljen u SSH ACL-u tailneta, ne nužno root.",
+    "tailscaleDeviceSelect": "Odaberi Tailscale uređaj",
+    "tailscaleDeviceSelectPlaceholder": "Odaberi uređaj...",
+    "tailscaleNoApiKey": "Nije konfiguriran Tailscale API ključ. Dodajte ga u Admin postavkama za omogućavanje otkrivanja uređaja.",
+    "tailscaleDocsLink": "Prikaži dokumentaciju",
+    "tailscaleLoadingDevices": "Učitavanje uređaja...",
+    "tailscaleDeviceLoadFailed": "Neuspjelo učitavanje Tailscale uređaja. Provjerite API URL i mrežnu vezu.",
+    "tailscaleNoDevices": "Nema pronađenih uređaja u vašem tailnetu.",
+    "tailscaleDeviceAutoFill": "Odabirom uređaja automatski će se popuniti IP adresa hosta.",
+    "tailscaleAddHost": "Dodaj host",
+    "tailscaleCopyIp": "Kopiraj Tailscale IP",
+    "tailscaleIpCopied": "IP kopiran",
+    "tailscaleIpCopyFailed": "Nije moguće kopirati IP",
+    "filterAuthTailscale": "Tailscale"
+  },
+  "terminal": {
+    "tailscaleCheckRequired": "Potrebna je Tailscale autentifikacija",
+    "tailscaleCheckDescription": "Tailscale SSH zahtijeva dodatnu provjeru. Autentificirajte se u pregledniku za nastavak.",
+    "tailscaleCheckOpenBrowser": "Otvori preglednik za autentifikaciju",
+    "tailscaleCheckWaiting": "Čekanje na Tailscale autentifikaciju...",
+    "tailscaleCheckTimeout": "Vrijeme za Tailscale autentifikaciju je isteklo. Pokušajte ponovno."
+  },
+  "manager": {
+    "title": "Tailscale",
+    "editRequired": "Potrebna vam je dozvola za uređivanje ovog hosta kako biste ga promijenili",
+    "tsNotInstalled": "Tailscale nije instaliran na ovom hostu",
+    "tsRunning": "Pokrenuto",
+    "tsStopped": "Zaustavljeno",
+    "tsEnable": "Poveži",
+    "tsDisable": "Prekini vezu",
+    "tsEnabling": "Povezivanje s Tailscaleom...",
+    "tsDisabling": "Prekidanje veze s Tailscaleom...",
+    "tsEnabled": "Tailscale povezan",
+    "tsDisabled": "Tailscale odspojen",
+    "tsExitNode": "Izlazni čvor",
+    "tsExitNodeActive": "Izlazni čvor aktivan"
+  },
+  "newUi": {
+    "sidebar": {
+      "quickConnect": {
+        "connectToTerminal": "Poveži se s terminalom",
+        "usernameLabel": "Korisničko ime"
+      }
+    }
+  },
+  "plugin": {
+    "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Pretraži uređaje",
+    "noDeviceMatches": "Nema uređaja koji odgovaraju vašoj pretrazi."
+  }
+}

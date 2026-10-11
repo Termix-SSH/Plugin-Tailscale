@@ -1,89 +1,99 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Zobrazit zařízení pro zadní část vozu",
-      "description": "Podívejte se na zařízení v připojené koncové síti (tailnet)."
+    "devices": {
+      "view": {
+        "title": "Zobrazit zařízení tailnetu",
+        "description": "Zobrazit zařízení v připojeném tailnetu."
+      }
     }
   },
   "settings": {
     "group": {
-      "api": "API pro koncové systémy",
+      "api": "Tailscale API",
       "devices": "Tailnet"
     },
     "apiKey": {
-      "label": "Klíč API",
-      "description": "Používá se k zobrazení seznamu zařízení v síti Tailnet. Funguje s klíčem Tailscale nebo Headscale.",
+      "label": "API klíč",
+      "description": "Používá se k výpisu zařízení ve vašem tailnetu. Funguje s klíčem Tailscale nebo Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
       "label": "Základní URL API",
-      "description": "Pro Tailscale nechte prázdné. Nastavte tak, aby ukazovalo na instanci Headscale.",
+      "description": "Nechte prázdné pro Tailscale. Nastavte tuto hodnotu pro ukázání na instanci Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Seznam zařízení",
-      "checking": "Kontrola zadní sítě...",
-      "noKey": "Zatím nebyl nastaven žádný klíč API.",
-      "error": "Nepodařilo se dosáhnout sítě Tailnet. Zkontrolujte klíč API.",
-      "count": "{{count}} zařízení je dosažitelné",
-      "count_other": "{{count}} zařízení dosažitelných",
-      "refresh": "Kontrola"
+      "checking": "Kontrola tailnetu...",
+      "noKey": "API klíč ještě není nastaven.",
+      "error": "Nelze se připojit k tailnetu. Zkontrolujte API klíč.",
+      "count": {
+        "one": "{{count}} dosažitelné zařízení",
+        "few": "{{count}} dosažitelná zařízení",
+        "many": "{{count}} dosažitelných zařízení",
+        "other": "{{count}} dosažitelných zařízení"
+      },
+      "count_one": "{{count}} dosažitelné zařízení",
+      "count_few": "{{count}} dosažitelná zařízení",
+      "count_many": "{{count}} dosažitelných zařízení",
+      "count_other": "{{count}} dosažitelných zařízení",
+      "refresh": "Zkontrolovat"
     }
   },
   "nav": {
-    "tailscale": "Koncová stupnice"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Musí se jednat o uživatele Unixu, kterému je vaše identita Tailscale udělena v SSH ACL tailnetu, nikoli nutně o uživatele root.",
-    "tailscaleDeviceSelect": "Vyberte zařízení Tailscale",
+    "tailscaleUsernameHint": "Toto musí být Unixový uživatel, kterému je vaše Tailscale identita udělena v SSH ACL tailnetu, nutně ne root.",
+    "tailscaleDeviceSelect": "Vybrat zařízení Tailscale",
     "tailscaleDeviceSelectPlaceholder": "Vyberte zařízení...",
-    "tailscaleNoApiKey": "Není nakonfigurován žádný klíč Tailscale API. Přidejte jej v nastavení správce, abyste povolili vyhledávání zařízení.",
-    "tailscaleDocsLink": "Zobrazit dokumenty",
+    "tailscaleNoApiKey": "Není nakonfigurován žádný API klíč Tailscale. Přidejte jeden v Nastavení správce pro povolení objevování zařízení.",
+    "tailscaleDocsLink": "Zobrazit dokumentaci",
     "tailscaleLoadingDevices": "Načítání zařízení...",
     "tailscaleDeviceLoadFailed": "Nepodařilo se načíst zařízení Tailscale. Zkontrolujte URL API a síťové připojení.",
-    "tailscaleNoDevices": "Ve vaší koncové síti nebyla nalezena žádná zařízení.",
-    "tailscaleDeviceAutoFill": "Výběrem zařízení se automaticky vyplní IP adresa hostitele.",
+    "tailscaleNoDevices": "Ve vašem tailnetu nebyla nalezena žádná zařízení.",
+    "tailscaleDeviceAutoFill": "Vybráním zařízení se automaticky vyplní IP adresa hostitele.",
     "tailscaleAddHost": "Přidat hostitele",
     "tailscaleCopyIp": "Kopírovat IP adresu Tailscale",
-    "tailscaleIpCopied": "IP adresa zkopírována",
-    "tailscaleIpCopyFailed": "Nepodařilo se zkopírovat IP adresu",
-    "filterAuthTailscale": "Koncová stupnice"
+    "tailscaleIpCopied": "IP zkopírována",
+    "tailscaleIpCopyFailed": "Nelze zkopírovat IP adresu",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Vyžadováno ověřování Tailscale",
-    "tailscaleCheckDescription": "Tailscale SSH vyžaduje dodatečnou kontrolu. Pro pokračování se ověřte ve svém prohlížeči.",
+    "tailscaleCheckRequired": "Je vyžadováno ověření Tailscale",
+    "tailscaleCheckDescription": "SSH přes Tailscale vyžaduje další kontrolu. Ověřte se ve svém prohlížeči pro pokračování.",
     "tailscaleCheckOpenBrowser": "Otevřít prohlížeč pro ověření",
     "tailscaleCheckWaiting": "Čekání na ověření Tailscale...",
-    "tailscaleCheckTimeout": "Časový limit pro ověřování Tailscale vypršel. Zkuste to prosím znovu."
+    "tailscaleCheckTimeout": "Časový limit ověření Tailscale vypršel. Zkuste to prosím znovu."
   },
   "manager": {
-    "title": "Koncová stupnice",
-    "refresh": "Obnovit",
-    "retry": "Zkusit znovu",
-    "sudoHint": "Nastavte pro tento hostitel heslo sudo, abyste povolili akce se zvýšenými oprávněními.",
-    "noData": "Nejsou k dispozici žádná data",
-    "filter": "Filtr...",
+    "title": "Tailscale",
+    "editRequired": "Pro změnu tohoto hostitele potřebujete oprávnění k úpravám",
     "tsNotInstalled": "Tailscale není na tomto hostiteli nainstalován",
-    "tsRunning": "Běh",
+    "tsRunning": "Běží",
     "tsStopped": "Zastaveno",
     "tsEnable": "Připojit",
     "tsDisable": "Odpojit",
     "tsEnabling": "Připojování k Tailscale...",
     "tsDisabling": "Odpojování od Tailscale...",
-    "tsEnabled": "Koncová váha připojena",
-    "tsDisabled": "Tailscale odpojeno",
-    "tsExitNode": "Východový uzel",
-    "tsExitNodeActive": "Výstupní uzel je aktivní"
+    "tsEnabled": "Tailscale připojen",
+    "tsDisabled": "Tailscale odpojen",
+    "tsExitNode": "Exit node",
+    "tsExitNodeActive": "Exit node aktivní"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Připojení k terminálu",
+        "connectToTerminal": "Připojit k terminálu",
         "usernameLabel": "Uživatelské jméno"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Hledat zařízení",
+    "noDeviceMatches": "Žádná zařízení neodpovídají vašemu hledání."
   }
 }

@@ -1,89 +1,93 @@
 {
   "permissions": {
-    "devices.view": {
-      "title": "Lihat perangkat tailnet.",
-      "description": "Lihat perangkat-perangkat yang terhubung ke tailnet."
+    "devices": {
+      "view": {
+        "title": "Lihat perangkat tailnet",
+        "description": "Lihat perangkat pada tailnet yang terhubung."
+      }
     }
   },
   "settings": {
     "group": {
       "api": "API Tailscale",
-      "devices": "Jaring ekor"
+      "devices": "Tailnet"
     },
     "apiKey": {
       "label": "Kunci API",
-      "description": "Digunakan untuk menampilkan daftar perangkat pada tailnet Anda. Bekerja dengan tombol Tailscale atau Headscale.",
+      "description": "Digunakan untuk mendaftar perangkat di tailnet Anda. Berfungsi dengan kunci Tailscale atau Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
     "apiBaseUrl": {
       "label": "URL dasar API",
-      "description": "Biarkan Tailscale kosong. Atur ini agar mengarah ke instance Headscale.",
+      "description": "Biarkan kosong untuk Tailscale. Atur ini untuk menunjuk ke instance Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
       "label": "Daftar perangkat",
-      "checking": "Memeriksa jaring ekor...",
-      "noKey": "Kunci API belum diatur.",
-      "error": "Tidak dapat terhubung ke tailnet. Periksa kunci API.",
-      "count": "{{count}} perangkat dapat dijangkau",
-      "count_other": "{{count}} perangkat yang dapat dijangkau",
-      "refresh": "Memeriksa"
+      "checking": "Memeriksa tailnet...",
+      "noKey": "Belum ada kunci API yang diatur.",
+      "error": "Tidak dapat mencapai tailnet. Periksa kunci API.",
+      "count": {
+        "other": "{{count}} perangkat terjangkau"
+      },
+      "count_other": "{{count}} perangkat terjangkau",
+      "refresh": "Periksa"
     }
   },
   "nav": {
-    "tailscale": "Skala ekor"
+    "tailscale": "Tailscale"
   },
   "hosts": {
-    "tailscaleUsernameHint": "Ini harus berupa pengguna Unix yang identitas Tailscale Anda diberikan dalam ACL SSH tailnet, tidak harus root.",
+    "tailscaleUsernameHint": "Ini harus menjadi pengguna Unix yang identitas Tailscale Anda diberi izin dalam ACL SSH tailnet, belum tentu root.",
     "tailscaleDeviceSelect": "Pilih perangkat Tailscale",
     "tailscaleDeviceSelectPlaceholder": "Pilih perangkat...",
-    "tailscaleNoApiKey": "Belum ada kunci API Tailscale yang dikonfigurasi. Tambahkan satu di Pengaturan Admin untuk mengaktifkan penemuan perangkat.",
-    "tailscaleDocsLink": "Lihat dokumen",
+    "tailscaleNoApiKey": "Tidak ada kunci API Tailscale yang dikonfigurasi. Tambahkan satu di Pengaturan Admin untuk mengaktifkan penemuan perangkat.",
+    "tailscaleDocsLink": "Lihat dokumentasi",
     "tailscaleLoadingDevices": "Memuat perangkat...",
     "tailscaleDeviceLoadFailed": "Gagal memuat perangkat Tailscale. Periksa URL API dan koneksi jaringan.",
-    "tailscaleNoDevices": "Tidak ada perangkat yang terdeteksi di tailnet Anda.",
-    "tailscaleDeviceAutoFill": "Memilih perangkat akan secara otomatis mengisi alamat IP host.",
-    "tailscaleAddHost": "Tambahkan host",
+    "tailscaleNoDevices": "Tidak ada perangkat yang ditemukan di tailnet Anda.",
+    "tailscaleDeviceAutoFill": "Memilih perangkat akan mengisi otomatis alamat IP host.",
+    "tailscaleAddHost": "Tambah host",
     "tailscaleCopyIp": "Salin IP Tailscale",
     "tailscaleIpCopied": "IP disalin",
-    "tailscaleIpCopyFailed": "IP tidak dapat disalin",
-    "filterAuthTailscale": "Skala ekor"
+    "tailscaleIpCopyFailed": "Tidak dapat menyalin IP",
+    "filterAuthTailscale": "Tailscale"
   },
   "terminal": {
-    "tailscaleCheckRequired": "Diperlukan Otentikasi Sisik Ekor",
-    "tailscaleCheckDescription": "Tailscale SSH memerlukan pemeriksaan tambahan. Lakukan otentikasi di browser Anda untuk melanjutkan.",
-    "tailscaleCheckOpenBrowser": "Buka Browser untuk Melakukan Otentikasi",
+    "tailscaleCheckRequired": "Autentikasi Tailscale Diperlukan",
+    "tailscaleCheckDescription": "SSH Tailscale memerlukan pemeriksaan tambahan. Autentikasi di browser Anda untuk melanjutkan.",
+    "tailscaleCheckOpenBrowser": "Buka Browser untuk Autentikasi",
     "tailscaleCheckWaiting": "Menunggu autentikasi Tailscale...",
     "tailscaleCheckTimeout": "Autentikasi Tailscale habis waktu. Silakan coba lagi."
   },
   "manager": {
-    "title": "Skala ekor",
-    "refresh": "Menyegarkan",
-    "retry": "Mencoba kembali",
-    "sudoHint": "Tetapkan kata sandi sudo untuk host ini agar memungkinkan tindakan dengan hak akses administrator.",
-    "noData": "Tidak ada data yang tersedia",
-    "filter": "Menyaring...",
-    "tsNotInstalled": "Tailscale tidak terpasang pada host ini.",
-    "tsRunning": "Berlari",
+    "title": "Tailscale",
+    "editRequired": "Anda memerlukan akses edit ke host ini untuk mengubahnya",
+    "tsNotInstalled": "Tailscale tidak terinstal di host ini",
+    "tsRunning": "Berjalan",
     "tsStopped": "Berhenti",
-    "tsEnable": "Menghubungkan",
-    "tsDisable": "Memutuskan",
-    "tsEnabling": "Menghubungkan ke Tailscale...",
-    "tsDisabling": "Memutus koneksi dari Tailscale...",
-    "tsEnabled": "Sisik ekor terhubung",
-    "tsDisabled": "Sisik ekor terputus",
+    "tsEnable": "Sambungkan",
+    "tsDisable": "Putuskan sambungan",
+    "tsEnabling": "Menyambung ke Tailscale...",
+    "tsDisabling": "Memutuskan sambungan dari Tailscale...",
+    "tsEnabled": "Tailscale terhubung",
+    "tsDisabled": "Tailscale terputus",
     "tsExitNode": "Node keluar",
     "tsExitNodeActive": "Node keluar aktif"
   },
   "newUi": {
     "sidebar": {
       "quickConnect": {
-        "connectToTerminal": "Hubungkan ke Terminal",
+        "connectToTerminal": "Sambungkan ke Terminal",
         "usernameLabel": "Nama pengguna"
       }
     }
   },
   "plugin": {
     "name": "Tailscale"
+  },
+  "tailscale": {
+    "searchDevices": "Cari perangkat",
+    "noDeviceMatches": "Tidak ada perangkat yang cocok dengan pencarian Anda."
   }
 }
