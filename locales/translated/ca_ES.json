@@ -27,11 +27,6 @@
       "checking": "Comprovant el tailnet...",
       "noKey": "Encara no s'ha configurat cap clau API.",
       "error": "No s'ha pogut accedir al tailnet. Comproveu la clau API.",
-      "count": {
-        "one": "{{count}} dispositiu accessible",
-        "many": "{{count}} dispositius accessibles",
-        "other": "{{count}} dispositius accessibles"
-      },
       "count_one": "{{count}} dispositiu accessible",
       "count_many": "{{count}} dispositius accessibles",
       "count_other": "{{count}} dispositius accessibles",

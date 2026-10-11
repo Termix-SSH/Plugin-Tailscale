@@ -27,10 +27,7 @@
       "checking": "正在檢查 Tailnet...",
       "noKey": "尚未設定 API 金鑰。",
       "error": "無法連線至 Tailnet。請檢查 API 金鑰。",
-      "count": {
-        "other": "{{count}} 個裝置可連線"
-      },
-      "count_other": "{{count}} 個裝置可連線",
+      "count_other": "可連線的裝置數：{{count}}",
       "refresh": "檢查"
     }
   },

@@ -27,10 +27,6 @@
       "checking": "Tailnet wird überprüft...",
       "noKey": "Kein API-Schlüssel festgelegt.",
       "error": "Das Tailnet konnte nicht erreicht werden. Überprüfen Sie den API-Schlüssel.",
-      "count": {
-        "one": "{{count}} Gerät erreichbar",
-        "other": "{{count}} Geräte erreichbar"
-      },
       "count_one": "{{count}} Gerät erreichbar",
       "count_other": "{{count}} Geräte erreichbar",
       "refresh": "Überprüfen"

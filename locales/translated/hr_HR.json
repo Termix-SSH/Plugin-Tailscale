@@ -27,11 +27,6 @@
       "checking": "Provjera tailneta...",
       "noKey": "API ključ još nije postavljen.",
       "error": "Nije moguće doseći tailnet. Provjerite API ključ.",
-      "count": {
-        "one": "{{count}} uređaj dostupan",
-        "few": "{{count}} uređaja dostupna",
-        "other": "{{count}} uređaja dostupno"
-      },
       "count_one": "{{count}} uređaj dostupan",
       "count_few": "{{count}} uređaja dostupna",
       "count_other": "{{count}} uređaja dostupno",

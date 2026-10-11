@@ -27,11 +27,6 @@
       "checking": "Verificando a tailnet...",
       "noKey": "Nenhuma chave da API definida ainda.",
       "error": "Não foi possível alcançar a tailnet. Verifique a chave da API.",
-      "count": {
-        "one": "{{count}} dispositivo acessível",
-        "many": "{{count}} dispositivos acessíveis",
-        "other": "{{count}} dispositivos acessíveis"
-      },
       "count_one": "{{count}} dispositivo acessível",
       "count_many": "{{count}} dispositivos acessíveis",
       "count_other": "{{count}} dispositivos acessíveis",

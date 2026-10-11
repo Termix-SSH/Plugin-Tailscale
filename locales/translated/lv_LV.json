@@ -27,14 +27,9 @@
       "checking": "Pārbauda tailnet...",
       "noKey": "API atslēga vēl nav iestatīta.",
       "error": "Nevarēja sasniegt tailnet. Pārbaudiet API atslēgu.",
-      "count": {
-        "zero": "Nav sasniedzamu ierīču",
-        "one": "Sasniedzama {{count}} ierīce",
-        "other": "Sasniedzamas {{count}} ierīces"
-      },
-      "count_zero": "Nav sasniedzamu ierīču",
-      "count_one": "Sasniedzama {{count}} ierīce",
-      "count_other": "Sasniedzamas {{count}} ierīces",
+      "count_zero": "0 sasniedzami ierīces",
+      "count_one": "{{count}} sasniedzama ierīce",
+      "count_other": "{{count}} sasniedzamas ierīces",
       "refresh": "Pārbaudīt"
     }
   },

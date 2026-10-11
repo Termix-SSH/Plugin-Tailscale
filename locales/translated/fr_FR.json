@@ -27,11 +27,6 @@
       "checking": "Vérification du tailnet...",
       "noKey": "Aucune clé API définie.",
       "error": "Impossible d'atteindre le tailnet. Vérifiez la clé API.",
-      "count": {
-        "one": "{{count}} appareil accessible",
-        "many": "{{count}} appareils accessibles",
-        "other": "{{count}} appareils accessibles"
-      },
       "count_one": "{{count}} appareil accessible",
       "count_many": "{{count}} appareils accessibles",
       "count_other": "{{count}} appareils accessibles",

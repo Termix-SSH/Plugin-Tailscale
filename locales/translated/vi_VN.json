@@ -27,10 +27,7 @@
       "checking": "Đang kiểm tra tailnet...",
       "noKey": "Chưa đặt khóa API.",
       "error": "Không thể kết nối đến tailnet. Vui lòng kiểm tra khóa API.",
-      "count": {
-        "other": "{{count}} thiết bị có thể kết nối"
-      },
-      "count_other": "{{count}} thiết bị có thể kết nối",
+      "count_other": "{{count}} thiết bị có thể truy cập",
       "refresh": "Kiểm tra"
     }
   },

@@ -27,12 +27,8 @@
       "checking": "Sjekker tailnetet...",
       "noKey": "Ingen API-nøkkel er angitt ennå.",
       "error": "Kunne ikke nå tailnetet. Sjekk API-nøkkelen.",
-      "count": {
-        "one": "{{count}} enhet tilgjengelig",
-        "other": "{{count}} enheter tilgjengelig"
-      },
       "count_one": "{{count}} enhet tilgjengelig",
-      "count_other": "{{count}} enheter tilgjengelig",
+      "count_other": "{{count}} enheter tilgjengelige",
       "refresh": "Sjekk"
     }
   },

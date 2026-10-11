@@ -27,10 +27,7 @@
       "checking": "正在检查 Tailnet...",
       "noKey": "尚未设置 API 密钥。",
       "error": "无法连接到 Tailnet。请检查 API 密钥。",
-      "count": {
-        "other": "{{count}} 个设备可达"
-      },
-      "count_other": "{{count}} 个设备可达",
+      "count_other": "{{count}} 台设备可访问",
       "refresh": "检查"
     }
   },

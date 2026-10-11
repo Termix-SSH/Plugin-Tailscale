@@ -27,12 +27,6 @@
       "checking": "Kontrola tailnetu...",
       "noKey": "API klíč ještě není nastaven.",
       "error": "Nelze se připojit k tailnetu. Zkontrolujte API klíč.",
-      "count": {
-        "one": "{{count}} dosažitelné zařízení",
-        "few": "{{count}} dosažitelná zařízení",
-        "many": "{{count}} dosažitelných zařízení",
-        "other": "{{count}} dosažitelných zařízení"
-      },
       "count_one": "{{count}} dosažitelné zařízení",
       "count_few": "{{count}} dosažitelná zařízení",
       "count_many": "{{count}} dosažitelných zařízení",

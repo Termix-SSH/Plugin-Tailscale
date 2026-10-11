@@ -27,11 +27,6 @@
       "checking": "Se verifică tailnetul...",
       "noKey": "Nicio cheie API setată încă.",
       "error": "Nu s-a putut accesa tailnetul. Verificați cheia API.",
-      "count": {
-        "one": "{{count}} dispozitiv accesibil",
-        "few": "{{count}} dispozitive accesibile",
-        "other": "{{count}} dispozitive accesibile"
-      },
       "count_one": "{{count}} dispozitiv accesibil",
       "count_few": "{{count}} dispozitive accesibile",
       "count_other": "{{count}} dispozitive accesibile",

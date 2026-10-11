@@ -27,16 +27,10 @@
       "checking": "Kontrola tailnetu...",
       "noKey": "API kľúč zatiaľ nie je nastavený.",
       "error": "Nepodarilo sa pripojiť k tailnetu. Skontrolujte API kľúč.",
-      "count": {
-        "one": "{{count}} dostupné zariadenie",
-        "few": "{{count}} dostupné zariadenia",
-        "many": "{{count}} dostupných zariadení",
-        "other": "{{count}} dostupných zariadení"
-      },
-      "count_one": "{{count}} dostupné zariadenie",
-      "count_few": "{{count}} dostupné zariadenia",
-      "count_many": "{{count}} dostupných zariadení",
-      "count_other": "{{count}} dostupných zariadení",
+      "count_one": "{{count}} prístupné zariadenie",
+      "count_few": "{{count}} prístupné zariadenia",
+      "count_many": "{{count}} prístupných zariadení",
+      "count_other": "{{count}} prístupných zariadení",
       "refresh": "Skontrolovať"
     }
   },

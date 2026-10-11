@@ -27,16 +27,10 @@
       "checking": "Tikrinamas tailnet...",
       "noKey": "API rakto dar nepasirinkta.",
       "error": "Nepavyko pasiekti tailnet. Patikrinkite API raktą.",
-      "count": {
-        "one": "Pasiekiamas {{count}} įrenginys",
-        "few": "Pasiekiami {{count}} įrenginiai",
-        "many": "Pasiekiamas {{count}} įrenginių",
-        "other": "Pasiekiami {{count}} įrenginiai"
-      },
-      "count_one": "Pasiekiamas {{count}} įrenginys",
-      "count_few": "Pasiekiami {{count}} įrenginiai",
-      "count_many": "Pasiekiamas {{count}} įrenginių",
-      "count_other": "Pasiekiami {{count}} įrenginiai",
+      "count_one": "{{count}} pasiekiamas įrenginys",
+      "count_few": "{{count}} pasiekiami įrenginiai",
+      "count_many": "{{count}} pasiekiamų įrenginių",
+      "count_other": "{{count}} pasiekiamų įrenginių",
       "refresh": "Patikrinti"
     }
   },

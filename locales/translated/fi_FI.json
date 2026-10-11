@@ -27,10 +27,6 @@
       "checking": "Tarkistetaan tailnetiä...",
       "noKey": "API-avainta ei ole vielä asetettu.",
       "error": "Tailnetiin ei saatu yhteyttä. Tarkista API-avain.",
-      "count": {
-        "one": "{{count}} laite tavoitettavissa",
-        "other": "{{count}} laitetta tavoitettavissa"
-      },
       "count_one": "{{count}} laite tavoitettavissa",
       "count_other": "{{count}} laitetta tavoitettavissa",
       "refresh": "Tarkista"

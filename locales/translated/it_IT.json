@@ -27,11 +27,6 @@
       "checking": "Verifica della tailnet in corso...",
       "noKey": "Nessuna chiave API impostata.",
       "error": "Impossibile raggiungere la tailnet. Controlla la chiave API.",
-      "count": {
-        "one": "{{count}} dispositivo raggiungibile",
-        "many": "{{count}} dispositivi raggiungibili",
-        "other": "{{count}} dispositivi raggiungibili"
-      },
       "count_one": "{{count}} dispositivo raggiungibile",
       "count_many": "{{count}} dispositivi raggiungibili",
       "count_other": "{{count}} dispositivi raggiungibili",

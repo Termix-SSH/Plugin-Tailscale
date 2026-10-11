@@ -27,10 +27,7 @@
       "checking": "테일넷 확인 중...",
       "noKey": "API 키가 아직 설정되지 않았습니다.",
       "error": "테일넷에 연결할 수 없습니다. API 키를 확인하세요.",
-      "count": {
-        "other": "{{count}}개 장치 연결 가능"
-      },
-      "count_other": "{{count}}개 장치 연결 가능",
+      "count_other": "{{count}}대의 장치가 연결 가능함",
       "refresh": "확인"
     }
   },

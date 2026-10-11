@@ -27,16 +27,10 @@
       "checking": "Preverjanje tailneta...",
       "noKey": "API ključ še ni nastavljen.",
       "error": "Tailneta ni mogoče doseči. Preverite API ključ.",
-      "count": {
-        "one": "{{count}} naprava dosegljiva",
-        "two": "{{count}} napravi dosegljivi",
-        "few": "{{count}} naprave dosegljive",
-        "other": "{{count}} naprav dosegljivih"
-      },
-      "count_one": "{{count}} naprava dosegljiva",
-      "count_two": "{{count}} napravi dosegljivi",
-      "count_few": "{{count}} naprave dosegljive",
-      "count_other": "{{count}} naprav dosegljivih",
+      "count_one": "{{count}} dosegljiva naprava",
+      "count_two": "{{count}} dosegljivi napravi",
+      "count_few": "{{count}} dosegljive naprave",
+      "count_other": "{{count}} dosegljivih naprav",
       "refresh": "Preveri"
     }
   },

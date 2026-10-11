@@ -27,10 +27,7 @@
       "checking": "Tailnet を確認しています...",
       "noKey": "API キーがまだ設定されていません。",
       "error": "Tailnet に到達できません。API キーを確認してください。",
-      "count": {
-        "other": "{{count}} 台のデバイスに到達可能"
-      },
-      "count_other": "{{count}} 台のデバイスに到達可能",
+      "count_other": "{{count}} 台のデバイスに接続可能",
       "refresh": "確認"
     }
   },

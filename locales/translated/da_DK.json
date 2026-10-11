@@ -27,10 +27,6 @@
       "checking": "Tjekker tailnet...",
       "noKey": "Ingen API-nøgle er indstillet endnu.",
       "error": "Kunne ikke nå tailnet. Tjek API-nøglen.",
-      "count": {
-        "one": "{{count}} enhed tilgængelig",
-        "other": "{{count}} enheder tilgængelige"
-      },
       "count_one": "{{count}} enhed tilgængelig",
       "count_other": "{{count}} enheder tilgængelige",
       "refresh": "Tjek"

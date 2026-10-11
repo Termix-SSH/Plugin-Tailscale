@@ -27,12 +27,8 @@
       "checking": "A tailnet ellenőrzése...",
       "noKey": "Még nincs API-kulcs beállítva.",
       "error": "Nem érhető el a tailnet. Ellenőrizze az API-kulcsot.",
-      "count": {
-        "one": "{{count}} eszköz elérhető",
-        "other": "{{count}} eszköz elérhető"
-      },
-      "count_one": "{{count}} eszköz elérhető",
-      "count_other": "{{count}} eszköz elérhető",
+      "count_one": "{{count}} elérhető eszköz",
+      "count_other": "{{count}} elérhető eszköz",
       "refresh": "Ellenőrzés"
     }
   },

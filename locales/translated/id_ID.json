@@ -27,10 +27,7 @@
       "checking": "Memeriksa tailnet...",
       "noKey": "Belum ada kunci API yang diatur.",
       "error": "Tidak dapat mencapai tailnet. Periksa kunci API.",
-      "count": {
-        "other": "{{count}} perangkat terjangkau"
-      },
-      "count_other": "{{count}} perangkat terjangkau",
+      "count_other": "{{count}} perangkat dapat dijangkau",
       "refresh": "Periksa"
     }
   },

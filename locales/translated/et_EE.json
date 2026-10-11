@@ -27,12 +27,8 @@
       "checking": "Tailneti kontrollimine...",
       "noKey": "API-võtit pole veel määratud.",
       "error": "Tailnetiga ei õnnestunud ühendust saada. Kontrolli API-võtit.",
-      "count": {
-        "one": "{{count}} seade on saadaval",
-        "other": "{{count}} seadet on saadaval"
-      },
-      "count_one": "{{count}} seade on saadaval",
-      "count_other": "{{count}} seadet on saadaval",
+      "count_one": "{{count}} seade saadaval",
+      "count_other": "{{count}} seadet saadaval",
       "refresh": "Kontrolli"
     }
   },

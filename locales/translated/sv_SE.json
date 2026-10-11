@@ -27,10 +27,6 @@
       "checking": "Kontrollerar tailnetet...",
       "noKey": "Ingen API-nyckel har angivits ännu.",
       "error": "Kunde inte nå tailnetet. Kontrollera API-nyckeln.",
-      "count": {
-        "one": "{{count}} enhet nåbar",
-        "other": "{{count}} enheter nåbara"
-      },
       "count_one": "{{count}} enhet nåbar",
       "count_other": "{{count}} enheter nåbara",
       "refresh": "Kontrollera"

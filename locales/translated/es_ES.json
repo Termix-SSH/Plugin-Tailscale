@@ -27,11 +27,6 @@
       "checking": "Comprobando el tailnet...",
       "noKey": "No se ha configurado ninguna clave API.",
       "error": "No se pudo acceder al tailnet. Comprueba la clave API.",
-      "count": {
-        "one": "{{count}} dispositivo accesible",
-        "many": "{{count}} dispositivos accesibles",
-        "other": "{{count}} dispositivos accesibles"
-      },
       "count_one": "{{count}} dispositivo accesible",
       "count_many": "{{count}} dispositivos accesibles",
       "count_other": "{{count}} dispositivos accesibles",

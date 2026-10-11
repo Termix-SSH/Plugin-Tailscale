@@ -27,16 +27,10 @@
       "checking": "Sprawdzanie tailnetu...",
       "noKey": "Nie ustawiono jeszcze klucza API.",
       "error": "Nie udało się połączyć z tailnetem. Sprawdź klucz API.",
-      "count": {
-        "one": "Osiągalne urządzenia: {{count}}",
-        "few": "Osiągalne urządzenia: {{count}}",
-        "many": "Osiągalne urządzenia: {{count}}",
-        "other": "Osiągalne urządzenia: {{count}}"
-      },
-      "count_one": "Osiągalne urządzenia: {{count}}",
-      "count_few": "Osiągalne urządzenia: {{count}}",
-      "count_many": "Osiągalne urządzenia: {{count}}",
-      "count_other": "Osiągalne urządzenia: {{count}}",
+      "count_one": "{{count}} urządzenie osiągalne",
+      "count_few": "{{count}} urządzenia osiągalne",
+      "count_many": "{{count}} urządzeń osiągalnych",
+      "count_other": "{{count}} urządzeń osiągalnych",
       "refresh": "Sprawdź"
     }
   },

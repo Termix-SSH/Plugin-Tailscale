@@ -27,12 +27,8 @@
       "checking": "Tailnet kontrol ediliyor...",
       "noKey": "Henüz API anahtarı ayarlanmadı.",
       "error": "Tailnet'e ulaşılamadı. API anahtarını kontrol edin.",
-      "count": {
-        "one": "{{count}} cihaza ulaşılabiliyor",
-        "other": "{{count}} cihaza ulaşılabiliyor"
-      },
-      "count_one": "{{count}} cihaza ulaşılabiliyor",
-      "count_other": "{{count}} cihaza ulaşılabiliyor",
+      "count_one": "{{count}} cihaz erişilebilir",
+      "count_other": "{{count}} cihaz erişilebilir",
       "refresh": "Kontrol et"
     }
   },

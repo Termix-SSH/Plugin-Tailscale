@@ -27,11 +27,6 @@
       "checking": "בודק את ה-tailnet...",
       "noKey": "לא הוגדר מפתח API עדיין.",
       "error": "לא ניתן להגיע ל-tailnet. בדוק את מפתח ה-API.",
-      "count": {
-        "one": "{{count}} מכשיר נגיש",
-        "two": "{{count}} מכשירים נגישים",
-        "other": "{{count}} מכשירים נגישים"
-      },
       "count_one": "{{count}} מכשיר נגיש",
       "count_two": "{{count}} מכשירים נגישים",
       "count_other": "{{count}} מכשירים נגישים",

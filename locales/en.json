@@ -25,7 +25,7 @@
       "checking": "Checking the tailnet...",
       "noKey": "No API key set yet.",
       "error": "Could not reach the tailnet. Check the API key.",
-      "count": "{{count}} device reachable",
+      "count_one": "{{count}} device reachable",
       "count_other": "{{count}} devices reachable",
       "refresh": "Check"
     }

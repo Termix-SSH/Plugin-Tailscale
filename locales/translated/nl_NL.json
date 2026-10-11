@@ -27,10 +27,6 @@
       "checking": "Tailnet controleren...",
       "noKey": "Er is nog geen API-sleutel ingesteld.",
       "error": "Kan geen verbinding maken met het tailnet. Controleer de API-sleutel.",
-      "count": {
-        "one": "{{count}} apparaat bereikbaar",
-        "other": "{{count}} apparaten bereikbaar"
-      },
       "count_one": "{{count}} apparaat bereikbaar",
       "count_other": "{{count}} apparaten bereikbaar",
       "refresh": "Controleren"

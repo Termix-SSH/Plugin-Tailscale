@@ -27,10 +27,6 @@
       "checking": "Kontroleer die tailnet...",
       "noKey": "Geen API-sleutel is nog nie gestel nie.",
       "error": "Kon nie die tailnet bereik nie. Kontroleer die API-sleutel.",
-      "count": {
-        "one": "{{count}} toestel bereikbaar",
-        "other": "{{count}} toestelle bereikbaar"
-      },
       "count_one": "{{count}} toestel bereikbaar",
       "count_other": "{{count}} toestelle bereikbaar",
       "refresh": "Kontroleer"
