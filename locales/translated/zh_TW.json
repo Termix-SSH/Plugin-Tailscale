@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "將 tailnet 裝置新增為主機，並透過 Tailscale SSH 連線。"
   },
   "tailscale": {
     "searchDevices": "搜尋裝置",

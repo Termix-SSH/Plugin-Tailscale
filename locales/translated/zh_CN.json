@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "将 tailnet 设备添加为主机，并通过 Tailscale SSH 连接。"
   },
   "tailscale": {
     "searchDevices": "搜索设备",
