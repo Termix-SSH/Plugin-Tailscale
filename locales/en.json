@@ -80,7 +80,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Add tailnet devices as hosts and connect with Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Search devices",
