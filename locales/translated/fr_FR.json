@@ -83,7 +83,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Ajoutez des appareils de tailnet en tant qu’hôtes et connectez-vous avec Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Rechercher des appareils",

@@ -84,7 +84,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Dodajte naprave iz tailnet omrežja kot gostitelje in se povežite z uporabo Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Išči naprave",

@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "टेल्नेट डिवाइस को होस्ट के रूप में जोड़ें और Tailscale SSH के साथ कनेक्ट करें।"
   },
   "tailscale": {
     "searchDevices": "डिवाइस खोजें",

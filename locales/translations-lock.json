@@ -51,6 +51,7 @@
   "newUi.sidebar.quickConnect.connectToTerminal": "25ad8c2a9824",
   "newUi.sidebar.quickConnect.usernameLabel": "84c29015de33",
   "plugin.name": "619c010a490e",
+  "plugin.description": "87f004e62ed7",
   "tailscale.searchDevices": "2ce0b70ee995",
   "tailscale.noDeviceMatches": "611ce7f4e076"
 }

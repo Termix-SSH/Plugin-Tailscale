@@ -83,7 +83,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Afegeix dispositius de la xarxa tailnet com a amfitrions i connecta't amb Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Cercar dispositius",

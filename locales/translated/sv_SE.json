@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Lägg till tailnet-enheter som värdar och anslut med Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Sök enheter",

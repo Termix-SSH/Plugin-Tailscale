@@ -84,7 +84,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Pridėkite tailnet įrenginius kaip serverius ir jungkitės naudodami Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Ieškoti įrenginių",

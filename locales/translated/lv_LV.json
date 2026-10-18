@@ -83,7 +83,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Pievienojiet tailnet ierīces kā mezglus un izveidojiet savienojumu, izmantojot Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Meklēt ierīces",

@@ -84,7 +84,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Додайте пристрої tailnet як хости та підключайтеся через Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Пошук пристроїв",

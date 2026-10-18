@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Adjon hozzá tailnet-eszközöket gazdagépeként, és csatlakozzon a Tailscale SSH segítségével."
   },
   "tailscale": {
     "searchDevices": "Eszközök keresése",

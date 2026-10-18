@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Lisää tailnet-laitteet isäntinä ja yhdistä Tailscale SSH:n avulla."
   },
   "tailscale": {
     "searchDevices": "Hae laitteita",

@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Voeg tailnet-toestelle by as gasheer en maak verbinding met Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Soek toestelle",

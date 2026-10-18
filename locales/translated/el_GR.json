@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Προσθέστε συσκευές tailnet ως hosts και συνδεθείτε με Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Αναζήτηση συσκευών",

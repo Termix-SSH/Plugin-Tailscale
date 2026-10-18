@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "tailnet デバイスをホストとして追加し、Tailscale SSH で接続します。"
   },
   "tailscale": {
     "searchDevices": "デバイスを検索",

@@ -86,7 +86,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "أضف أجهزة الشبكة الداخلية (tailnet) كمضيفات واتصل بها باستخدام Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "البحث عن الأجهزة",

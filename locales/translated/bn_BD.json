@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "টেইলস্কেল"
+    "name": "টেইলস্কেল",
+    "description": "টেইলনেট ডিভাইসগুলো হোস্ট হিসেবে যোগ করুন এবং Tailscale SSH দিয়ে সংযোগ করুন।"
   },
   "tailscale": {
     "searchDevices": "ডিভাইস খুঁজুন",

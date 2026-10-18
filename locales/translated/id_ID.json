@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Tambahkan perangkat tailnet sebagai host dan sambungkan dengan Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Cari perangkat",

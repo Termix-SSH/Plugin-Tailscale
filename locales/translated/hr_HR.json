@@ -83,7 +83,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Dodajte uređaje iz tailnet mreže kao hostove i povežite se putem Tailscale SSH-a."
   },
   "tailscale": {
     "searchDevices": "Pretraži uređaje",

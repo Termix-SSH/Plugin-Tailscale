@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "tailnet 장치를 호스트로 추가하고 Tailscale SSH로 연결합니다."
   },
   "tailscale": {
     "searchDevices": "장치 검색",

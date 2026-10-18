@@ -84,7 +84,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Pridajte zariadenia tailnetu ako hostiteľov a pripojte sa pomocou Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Hľadať zariadenia",

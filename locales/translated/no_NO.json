@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Legg til tailnet-enheter som vertsmaskiner og koble til med Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Søk etter enheter",

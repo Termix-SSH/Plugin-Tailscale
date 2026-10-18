@@ -83,7 +83,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "הוסף מכשירי tailnet כמארחים והתחבר באמצעות Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "חיפוש מכשירים",

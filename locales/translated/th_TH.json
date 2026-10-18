@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "เพิ่มอุปกรณ์ tailnet เป็นโฮสต์และเชื่อมต่อด้วย Tailscale SSH"
   },
   "tailscale": {
     "searchDevices": "ค้นหาอุปกรณ์",

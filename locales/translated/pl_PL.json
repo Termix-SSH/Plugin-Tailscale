@@ -84,7 +84,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Dodaj urządzenia z tailnet jako hosty i łącz się z nimi za pomocą Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Szukaj urządzeń",

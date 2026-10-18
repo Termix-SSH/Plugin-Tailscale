@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Tambah peranti tailnet sebagai hos dan sambungkan dengan Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Cari peranti",

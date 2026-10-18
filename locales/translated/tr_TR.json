@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Tailnet cihazlarını ana bilgisayar olarak ekleyin ve Tailscale SSH ile bağlanın."
   },
   "tailscale": {
     "searchDevices": "Cihazları ara",

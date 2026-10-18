@@ -81,7 +81,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Thêm thiết bị tailnet dưới dạng host và kết nối bằng Tailscale SSH."
   },
   "tailscale": {
     "searchDevices": "Tìm kiếm thiết bị",

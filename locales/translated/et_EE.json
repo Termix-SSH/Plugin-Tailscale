@@ -82,7 +82,8 @@
     }
   },
   "plugin": {
-    "name": "Tailscale"
+    "name": "Tailscale",
+    "description": "Lisa tailneti seadmed perenaududena ja ühendu Tailscale SSH-ga."
   },
   "tailscale": {
     "searchDevices": "Otsi seadmeid",
