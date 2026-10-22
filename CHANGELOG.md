@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Added
+
+- Tailnet dashboard card: how many devices are online and the list, online first
+
 ## 1.0.2
 
 ### Changed

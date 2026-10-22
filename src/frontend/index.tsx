@@ -8,6 +8,7 @@ import { TailscaleDevicesStatus } from "./TailscaleDevicesStatus";
 import { TailscaleAuthEditor } from "./TailscaleAuthEditor";
 import { TailscaleCheckOverlay } from "./TailscaleCheckOverlay";
 import { TailscaleManagerCard } from "./TailscaleManagerCard";
+import { TailscaleCard } from "./TailscaleCard";
 
 function Panel({ shell }: PanelProps) {
   return (
@@ -38,6 +39,14 @@ export function activate(app: TermixApp): void {
     order: 20,
   });
   app.registerPanel("tailscale", Panel);
+  app.registerDashboardCard({
+    id: "tailscale-devices",
+    titleKey: "card.title",
+    defaultPanel: "side",
+    defaultHeight: 220,
+    frame: "framed",
+    component: TailscaleCard,
+  });
 
   app.registerSettingsComponent("devices", TailscaleDevicesStatus);
 

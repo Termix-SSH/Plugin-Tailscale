@@ -89,5 +89,11 @@
   "tailscale": {
     "searchDevices": "Cercar dispositius",
     "noDeviceMatches": "Cap dispositiu no coincideix amb la cerca."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "S'està carregant...",
+    "noKey": "Afegeix una clau API de Tailscale a la configuració del complement per veure els teus dispositius.",
+    "online": "{{online}} de {{total}} dispositius en línia"
   }
 }

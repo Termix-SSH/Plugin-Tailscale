@@ -86,5 +86,11 @@
   "tailscale": {
     "searchDevices": "Search devices",
     "noDeviceMatches": "No devices match your search."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Loading...",
+    "noKey": "Add a Tailscale API key in the plugin settings to see your devices.",
+    "online": "{{online}} of {{total}} devices online"
   }
 }

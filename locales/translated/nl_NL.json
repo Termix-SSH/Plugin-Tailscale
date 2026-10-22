@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Apparaten zoeken",
     "noDeviceMatches": "Geen apparaten gevonden die overeenkomen met je zoekopdracht."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Laden...",
+    "noKey": "Voeg een Tailscale API-sleutel toe in de plug-ininstellingen om je apparaten te zien.",
+    "online": "{{online}} van de {{total}} apparaten zijn online"
   }
 }

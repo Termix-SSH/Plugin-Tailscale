@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Eszközök keresése",
     "noDeviceMatches": "Nincs eszköz, amely illeszkedne a kereséshez."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Betöltés...",
+    "noKey": "Adjon hozzá egy Tailscale API-kulcsot a bővítmény beállításaiban, hogy láthassa az eszközeit.",
+    "online": "{{online}}/{{total}} eszköz online"
   }
 }

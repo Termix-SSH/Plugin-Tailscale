@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Otsi seadmeid",
     "noDeviceMatches": "Ükski seade ei vasta sinu otsingule."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Laadimine...",
+    "noKey": "Lisage pistmeseadedesse Tailscale'i API- võti, et näha oma seadmeid.",
+    "online": "{{online}}/{{total}} seadet on võrgus"
   }
 }

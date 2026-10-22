@@ -89,5 +89,11 @@
   "tailscale": {
     "searchDevices": "Rechercher des appareils",
     "noDeviceMatches": "Aucun appareil ne correspond à votre recherche."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Chargement...",
+    "noKey": "Ajoutez une clé API Tailscale dans les paramètres du plugin pour afficher vos appareils.",
+    "online": "{{online}} appareil(s) sur {{total}} en ligne"
   }
 }

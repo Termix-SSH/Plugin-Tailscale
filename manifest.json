@@ -1,7 +1,7 @@
 {
   "id": "tailscale",
   "name": "Tailscale",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Add tailnet devices as hosts and connect with Tailscale SSH.",
   "author": {
     "name": "Termix"
@@ -16,7 +16,8 @@
     "Add tailnet devices as hosts in a couple of clicks",
     "Connect with Tailscale SSH, with no credentials stored",
     "Works with Headscale",
-    "A Tailscale card in Host Metrics"
+    "A Tailscale card in Host Metrics",
+    "A dashboard card with your tailnet devices and which are online"
   ],
   "engine": {
     "termix": ">=26.10.0",
@@ -81,7 +82,14 @@
         }
       ]
     },
-    "uses": ["host-metrics.managers", "terminal.overlay"]
+    "uses": ["host-metrics.managers", "terminal.overlay"],
+    "dashboardCards": [
+      {
+        "id": "tailscale-devices",
+        "titleKey": "card.title",
+        "icon": "Radar"
+      }
+    ]
   },
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"]

@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Hae laitteita",
     "noDeviceMatches": "Hakuun ei löytynyt laitteita."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Ladataan...",
+    "noKey": "Lisää Tailscale API -avain lisäosan asetuksiin nähdäksesi laitteet.",
+    "online": "{{online}}/{{total}} laitetta online"
   }
 }

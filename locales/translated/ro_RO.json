@@ -89,5 +89,11 @@
   "tailscale": {
     "searchDevices": "Caută dispozitive",
     "noDeviceMatches": "Niciun dispozitiv nu se potrivește cu căutarea dvs."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Se încarcă...",
+    "noKey": "Adăugați o cheie API Tailscale în setările pluginului pentru a vedea dispozitivele dvs.",
+    "online": "{{online}} din {{total}} dispozitive online"
   }
 }

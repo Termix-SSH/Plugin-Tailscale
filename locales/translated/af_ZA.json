@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Soek toestelle",
     "noDeviceMatches": "Geen toestelle stem ooreen met jou soektog nie."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Laai tans...",
+    "noKey": "Voeg 'n Tailscale API-sleutel by in die plugin-instellings om jou toestelle te sien.",
+    "online": "{{online}} van {{total}} toestelle aanlyn"
   }
 }

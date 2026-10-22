@@ -87,5 +87,11 @@
   "tailscale": {
     "searchDevices": "搜索设备",
     "noDeviceMatches": "没有设备匹配您的搜索。"
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "加载中...",
+    "noKey": "在插件设置中添加 Tailscale API 密钥以查看您的设备。",
+    "online": "{{online}} / {{total}} 台设备在线"
   }
 }

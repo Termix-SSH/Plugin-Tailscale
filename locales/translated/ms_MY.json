@@ -87,5 +87,11 @@
   "tailscale": {
     "searchDevices": "Cari peranti",
     "noDeviceMatches": "Tiada peranti sepadan dengan carian anda."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Memuatkan...",
+    "noKey": "Tambahkan kunci API Tailscale dalam tetapan plugin untuk melihat peranti anda.",
+    "online": "{{online}} daripada {{total}} peranti dalam talian"
   }
 }

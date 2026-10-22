@@ -92,5 +92,11 @@
   "tailscale": {
     "searchDevices": "البحث عن الأجهزة",
     "noDeviceMatches": "لا توجد أجهزة تطابق بحثك."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "جارٍ التحميل...",
+    "noKey": "أضف مفتاح واجهة برمجة تطبيقات Tailscale في إعدادات المكوّن الإضافي لعرض أجهزتك.",
+    "online": "{{online}} من أصل {{total}} أجهزة متصلة"
   }
 }

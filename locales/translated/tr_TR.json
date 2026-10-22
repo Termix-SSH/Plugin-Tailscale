@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Cihazları ara",
     "noDeviceMatches": "Aramanıza uygun cihaz bulunamadı."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Yükleniyor...",
+    "noKey": "Cihazlarınızı görmek için eklenti ayarlarına bir Tailscale API anahtarı ekleyin.",
+    "online": "{{total}} cihazdan {{online}}'ı çevrimiçi"
   }
 }

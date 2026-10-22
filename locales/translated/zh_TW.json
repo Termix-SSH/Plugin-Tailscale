@@ -87,5 +87,11 @@
   "tailscale": {
     "searchDevices": "搜尋裝置",
     "noDeviceMatches": "沒有裝置符合您的搜尋條件。"
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "載入中...",
+    "noKey": "在插件設定中新增 Tailscale API 金鑰，即可查看您的裝置。",
+    "online": "{{online}} / {{total}} 個裝置線上"
   }
 }

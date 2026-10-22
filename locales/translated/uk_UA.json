@@ -90,5 +90,11 @@
   "tailscale": {
     "searchDevices": "Пошук пристроїв",
     "noDeviceMatches": "Не знайдено пристроїв, що відповідають пошуку."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Завантаження...",
+    "noKey": "Додайте ключ API Tailscale в налаштуваннях плагіна, щоб побачити свої пристрої.",
+    "online": "{{online}} з {{total}} пристроїв онлайн"
   }
 }

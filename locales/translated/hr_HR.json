@@ -89,5 +89,11 @@
   "tailscale": {
     "searchDevices": "Pretraži uređaje",
     "noDeviceMatches": "Nema uređaja koji odgovaraju vašoj pretrazi."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Učitavanje...",
+    "noKey": "Dodajte Tailscale API ključ u postavke dodatka kako biste vidjeli svoje uređaje.",
+    "online": "{{online}} od {{total}} uređaja je online"
   }
 }

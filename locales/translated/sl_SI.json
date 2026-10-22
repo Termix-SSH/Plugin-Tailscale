@@ -90,5 +90,11 @@
   "tailscale": {
     "searchDevices": "Išči naprave",
     "noDeviceMatches": "Nobena naprava ne ustreza vaši iskalni poizvedbi."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Nalaganje...",
+    "noKey": "Dodajte ključ za Tailscale API v nastavitve vtičnika, da vidite svoje naprave.",
+    "online": "{{online}} od {{total}} naprav je povezanih"
   }
 }

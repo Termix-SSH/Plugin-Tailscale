@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Søg i enheder",
     "noDeviceMatches": "Ingen enheder matcher din søgning."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Indlæser...",
+    "noKey": "Tilføj en Tailscale API-nøgle i plugin-indstillingerne for at se dine enheder.",
+    "online": "{{online}} af {{total}} enheder er online"
   }
 }

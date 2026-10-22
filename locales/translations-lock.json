@@ -53,5 +53,9 @@
   "plugin.name": "619c010a490e",
   "plugin.description": "87f004e62ed7",
   "tailscale.searchDevices": "2ce0b70ee995",
-  "tailscale.noDeviceMatches": "611ce7f4e076"
+  "tailscale.noDeviceMatches": "611ce7f4e076",
+  "card.title": "e1b3941ef009",
+  "card.loading": "b04ba49f8486",
+  "card.noKey": "39a08cfe9e39",
+  "card.online": "772ac40c0297"
 }

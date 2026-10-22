@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "Søk etter enheter",
     "noDeviceMatches": "Ingen enheter samsvarer med søket ditt."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Laster inn...",
+    "noKey": "Legg til en Tailscale API-nøkkel i innstillingene for programtillegget for å se enhetene dine.",
+    "online": "{{online}} av {{total}} enheter er tilkoblet"
   }
 }

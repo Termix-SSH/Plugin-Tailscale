@@ -88,5 +88,11 @@
   "tailscale": {
     "searchDevices": "डिवाइस खोजें",
     "noDeviceMatches": "कोई डिवाइस आपकी खोज से मेल नहीं खाता।"
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "लोड हो रहा है...",
+    "noKey": "अपने डिवाइस देखने के लिए प्लगइन सेटिंग्स में एक Tailscale API कुंजी जोड़ें।",
+    "online": "{{total}} डिवाइसों में से {{online}} ऑनलाइन"
   }
 }

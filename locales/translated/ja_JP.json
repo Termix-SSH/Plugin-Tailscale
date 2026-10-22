@@ -87,5 +87,11 @@
   "tailscale": {
     "searchDevices": "デバイスを検索",
     "noDeviceMatches": "検索条件に一致するデバイスがありません。"
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "読み込み中...",
+    "noKey": "デバイスを表示するには、プラグイン設定に Tailscale API キーを追加してください。",
+    "online": "{{total}} 台のうち {{online}} 台がオンライン"
   }
 }

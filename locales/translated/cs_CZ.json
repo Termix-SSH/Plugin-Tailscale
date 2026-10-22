@@ -90,5 +90,11 @@
   "tailscale": {
     "searchDevices": "Hledat zařízení",
     "noDeviceMatches": "Žádná zařízení neodpovídají vašemu hledání."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Načítání...",
+    "noKey": "Přidejte klíč Tailscale API v nastavení pluginu, abyste viděli svá zařízení.",
+    "online": "{{online}} z {{total}} zařízení je online"
   }
 }

@@ -89,5 +89,11 @@
   "tailscale": {
     "searchDevices": "חיפוש מכשירים",
     "noDeviceMatches": "אף מכשיר לא תואם את החיפוש שלך."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "טוען...",
+    "noKey": "הוסף מפתח API של Tailscale בהגדרות התוסף כדי לראות את המכשירים שלך.",
+    "online": "{{online}} מתוך {{total}} מכשירים מחוברים"
   }
 }

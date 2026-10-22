@@ -90,5 +90,11 @@
   "tailscale": {
     "searchDevices": "Szukaj urządzeń",
     "noDeviceMatches": "Żadne urządzenia nie pasują do wyszukiwania."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Ładowanie...",
+    "noKey": "Dodaj klucz API Tailscale w ustawieniach wtyczki, aby zobaczyć swoje urządzenia.",
+    "online": "{{online}} z {{total}} urządzeń online"
   }
 }

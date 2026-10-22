@@ -89,5 +89,11 @@
   "tailscale": {
     "searchDevices": "Meklēt ierīces",
     "noDeviceMatches": "Nav ierīču, kas atbilstu jūsu meklējumam."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Ielādē...",
+    "noKey": "Lai redzētu ierīces, pievienojiet Tailscale API atslēgu spraudņa iestatījumos.",
+    "online": "{{online}} no {{total}} ierīcēm tiešsaistē"
   }
 }

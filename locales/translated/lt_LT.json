@@ -90,5 +90,11 @@
   "tailscale": {
     "searchDevices": "Ieškoti įrenginių",
     "noDeviceMatches": "Jokie įrenginiai neatitinka jūsų paieškos."
+  },
+  "card": {
+    "title": "Tailnet",
+    "loading": "Įkeliama...",
+    "noKey": "Norėdami matyti savo įrenginius, įskiepio nustatymuose pridėkite Tailscale API raktą.",
+    "online": "{{online}} iš {{total}} įrenginių prisijungę"
   }
 }
