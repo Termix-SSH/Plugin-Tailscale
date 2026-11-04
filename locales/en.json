@@ -92,5 +92,16 @@
     "loading": "Loading...",
     "noKey": "Add a Tailscale API key in the plugin settings to see your devices.",
     "online": "{{online}} of {{total}} devices online"
+  },
+  "operations": {
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Connect Tailscale"
+    },
+    "down": {
+      "title": "Disconnect Tailscale"
+    }
   }
 }

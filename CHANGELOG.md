@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0
+
+### Added
+
+- Connect and disconnect Tailscale on a host through Termix actions, and whether it is connected as a status tile
+
+### Changed
+
+- Needs Termix 26.11.1 or newer
+
 ## 1.1.0
 
 ### Added

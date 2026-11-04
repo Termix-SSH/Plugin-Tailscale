@@ -1,7 +1,7 @@
 {
   "id": "tailscale",
   "name": "Tailscale",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Add tailnet devices as hosts and connect with Tailscale SSH.",
   "author": {
     "name": "Termix"
@@ -20,7 +20,7 @@
     "A dashboard card with your tailnet devices and which are online"
   ],
   "engine": {
-    "termix": ">=26.10.0",
+    "termix": ">=26.11.1-0",
     "api": "^1.2"
   },
   "capabilities": [
@@ -31,7 +31,8 @@
     "ssh:connect",
     "credentials:use",
     "credentials:read",
-    "ui:surface"
+    "ui:surface",
+    "operations:provide"
   ],
   "optionalDependencies": {
     "host-metrics": "^1.0.0"
@@ -89,7 +90,63 @@
         "titleKey": "card.title",
         "icon": "Radar"
       }
-    ]
+    ],
+    "operations": {
+      "actions": [
+        {
+          "id": "tailscale.status",
+          "titleKey": "operations.status.title",
+          "scope": "host",
+          "risk": "read",
+          "permission": "devices.view",
+          "hostAccess": "connect",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true,
+            "palette": false
+          }
+        },
+        {
+          "id": "tailscale.up",
+          "titleKey": "operations.up.title",
+          "icon": "Wifi",
+          "scope": "host",
+          "risk": "change",
+          "permission": "devices.view",
+          "hostAccess": "edit",
+          "dryRun": "describe",
+          "idempotent": true,
+          "undo": "tailscale.down",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true
+          }
+        },
+        {
+          "id": "tailscale.down",
+          "titleKey": "operations.down.title",
+          "icon": "WifiOff",
+          "scope": "host",
+          "risk": "destructive",
+          "permission": "devices.view",
+          "hostAccess": "edit",
+          "dryRun": "describe",
+          "idempotent": true,
+          "undo": "tailscale.up"
+        }
+      ],
+      "signals": [
+        {
+          "id": "tailscale.connected",
+          "titleKey": "operations.status.title",
+          "read": "tailscale.status",
+          "scope": "host",
+          "kind": "status",
+          "refreshSec": 300,
+          "fix": "tailscale.up"
+        }
+      ]
+    }
   },
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"]
