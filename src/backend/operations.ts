@@ -11,6 +11,7 @@ import {
   PROBE_CMD,
   resolveManagerHost,
 } from "./host-metrics-manager.js";
+import { fetchDevices } from "./devices.js";
 import { withSshConnection } from "./ssh.js";
 
 const CONNECTION = { pool: "tailscale", purpose: "metrics" } as const;
@@ -47,6 +48,26 @@ export function registerOperations(ctx: PluginContext): void {
           status: !data.installed ? "unknown" : data.running ? "ok" : "warn",
           label,
           items: data.tailscaleIPs.map((ip) => ({ label: ip })),
+        },
+      };
+    },
+  });
+
+  ctx.operations.register("tailscale.devices", {
+    run: async () => {
+      const devices = await fetchDevices(ctx);
+      if (!devices) throw new Error("Set a Tailscale API key first");
+      const online = devices.filter((d) => d.online).length;
+      return {
+        summary: `${online} of ${devices.length} devices online`,
+        data: {
+          rows: devices.map((d) => ({
+            id: d.id,
+            name: d.hostname || d.name,
+            address: d.addresses[0] ?? "",
+            os: d.os,
+            state: d.online ? "online" : "offline",
+          })),
         },
       };
     },

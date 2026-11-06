@@ -4,6 +4,7 @@ import { startTailscaleService, stopTailscaleService } from "./routes.js";
 import { registerTailscaleSshAuth } from "./ssh-auth-provider.js";
 import { registerTailscaleHostMetricsManager } from "./host-metrics-manager.js";
 import { registerOperations } from "./operations.js";
+import { startTailscaleAlerts } from "./alerts.js";
 import { setPluginSsh } from "./ssh.js";
 
 export async function activate(ctx: PluginContext) {
@@ -11,6 +12,7 @@ export async function activate(ctx: PluginContext) {
   startTailscaleService(router, ctx);
   registerTailscaleHostMetricsManager(router, ctx);
   registerOperations(ctx);
+  startTailscaleAlerts(ctx);
   setPluginSsh(ctx.ssh);
   registerTailscaleSshAuth(ctx);
   ctx.log.info("Tailscale routes mounted at /plugin-api/tailscale");

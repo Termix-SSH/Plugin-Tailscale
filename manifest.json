@@ -32,6 +32,7 @@
     "credentials:use",
     "credentials:read",
     "ui:surface",
+    "notify:send",
     "operations:provide"
   ],
   "optionalDependencies": {
@@ -76,6 +77,14 @@
           "group": "settings.group.api"
         },
         {
+          "key": "alertOffline",
+          "type": "boolean",
+          "labelKey": "settings.alertOffline.label",
+          "descriptionKey": "settings.alertOffline.description",
+          "default": false,
+          "group": "settings.group.devices"
+        },
+        {
           "key": "devices",
           "type": "custom",
           "component": "devices",
@@ -93,6 +102,18 @@
     ],
     "operations": {
       "actions": [
+        {
+          "id": "tailscale.devices",
+          "titleKey": "operations.devices.title",
+          "scope": "server",
+          "risk": "read",
+          "permission": "devices.view",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true,
+            "palette": false
+          }
+        },
         {
           "id": "tailscale.status",
           "titleKey": "operations.status.title",
@@ -133,6 +154,29 @@
           "dryRun": "describe",
           "idempotent": true,
           "undo": "tailscale.up"
+        }
+      ],
+      "resources": [
+        {
+          "id": "tailscale.device",
+          "titleKey": "operations.device.title",
+          "icon": "Radar",
+          "list": "tailscale.devices",
+          "key": "id",
+          "name": "name",
+          "status": "state",
+          "tab": "tailscale",
+          "columns": [
+            {
+              "key": "address",
+              "titleKey": "operations.device.address"
+            },
+            {
+              "key": "os",
+              "titleKey": "operations.device.os"
+            }
+          ],
+          "filters": ["state"]
         }
       ],
       "signals": [
