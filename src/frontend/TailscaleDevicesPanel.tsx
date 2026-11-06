@@ -4,8 +4,8 @@ import {
   useTranslation,
   type HostDraft,
 } from "@termix-ssh/plugin-sdk/frontend";
-import { Copy, Loader2, Plus, RefreshCw, Terminal } from "lucide-react";
-import { Button } from "@termix-ssh/plugin-sdk/ui";
+import { Copy, Plus, RefreshCw, Terminal } from "lucide-react";
+import { Button, LoadingState, TOOLBAR_FIT } from "@termix-ssh/plugin-sdk/ui";
 import { Input, PanelSearch } from "@termix-ssh/plugin-sdk/ui";
 import type { PluginHostRecord as Host } from "@termix-ssh/plugin-sdk/frontend";
 import { getTailscaleDevices } from "./tailscale-api";
@@ -124,7 +124,7 @@ export function TailscaleDevicesPanel({
       </div>
 
       {!loading && hasApiKey && !error && devices.length > 0 && (
-        <div className="border-b border-border px-3 py-2">
+        <div className={`border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}>
           <PanelSearch
             value={query}
             onChange={setQuery}
@@ -136,10 +136,11 @@ export function TailscaleDevicesPanel({
 
       <div className="flex flex-col gap-2 p-3">
         {loading && (
-          <div className="flex items-center gap-2 text-[10px] text-muted-foreground">
-            <Loader2 className="size-3.5 animate-spin" />
-            {t("hosts.tailscaleLoadingDevices")}
-          </div>
+          <LoadingState
+            compact
+            label={t("hosts.tailscaleLoadingDevices")}
+            className="px-0"
+          />
         )}
 
         {!loading && !hasApiKey && (

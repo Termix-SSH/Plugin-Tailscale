@@ -5,7 +5,7 @@ import {
   useTranslation,
   type DashboardCardProps,
 } from "@termix-ssh/plugin-sdk/frontend";
-import { ListRow, PanelList } from "@termix-ssh/plugin-sdk/ui";
+import { ListRow, PanelList, LoadingState } from "@termix-ssh/plugin-sdk/ui";
 import {
   getTailscaleDevices,
   type TailscaleDevicesResponse,
@@ -48,9 +48,7 @@ export function TailscaleCard({ isVisible, shell }: DashboardCardProps) {
 
   if (!allowed) return null;
   if (!data) {
-    return (
-      <p className="p-3 text-xs text-muted-foreground">{t("card.loading")}</p>
-    );
+    return <LoadingState compact label={t("card.loading")} />;
   }
   if (!data.hasApiKey) {
     return (
