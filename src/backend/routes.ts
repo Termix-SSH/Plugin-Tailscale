@@ -1,31 +1,7 @@
 import { Router } from "express";
 import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 
-interface TailscaleDevice {
-  id: string;
-  name: string;
-  hostname: string;
-  addresses: string[];
-  os: string;
-  lastSeen: string;
-}
-
-interface TailscaleAPIDevice {
-  id: string;
-  name: string;
-  hostname: string;
-  addresses: string[];
-  os: string;
-  lastSeen: string;
-  nodeId?: string;
-}
-
-const DEFAULT_TAILSCALE_API_BASE = "https://api.tailscale.com/api/v2";
-
-function normalizeApiBase(raw: string | null): string {
-  const trimmed = (raw ?? "").trim().replace(/\/+$/, "");
-  return trimmed || DEFAULT_TAILSCALE_API_BASE;
-}
+import { DeviceApiError, fetchDevices } from "./devices.js";
 
 /**
  * Set by activate(). Dropped on deactivate so a request arriving mid-teardown
@@ -78,64 +54,26 @@ export function startTailscaleService(
             .status(503)
             .json({ error: "Tailscale is not available", devices: [] });
         }
-        const apiKey = (await context.settings.get<string>("apiKey")) ?? "";
-        if (!apiKey) {
-          return res.json({ devices: [], hasApiKey: false });
-        }
-        const apiBase = normalizeApiBase(
-          (await context.settings.get<string>("apiBaseUrl")) ?? null,
-        );
-
-        const url = `${apiBase}/tailnet/-/devices?fields=all`;
-        // The base is admin-set and may be a LAN Headscale; listing it also
-        // routes the call through the configured outbound proxy.
-        const response = await context.fetch(url, {
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "User-Agent": "Termix/1.0",
-          },
-          allowPrivateHosts: [new URL(apiBase).hostname],
-        });
-
-        if (!response.ok) {
-          context.log.warn(
-            `Tailscale API returned non-OK status ${response.status}`,
-          );
-          if (response.status === 401 || response.status === 403) {
-            return res.status(401).json({
-              error: "Invalid Tailscale API key",
+        const devices = await fetchDevices(context);
+        res.json({ devices: devices ?? [], hasApiKey: devices !== null });
+      } catch (err) {
+        // Do not log fetch errors or response bodies: they can contain credentials.
+        if (err instanceof DeviceApiError) {
+          context?.log.warn(`Device API returned non-OK status ${err.status}`);
+          return res
+            .status(err.status === 401 || err.status === 403 ? 401 : 502)
+            .json({
+              error:
+                err.status === 401 || err.status === 403
+                  ? "Invalid device API key"
+                  : "Device API error",
               devices: [],
               hasApiKey: true,
             });
-          }
-          return res.status(502).json({
-            error: "Tailscale API error",
-            devices: [],
-            hasApiKey: true,
-          });
         }
-
-        const data = (await response.json()) as {
-          devices: TailscaleAPIDevice[];
-        };
-
-        const devices: TailscaleDevice[] = (data.devices ?? []).map((d) => ({
-          id: d.id,
-          name: d.name,
-          hostname: d.hostname,
-          addresses: d.addresses ?? [],
-          os: d.os,
-          lastSeen: d.lastSeen,
-        }));
-
-        res.json({ devices, hasApiKey: true });
-      } catch (err) {
-        context?.log.error(
-          "Failed to fetch Tailscale devices",
-          err instanceof Error ? err : undefined,
-        );
+        context?.log.error("Failed to fetch tailnet devices");
         res.status(500).json({
-          error: "Failed to fetch Tailscale devices",
+          error: "Failed to fetch tailnet devices",
           devices: [],
           hasApiKey: true,
         });

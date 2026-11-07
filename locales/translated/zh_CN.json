@@ -19,7 +19,7 @@
     },
     "apiBaseUrl": {
       "label": "API 基础 URL",
-      "description": "Tailscale 用户请留空。Headscale 用户请设置为此实例的地址。",
+      "description": "Tailscale 可留空，或填写包含 /api/v2 的自定义 API 基础地址。Headscale 请填写服务器地址（包含代理路径前缀），不要添加 /api/v1/node。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +29,12 @@
       "error": "无法连接到 Tailnet。请检查 API 密钥。",
       "count_other": "{{count}} 台设备可访问",
       "refresh": "检查"
+    },
+    "provider": {
+      "label": "控制服务器",
+      "description": "选择设备发现 API。不根据 API 密钥猜测服务类型。",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {

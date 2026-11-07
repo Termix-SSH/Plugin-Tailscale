@@ -60,6 +60,24 @@
     "settings": {
       "admin": [
         {
+          "key": "provider",
+          "type": "select",
+          "labelKey": "settings.provider.label",
+          "descriptionKey": "settings.provider.description",
+          "default": "tailscale",
+          "options": [
+            {
+              "value": "tailscale",
+              "labelKey": "settings.provider.tailscale"
+            },
+            {
+              "value": "headscale",
+              "labelKey": "settings.provider.headscale"
+            }
+          ],
+          "group": "settings.group.api"
+        },
+        {
           "key": "apiKey",
           "type": "secret",
           "labelKey": "settings.apiKey.label",

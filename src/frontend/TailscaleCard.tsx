@@ -16,7 +16,12 @@ const POLL_MS = 60_000;
 const ONLINE_MS = 5 * 60 * 1000;
 
 /** Whether a device was seen in the last few minutes. */
-export function isOnline(lastSeen: string, now = Date.now()): boolean {
+export function isOnline(
+  lastSeen: string,
+  now = Date.now(),
+  online?: boolean,
+): boolean {
+  if (typeof online === "boolean") return online;
   const seen = Date.parse(lastSeen);
   return Number.isFinite(seen) && now - seen < ONLINE_MS;
 }
@@ -61,10 +66,13 @@ export function TailscaleCard({ isVisible, shell }: DashboardCardProps) {
 
   const devices = [...data.devices].sort(
     (a, b) =>
-      Number(isOnline(b.lastSeen)) - Number(isOnline(a.lastSeen)) ||
+      Number(isOnline(b.lastSeen, undefined, b.online)) -
+        Number(isOnline(a.lastSeen, undefined, a.online)) ||
       a.name.localeCompare(b.name),
   );
-  const online = devices.filter((device) => isOnline(device.lastSeen)).length;
+  const online = devices.filter((device) =>
+    isOnline(device.lastSeen, undefined, device.online),
+  ).length;
 
   return (
     <div className="flex h-full min-h-0 flex-col">
@@ -80,8 +88,12 @@ export function TailscaleCard({ isVisible, shell }: DashboardCardProps) {
           <ListRow
             key={device.id}
             stripe={index}
-            tone={isOnline(device.lastSeen) ? "success" : "muted"}
-            dimmed={!isOnline(device.lastSeen)}
+            tone={
+              isOnline(device.lastSeen, undefined, device.online)
+                ? "success"
+                : "muted"
+            }
+            dimmed={!isOnline(device.lastSeen, undefined, device.online)}
             icon={<Radar className="size-3.5" />}
             title={device.name.split(".")[0] || device.hostname}
             meta={[device.addresses[0], device.os].filter(Boolean).join(" | ")}

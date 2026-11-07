@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { createMockCtx } from "@termix-ssh/plugin-sdk/testing";
 import type { PluginManifest } from "@termix-ssh/plugin-sdk/manifest";
 import manifestJson from "../../manifest.json";
@@ -60,4 +60,28 @@ describe("tailnet alerts", () => {
     await startTailscaleAlerts(mock.ctx).tick();
     expect(mock.fetches).toHaveLength(0);
   });
+});
+
+it("does not log credential-bearing transport errors from scheduled Headscale checks", async () => {
+  const mock = createMockCtx({
+    pluginId: manifest.id,
+    manifest,
+    capabilities: manifest.capabilities,
+    settings: {
+      provider: "headscale",
+      apiBaseUrl: "https://headscale.example",
+      apiKey: "synthetic-secret",
+      alertOffline: true,
+    },
+    fetch: async () => {
+      throw new Error("Authorization: Bearer synthetic-secret");
+    },
+  });
+  const debug = vi.spyOn(mock.ctx.log, "debug");
+  startTailscaleAlerts(mock.ctx);
+  await mock.runScheduled();
+  expect(debug).toHaveBeenCalledWith(
+    "Tailnet check failed: Error: Could not reach device API",
+  );
+  expect(JSON.stringify(debug.mock.calls)).not.toContain("synthetic-secret");
 });

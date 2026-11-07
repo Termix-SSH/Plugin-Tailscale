@@ -27,6 +27,11 @@ describe("tailnet dashboard card", () => {
     expect(isOnline("never", now)).toBe(false);
   });
 
+  it("respects explicit Headscale status even when lastSeen disagrees", () => {
+    expect(isOnline("2020-01-01T00:00:00Z", Date.now(), true)).toBe(true);
+    expect(isOnline(new Date().toISOString(), Date.now(), false)).toBe(false);
+  });
+
   it("counts online devices", async () => {
     rendered = await renderWithApp(plugin, {
       manifest,
