@@ -6,20 +6,16 @@ Termix's server needs to be on the tailnet to reach those devices.
 
 1. Make an API key in the [Tailscale admin console](https://login.tailscale.com/admin/settings/keys), or with `headscale apikeys create` for Headscale.
 2. Install the plugin from the Plugins tab.
-3. Open Settings, Tailscale and paste the API key. Select **Headscale** as the Control server when using Headscale, then set API base URL to its server URL (for example, `https://headscale.example` or `https://proxy.example/headscale`). Do not append `/api/v1/node`. Tailscale remains the default.
+3. Open Settings, Tailscale and paste the API key. For Headscale, set Control server to Headscale and API base URL to your Headscale address, like `https://headscale.example`.
 4. Press Check to see how many devices it can reach.
 
 Open the Tailscale panel from the sidebar to see your devices. Add host adds one as a host, and Copy Tailscale IP copies its `100.x` address. In the host editor, Select Tailscale device fills in a device's address.
 
-The key is stored encrypted. It is only used to list devices. The selected provider determines the endpoint; the plugin does not infer it from a key prefix or fall back to another provider on errors.
-
-Headscale discovery uses its `/api/v1/node` API and maps node IDs, names and IP addresses into the device list. Its explicit `online` flag drives online status; a missing flag is offline, as in the protobuf default. Headscale 0.25.1 does not expose an OS in this response, so that field stays empty. Node keys and pre-authentication keys are not returned to the browser.
-
-The adapter follows the [Headscale 0.25.1 node schema](https://github.com/juanfont/headscale/blob/v0.25.1/proto/headscale/v1/node.proto) and [HTTP service mapping](https://github.com/juanfont/headscale/blob/v0.25.1/proto/headscale/v1/headscale.proto).
+The key is stored encrypted. It is only used to list devices. Headscale does not report a device's OS, so that column stays empty for it.
 
 ## On the dashboard
 
-Add the Tailnet card in the dashboard's edit mode. It shows how many devices are online, using Headscale’s online flag or Tailscale control-server presence and recent activity, and lists them with the online ones first.
+Add the Tailnet card in the dashboard's edit mode. It shows how many devices are online and lists them with the online ones first.
 
 ## Tailscale SSH
 

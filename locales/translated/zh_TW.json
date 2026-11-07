@@ -19,7 +19,6 @@
     },
     "apiBaseUrl": {
       "label": "API 基礎 URL",
-      "description": "Tailscale 可留空，或填寫包含 /api/v2 的自訂 API 基礎位址。Headscale 請填寫伺服器位址（包含代理路徑前綴），不要加入 /api/v1/node。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,7 +31,6 @@
     },
     "provider": {
       "label": "控制伺服器",
-      "description": "選擇裝置探索 API。不根據 API 金鑰猜測服務類型。",
       "tailscale": "Tailscale",
       "headscale": "Headscale"
     }

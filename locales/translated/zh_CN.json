@@ -19,7 +19,6 @@
     },
     "apiBaseUrl": {
       "label": "API 基础 URL",
-      "description": "Tailscale 可留空，或填写包含 /api/v2 的自定义 API 基础地址。Headscale 请填写服务器地址（包含代理路径前缀），不要添加 /api/v1/node。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,7 +31,6 @@
     },
     "provider": {
       "label": "控制服务器",
-      "description": "选择设备发现 API。不根据 API 密钥猜测服务类型。",
       "tailscale": "Tailscale",
       "headscale": "Headscale"
     }

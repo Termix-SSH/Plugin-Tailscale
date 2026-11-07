@@ -5,6 +5,7 @@
 ### Added
 
 - Connect and disconnect Tailscale on a host through Termix actions, and whether it is connected as a status tile
+- Headscale servers list their devices too: pick Headscale as the control server in settings
 
 ### Changed
 

@@ -21,7 +21,7 @@
     },
     "apiBaseUrl": {
       "label": "API base URL",
-      "description": "Leave empty for Tailscale, or enter a custom Tailscale API base including /api/v2. For Headscale, enter the server URL (including any proxy path prefix), without /api/v1/node.",
+      "description": "Leave empty for Tailscale. For Headscale, enter your Headscale address.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -35,7 +35,7 @@
     },
     "provider": {
       "label": "Control server",
-      "description": "Select the device discovery API. API keys are not used to guess the provider.",
+      "description": "Pick Headscale if you run your own Headscale server.",
       "tailscale": "Tailscale",
       "headscale": "Headscale"
     }
