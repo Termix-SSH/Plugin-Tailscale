@@ -30,6 +30,7 @@ Read the [docs](https://docs.termix.site/plugins/tailscale) to set it up and use
 - Connect with Tailscale SSH, with no credentials stored
 - Works with Headscale
 - A Tailscale card in Host Metrics
+- Connect and disconnect Tailscale through Termix actions, with its state as a status tile
 
 <br />
 
