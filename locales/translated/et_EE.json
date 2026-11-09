@@ -17,9 +17,13 @@
       "description": "Kasutatakse sinu tailneti seadmete loetlemiseks. Töötab nii Tailscale'i kui ka Headscale'i võtmega.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Teavita, kui seade läheb offline'i",
+      "description": "Saada halduritele teavitus, kui varem online olnud tailneti seade ühenduse kaotab. Nõuab API- võtit."
+    },
     "apiBaseUrl": {
       "label": "API baas-URL",
-      "description": "Jäta tühjaks Tailscale'i puhul. Määra see, kui kasutad Headscale'i instantsi.",
+      "description": "Jäta tühjaks Tailscale'i puhul. Headscale'i puhul sisesta oma Headscale'i aadress.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} seade saadaval",
       "count_other": "{{count}} seadet saadaval",
       "refresh": "Kontrolli"
+    },
+    "provider": {
+      "label": "Juhtimisserver",
+      "description": "Vali Headscale, kui kasutad oma enda Headscale'i serverit.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Laadimine...",
     "noKey": "Lisage pistmeseadedesse Tailscale'i API- võti, et näha oma seadmeid.",
     "online": "{{online}}/{{total}} seadet on võrgus"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailneti seadmed"
+    },
+    "device": {
+      "title": "Tailneti seadmed",
+      "address": "Aadress",
+      "os": "Süsteem"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Ühenda Tailscale"
+    },
+    "down": {
+      "title": "Katkesta Tailscale'i ühendus"
+    }
   }
 }

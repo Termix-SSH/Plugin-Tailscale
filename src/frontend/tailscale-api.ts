@@ -13,6 +13,7 @@ export interface TailscaleDevicesResponse {
     addresses: string[];
     os: string;
     lastSeen: string;
+    online?: boolean;
   }>;
   hasApiKey: boolean;
   error?: string;

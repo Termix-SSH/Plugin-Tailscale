@@ -17,9 +17,13 @@
       "description": "আপনার টেইলনেটে থাকা ডিভাইসের তালিকা দেখতে এটি ব্যবহার করা হয়। এটি টেইলস্কেল বা হেডস্কেল কী দিয়ে কাজ করে।",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "যখন কোনো ডিভাইস অফলাইন হয় তখন সতর্ক করুন",
+      "description": "যখন একটি অনলাইন টেলনেট ডিভাইস সংযোগ বিচ্ছিন্ন হয়, তখন প্রশাসকদের কাছে একটি সতর্কবার্তা পাঠান। এর জন্য API কী প্রয়োজন।"
+    },
     "apiBaseUrl": {
       "label": "API বেস URL",
-      "description": "টেইলস্কেলের জন্য এটি খালি রাখুন। হেডস্কেল ইনস্ট্যান্সের দিকে ইঙ্গিত করতে এটি সেট করুন।",
+      "description": "Tailscale-এর জন্য খালি রাখুন। Headscale-এর জন্য আপনার Headscale ঠিকানা লিখুন।",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}}টি ডিভাইসে সংযোগ সম্ভব",
       "count_other": "{{count}}টি ডিভাইসে সংযোগ সম্ভব",
       "refresh": "যাচাই করুন"
+    },
+    "provider": {
+      "label": "কন্ট্রোল সার্ভার",
+      "description": "যদি আপনি নিজের Headscale সার্ভার চালাচ্ছেন, তাহলে Headscale নির্বাচন করুন।",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "লোড হচ্ছে...",
     "noKey": "আপনার ডিভাইসগুলো দেখতে প্লাগইন সেটিংসে একটি Tailscale API কী যোগ করুন।",
     "online": "{{total}} টি ডিভাইসের মধ্যে {{online}} টি অনলাইন"
+  },
+  "operations": {
+    "devices": {
+      "title": "টেলনেট ডিভাইসসমূহ"
+    },
+    "device": {
+      "title": "টেলনেট ডিভাইসসমূহ",
+      "address": "ঠিকানা",
+      "os": "সিস্টেম"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale সংযোগ করুন"
+    },
+    "down": {
+      "title": "Tailscale সংযোগ বিচ্ছিন্ন করুন"
+    }
   }
 }

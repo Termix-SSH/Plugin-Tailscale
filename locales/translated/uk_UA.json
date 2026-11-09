@@ -17,9 +17,13 @@
       "description": "Використовується для отримання списку пристроїв у вашому tailnet. Працює з ключем Tailscale або Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Сповіщати, коли пристрій втрачає з’єднання",
+      "description": "Надсилати сповіщення адміністраторам, коли пристрій tailnet, який був онлайн, відключається. Потрібен API-ключ."
+    },
     "apiBaseUrl": {
       "label": "Базова URL-адреса API",
-      "description": "Залиште порожнім для Tailscale. Вкажіть це значення, щоб підключитися до екземпляра Headscale.",
+      "description": "Залиште порожнім для Tailscale. Для Headscale введіть адресу вашого сервера Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,6 +36,12 @@
       "count_many": "{{count}} пристроїв доступних",
       "count_other": "{{count}} пристроїв доступних",
       "refresh": "Перевірити"
+    },
+    "provider": {
+      "label": "Сервер керування",
+      "description": "Оберіть Headscale, якщо ви використовуєте власний сервер Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -96,5 +106,24 @@
     "loading": "Завантаження...",
     "noKey": "Додайте ключ API Tailscale в налаштуваннях плагіна, щоб побачити свої пристрої.",
     "online": "{{online}} з {{total}} пристроїв онлайн"
+  },
+  "operations": {
+    "devices": {
+      "title": "Пристрої tailnet"
+    },
+    "device": {
+      "title": "Пристрої tailnet",
+      "address": "Адреса",
+      "os": "Система"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Підключити Tailscale"
+    },
+    "down": {
+      "title": "Відключити Tailscale"
+    }
   }
 }

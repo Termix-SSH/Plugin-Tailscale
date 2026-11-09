@@ -17,9 +17,13 @@
       "description": "आपके टेलनेट पर डिवाइस सूचीबद्ध करने के लिए उपयोग किया जाता है। Tailscale या Headscale कुंजी के साथ काम करता है।",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "डिवाइस ऑफ़लाइन होने पर अलर्ट दिखाएं",
+      "description": "जब कोई ऑनलाइन टेलनेट डिवाइस कनेक्शन खो दे, तो एडमिनों को अलर्ट भेजें। इसके लिए API की की आवश्यकता होती है।"
+    },
     "apiBaseUrl": {
       "label": "API बेस URL",
-      "description": "Tailscale के लिए खाली छोड़ दें। इसे Headscale इंस्टेंस की ओर इशारा करने के लिए सेट करें।",
+      "description": "Tailscale के लिए इसे खाली छोड़ दें। Headscale के लिए, अपना Headscale पता दर्ज करें।",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} उपकरण पहुँच योग्य",
       "count_other": "{{count}} उपकरण पहुँच योग्य",
       "refresh": "जांचें"
+    },
+    "provider": {
+      "label": "कंट्रोल सर्वर",
+      "description": "यदि आप अपना खुद का Headscale सर्वर चला रहे हैं, तो Headscale चुनें।",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "लोड हो रहा है...",
     "noKey": "अपने डिवाइस देखने के लिए प्लगइन सेटिंग्स में एक Tailscale API कुंजी जोड़ें।",
     "online": "{{total}} डिवाइसों में से {{online}} ऑनलाइन"
+  },
+  "operations": {
+    "devices": {
+      "title": "टेलनेट डिवाइस"
+    },
+    "device": {
+      "title": "टेलनेट डिवाइस",
+      "address": "पता",
+      "os": "सिस्टम"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale कनेक्ट करें"
+    },
+    "down": {
+      "title": "Tailscale डिस्कनेक्ट करें"
+    }
   }
 }

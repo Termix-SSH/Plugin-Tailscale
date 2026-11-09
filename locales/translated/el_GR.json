@@ -17,9 +17,13 @@
       "description": "Χρησιμοποιείται για την αναφορά των συσκευών στο tailnet σας. Λειτουργεί με κλειδί Tailscale ή Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Ειδοποίηση όταν μια συσκευή αποσυνδέεται",
+      "description": "Αποστολή ειδοποίησης στους διαχειριστές όταν μια συσκευή tailnet που ήταν συνδεδεμένη αποσυνδεθεί. Απαιτείται το API key."
+    },
     "apiBaseUrl": {
       "label": "Βασική διεύθυνση API",
-      "description": "Αφήστε κενό για Tailscale. Ορίστε το για να δείχνει σε μια έκδοση Headscale.",
+      "description": "Αφήστε κενό για Tailscale. Για Headscale, εισάγετε τη διεύθυνση του Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} διαθέσιμη συσκευή",
       "count_other": "{{count}} διαθέσιμες συσκευές",
       "refresh": "Έλεγχος"
+    },
+    "provider": {
+      "label": "Διακομιστής ελέγχου",
+      "description": "Επιλέξτε Headscale αν τρέχετε τον δικό σας διακομιστή Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Φόρτωση...",
     "noKey": "Προσθέστε ένα API key του Tailscale στις ρυθμίσεις του plugin για να δείτε τις συσκευές σας.",
     "online": "{{online}} από {{total}} συσκευές συνδεδεμένες"
+  },
+  "operations": {
+    "devices": {
+      "title": "Συσκευές Tailnet"
+    },
+    "device": {
+      "title": "Συσκευές Tailnet",
+      "address": "Διεύθυνση",
+      "os": "Σύστημα"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Σύνδεση Tailscale"
+    },
+    "down": {
+      "title": "Αποσύνδεση Tailscale"
+    }
   }
 }

@@ -29,7 +29,7 @@ export interface TailscaleData {
   exitNodeInUse: boolean;
 }
 
-const PROBE_CMD = [
+export const PROBE_CMD = [
   "command -v tailscale >/dev/null 2>&1 && echo ts_installed=1 || echo ts_installed=0",
   "tailscale status --json 2>/dev/null",
 ].join("; ");
@@ -130,7 +130,7 @@ interface ManagerHost {
  * owner's sudo password even for a shared user: core decrypts it with the
  * owner's key.
  */
-async function resolveManagerHost(
+export async function resolveManagerHost(
   ctx: PluginContext,
   hostId: number,
   level: "connect" | "edit" = "connect",

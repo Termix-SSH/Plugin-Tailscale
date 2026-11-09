@@ -17,9 +17,13 @@
       "description": "Służy do wyświetlania listy urządzeń w twoim tailnecie. Działa z kluczem Tailscale lub Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Powiadom, gdy urządzenie straci połączenie",
+      "description": "Wyślij powiadomienie do administratorów, gdy urządzenie w sieci tailnet, które było online, straci połączenie. Wymaga klucza API."
+    },
     "apiBaseUrl": {
       "label": "Podstawowy adres URL API",
-      "description": "Pozostaw puste dla Tailscale. Ustaw to, aby wskazać instancję Headscale.",
+      "description": "Pozostaw puste dla Tailscale. W przypadku Headscale podaj adres swojego serwera Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,6 +36,12 @@
       "count_many": "{{count}} urządzeń osiągalnych",
       "count_other": "{{count}} urządzeń osiągalnych",
       "refresh": "Sprawdź"
+    },
+    "provider": {
+      "label": "Serwer kontrolny",
+      "description": "Wybierz Headscale, jeśli uruchamiasz własny serwer Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -96,5 +106,24 @@
     "loading": "Ładowanie...",
     "noKey": "Dodaj klucz API Tailscale w ustawieniach wtyczki, aby zobaczyć swoje urządzenia.",
     "online": "{{online}} z {{total}} urządzeń online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Urządzenia w sieci tailnet"
+    },
+    "device": {
+      "title": "Urządzenia w sieci tailnet",
+      "address": "Adres",
+      "os": "System"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Połącz Tailscale"
+    },
+    "down": {
+      "title": "Rozłącz Tailscale"
+    }
   }
 }

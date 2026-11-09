@@ -17,9 +17,13 @@
       "description": "用於列出您 Tailnet 上的裝置。支援 Tailscale 或 Headscale 金鑰。",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "裝置離線時發出警示",
+      "description": "當原本在線的 tailnet 裝置離線時，向管理員發送警示。需要 API 金鑰。"
+    },
     "apiBaseUrl": {
       "label": "API 基礎 URL",
-      "description": "若使用 Tailscale 請留空。若使用 Headscale，請設定為其實例地址。",
+      "description": "若使用 Tailscale 請留空。若使用 Headscale，請輸入您的 Headscale 位址。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "無法連線至 Tailnet。請檢查 API 金鑰。",
       "count_other": "可連線的裝置數：{{count}}",
       "refresh": "檢查"
+    },
+    "provider": {
+      "label": "控制伺服器",
+      "description": "若您運行自己的 Headscale 伺服器，請選擇 Headscale。",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "載入中...",
     "noKey": "在插件設定中新增 Tailscale API 金鑰，即可查看您的裝置。",
     "online": "{{online}} / {{total}} 個裝置線上"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet 裝置"
+    },
+    "device": {
+      "title": "Tailnet 裝置",
+      "address": "位址",
+      "os": "系統"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "連線 Tailscale"
+    },
+    "down": {
+      "title": "斷開 Tailscale"
+    }
   }
 }

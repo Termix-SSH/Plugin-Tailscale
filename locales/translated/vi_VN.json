@@ -17,9 +17,13 @@
       "description": "Dùng để liệt kê các thiết bị trên tailnet của bạn. Hoạt động với khóa Tailscale hoặc Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Cảnh báo khi thiết bị ngắt kết nối",
+      "description": "Gửi cảnh báo cho quản trị viên khi thiết bị tailnet đang trực tuyến bị ngắt kết nối. Cần có khóa API."
+    },
     "apiBaseUrl": {
       "label": "URL gốc API",
-      "description": "Để trống nếu dùng Tailscale. Đặt giá trị này để trỏ đến một phiên bản Headscale.",
+      "description": "Để trống nếu dùng Tailscale. Nếu dùng Headscale, hãy nhập địa chỉ Headscale của bạn.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "Không thể kết nối đến tailnet. Vui lòng kiểm tra khóa API.",
       "count_other": "{{count}} thiết bị có thể truy cập",
       "refresh": "Kiểm tra"
+    },
+    "provider": {
+      "label": "Máy chủ điều khiển",
+      "description": "Chọn Headscale nếu bạn đang tự chạy máy chủ Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "Đang tải...",
     "noKey": "Thêm khóa API Tailscale trong cài đặt plugin để xem các thiết bị của bạn.",
     "online": "{{online}} trong số {{total}} thiết bị đang trực tuyến"
+  },
+  "operations": {
+    "devices": {
+      "title": "Thiết bị Tailnet"
+    },
+    "device": {
+      "title": "Thiết bị Tailnet",
+      "address": "Địa chỉ",
+      "os": "Hệ thống"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Kết nối Tailscale"
+    },
+    "down": {
+      "title": "Ngắt kết nối Tailscale"
+    }
   }
 }

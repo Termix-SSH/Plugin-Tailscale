@@ -17,9 +17,13 @@
       "description": "Používa sa na zoznamenie zariadení vo vašom tailnete. Funguje s kľúčom Tailscale alebo Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Upozornenie, keď zariadenie stratí pripojenie",
+      "description": "Pošlite upozornenie správcovi, keď zariadenie v tailneti, ktoré bolo pripojené, stratí pripojenie. Vyžaduje sa API kľúč."
+    },
     "apiBaseUrl": {
       "label": "Základná URL adresa API",
-      "description": "Pre Tailscale nechajte prázdne. Nastavte túto hodnotu pre pripojenie k inštancii Headscale.",
+      "description": "Pre Tailscale nechajte prázdne. Pre Headscale zadajte adresu vášho Headscale servera.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,6 +36,12 @@
       "count_many": "{{count}} prístupných zariadení",
       "count_other": "{{count}} prístupných zariadení",
       "refresh": "Skontrolovať"
+    },
+    "provider": {
+      "label": "Ovládací server",
+      "description": "Vyberte Headscale, ak prevádzkujete vlastný Headscale server.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -96,5 +106,24 @@
     "loading": "Načítava sa...",
     "noKey": "Pridajte kľúč API Tailscale v nastaveniach pluginu, aby ste videli svoje zariadenia.",
     "online": "{{online}} z {{total}} zariadení je pripojených"
+  },
+  "operations": {
+    "devices": {
+      "title": "Zariadenia v tailneti"
+    },
+    "device": {
+      "title": "Zariadenia v tailneti",
+      "address": "Adresa",
+      "os": "Systém"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Pripojiť Tailscale"
+    },
+    "down": {
+      "title": "Odpojiť Tailscale"
+    }
   }
 }

@@ -26,6 +26,17 @@ describe("tailscale settings contribution", () => {
     expect(manifest.errors).toEqual([]);
   });
 
+  it("offers an explicit provider and defaults to Tailscale", () => {
+    const provider = manifest.manifest?.contributes?.settings?.admin?.find(
+      (field) => field.key === "provider",
+    );
+    expect(provider).toMatchObject({
+      type: "select",
+      default: "tailscale",
+      options: [{ value: "tailscale" }, { value: "headscale" }],
+    });
+  });
+
   it("declares the API key as a secret, so it is encrypted and redacted", () => {
     const apiKey = manifest.manifest?.contributes?.settings?.admin?.find(
       (field) => field.key === "apiKey",

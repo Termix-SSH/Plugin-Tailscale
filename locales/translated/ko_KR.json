@@ -17,9 +17,13 @@
       "description": "테일넷의 장치를 나열하는 데 사용됩니다. Tailscale 또는 Headscale 키와 함께 작동합니다.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "장치가 오프라인 상태가 되면 알림",
+      "description": "온라인 상태였던 테일넷 장치가 연결을 끊으면 관리자에게 알림을 보냅니다. API 키가 필요합니다."
+    },
     "apiBaseUrl": {
       "label": "API 기본 URL",
-      "description": "Tailscale의 경우 비워두세요. Headscale 인스턴스를 가리키도록 설정하세요.",
+      "description": "Tailscale의 경우 비워두세요. Headscale의 경우 Headscale 주소를 입력하세요.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "테일넷에 연결할 수 없습니다. API 키를 확인하세요.",
       "count_other": "{{count}}대의 장치가 연결 가능함",
       "refresh": "확인"
+    },
+    "provider": {
+      "label": "컨트롤 서버",
+      "description": "자신의 Headscale 서버를 실행 중이면 Headscale을 선택하세요.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "로딩 중...",
     "noKey": "플러그인 설정에서 Tailscale API 키를 추가하여 장치를 확인하세요.",
     "online": "{{total}}개 중 {{online}}개 장치 온라인"
+  },
+  "operations": {
+    "devices": {
+      "title": "테일넷 장치"
+    },
+    "device": {
+      "title": "테일넷 장치",
+      "address": "주소",
+      "os": "시스템"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale 연결"
+    },
+    "down": {
+      "title": "Tailscale 연결 끊기"
+    }
   }
 }

@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0
+
+### Added
+
+- Connect and disconnect Tailscale on a host through Termix actions, and whether it is connected as a status tile
+- Headscale servers list their devices too: pick Headscale as the control server in settings
+
+### Changed
+
+- Needs Termix 26.11.1 or newer
+- Toolbars, loading screens, back buttons and Save bars match the rest of Termix
+
 ## 1.1.0
 
 ### Added

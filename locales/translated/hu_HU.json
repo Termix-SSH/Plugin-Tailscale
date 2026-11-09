@@ -17,9 +17,13 @@
       "description": "A tailneten lévő eszközök listázásához használják. Tailscale- vagy Headscale-kulccsal is működik.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Értesítés, amikor egy eszköz offline állapotba kerül",
+      "description": "Küldjön értesítést a rendszergazdáknak, amikor egy korábban online tailnet-eszköz leválik. Ehhez API-kulcs szükséges."
+    },
     "apiBaseUrl": {
       "label": "API alap-URL",
-      "description": "Hagyja üresen a Tailscale esetén. Állítsa be egy Headscale példány megadásához.",
+      "description": "Hagyja üresen a Tailscale esetén. Headscale esetén adja meg a Headscale címét.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} elérhető eszköz",
       "count_other": "{{count}} elérhető eszköz",
       "refresh": "Ellenőrzés"
+    },
+    "provider": {
+      "label": "Vezérlőszerver",
+      "description": "Válassza a Headscale-t, ha saját Headscale-szervert üzemeltet.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Betöltés...",
     "noKey": "Adjon hozzá egy Tailscale API-kulcsot a bővítmény beállításaiban, hogy láthassa az eszközeit.",
     "online": "{{online}}/{{total}} eszköz online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet eszközök"
+    },
+    "device": {
+      "title": "Tailnet eszközök",
+      "address": "Cím",
+      "os": "Rendszer"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale csatlakoztatása"
+    },
+    "down": {
+      "title": "Tailscale leválasztása"
+    }
   }
 }

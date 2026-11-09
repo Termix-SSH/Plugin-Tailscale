@@ -17,9 +17,13 @@
       "description": "Digunakan untuk mendaftar perangkat di tailnet Anda. Berfungsi dengan kunci Tailscale atau Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Peringatan saat perangkat offline",
+      "description": "Kirim peringatan ke admin ketika perangkat tailnet yang sedang online menjadi tidak tersedia. Membutuhkan kunci API."
+    },
     "apiBaseUrl": {
       "label": "URL dasar API",
-      "description": "Biarkan kosong untuk Tailscale. Atur ini untuk menunjuk ke instance Headscale.",
+      "description": "Biarkan kosong untuk Tailscale. Untuk Headscale, masukkan alamat Headscale Anda.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "Tidak dapat mencapai tailnet. Periksa kunci API.",
       "count_other": "{{count}} perangkat dapat dijangkau",
       "refresh": "Periksa"
+    },
+    "provider": {
+      "label": "Server kontrol",
+      "description": "Pilih Headscale jika Anda menjalankan server Headscale sendiri.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "Memuat...",
     "noKey": "Tambahkan kunci API Tailscale di pengaturan plugin untuk melihat perangkat Anda.",
     "online": "{{online}} dari {{total}} perangkat online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Perangkat tailnet"
+    },
+    "device": {
+      "title": "Perangkat tailnet",
+      "address": "Alamat",
+      "os": "Sistem"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Sambungkan Tailscale"
+    },
+    "down": {
+      "title": "Putuskan Tailscale"
+    }
   }
 }

@@ -17,9 +17,13 @@
       "description": "Izmanto, lai uzskaitītu ierīces jūsu tailnet. Darbojas gan ar Tailscale, gan Headscale atslēgu.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Brīdinājums, kad ierīce kļūst nepieejama",
+      "description": "Nosūtīt brīdinājumu administratoriem, kad tailnet ierīce, kas bija tiešsaistē, atslēdzas. Nepieciešama API atslēga."
+    },
     "apiBaseUrl": {
       "label": "API bāzes URL",
-      "description": "Atstājiet tukšu, ja izmantojat Tailscale. Iestatiet šo, lai norādītu uz Headscale instanci.",
+      "description": "Atstāt tukšu Tailscale gadījumā. Headscale gadījumā ievadiet savu Headscale adresi.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_one": "{{count}} sasniedzama ierīce",
       "count_other": "{{count}} sasniedzamas ierīces",
       "refresh": "Pārbaudīt"
+    },
+    "provider": {
+      "label": "Vadības serveris",
+      "description": "Izvēlieties Headscale, ja izmantojat savu Headscale serveri.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "Ielādē...",
     "noKey": "Lai redzētu ierīces, pievienojiet Tailscale API atslēgu spraudņa iestatījumos.",
     "online": "{{online}} no {{total}} ierīcēm tiešsaistē"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet ierīces"
+    },
+    "device": {
+      "title": "Tailnet ierīces",
+      "address": "Adrese",
+      "os": "Sistēma"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Pievienot Tailscale"
+    },
+    "down": {
+      "title": "Atvienot Tailscale"
+    }
   }
 }

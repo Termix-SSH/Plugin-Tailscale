@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "18446744073709551614",
+      "name": "original-name",
+      "givenName": "gateway",
+      "ipAddresses": ["100.64.0.10", "fd7a:115c:a1e0::a"],
+      "lastSeen": "2020-01-01T00:00:00Z",
+      "online": true,
+      "machineKey": "machine-key-must-not-leave-backend",
+      "nodeKey": "node-key-must-not-leave-backend",
+      "preAuthKey": { "key": "preauth-key-must-not-leave-backend" },
+      "user": { "id": "1", "name": "owner" }
+    },
+    {
+      "id": "2",
+      "name": "laptop",
+      "givenName": "",
+      "ipAddresses": ["100.64.0.11"],
+      "lastSeen": "2099-01-01T00:00:00Z",
+      "online": false
+    },
+    { "id": "3", "name": "offline", "ipAddresses": [] }
+  ]
+}

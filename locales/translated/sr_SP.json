@@ -17,9 +17,13 @@
       "description": "Користи се за набрајање уређаја у вашем tailnet-у. Ради са Tailscale или Headscale кључем.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Обавести када уређај буде ван мреже",
+      "description": "Пошаљи обавештење администраторима када уређај на tailnet-у који је био на мрежи буде искључен. Потребан је API кључ."
+    },
     "apiBaseUrl": {
       "label": "Основна URL адреса API-ја",
-      "description": "Оставите празно за Tailscale. Поставите ово да указује на Headscale инстанцу.",
+      "description": "Остави празно за Tailscale. За Headscale, унеси адресу свог Headscale сервера.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_few": "{{count}} уређаја су доступна",
       "count_other": "{{count}} уређаја је доступно",
       "refresh": "Провери"
+    },
+    "provider": {
+      "label": "Контролни сервер",
+      "description": "Изабери Headscale ако користиш сопствени Headscale сервер.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "Учитавање...",
     "noKey": "Додајте Tailscale API кључ у подешавањима прикључка да бисте видели своје уређаје.",
     "online": "{{online}} од {{total}} уређаја је на мрежи"
+  },
+  "operations": {
+    "devices": {
+      "title": "Уређаји на tailnet-у"
+    },
+    "device": {
+      "title": "Уређаји на tailnet-у",
+      "address": "Адреса",
+      "os": "Систем"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Повези Tailscale"
+    },
+    "down": {
+      "title": "Искључи Tailscale"
+    }
   }
 }

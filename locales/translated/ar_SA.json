@@ -17,9 +17,13 @@
       "description": "يُستخدم لسرد الأجهزة على شبكتك الداخلية. يعمل مع مفتاح Tailscale أو Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "إرسال تنبيه عند انقطاع اتصال جهاز",
+      "description": "إرسال تنبيه للمسؤولين عند انقطاع اتصال جهاز كان متصلاً في الشبكة الداخلية. يتطلب مفتاح API."
+    },
     "apiBaseUrl": {
       "label": "الرابط الأساسي لواجهة برمجة التطبيقات",
-      "description": "اتركه فارغًا لاستخدام Tailscale. قم بتعيينه للإشارة إلى مثيل Headscale.",
+      "description": "اتركه فارغاً لاستخدام Tailscale. لاستخدام Headscale، أدخل عنوان خادم Headscale الخاص بك.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -34,6 +38,12 @@
       "count_many": "{{count}} جهازًا يمكن الوصول إليها",
       "count_other": "{{count}} أجهزة يمكن الوصول إليها",
       "refresh": "فحص"
+    },
+    "provider": {
+      "label": "خادم التحكم",
+      "description": "اختر Headscale إذا كنت تشغل خادم Headscale خاصاً بك.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -98,5 +108,24 @@
     "loading": "جارٍ التحميل...",
     "noKey": "أضف مفتاح واجهة برمجة تطبيقات Tailscale في إعدادات المكوّن الإضافي لعرض أجهزتك.",
     "online": "{{online}} من أصل {{total}} أجهزة متصلة"
+  },
+  "operations": {
+    "devices": {
+      "title": "أجهزة الشبكة الداخلية"
+    },
+    "device": {
+      "title": "أجهزة الشبكة الداخلية",
+      "address": "العنوان",
+      "os": "النظام"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "توصيل Tailscale"
+    },
+    "down": {
+      "title": "فصل Tailscale"
+    }
   }
 }

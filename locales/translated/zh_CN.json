@@ -17,9 +17,13 @@
       "description": "用于列出您 Tailnet 上的设备。支持 Tailscale 或 Headscale 密钥。",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "设备离线时发送警报",
+      "description": "当在线的 Tailnet 设备断开连接时，向管理员发送警报。需要 API 密钥。"
+    },
     "apiBaseUrl": {
       "label": "API 基础 URL",
-      "description": "Tailscale 用户请留空。Headscale 用户请设置为此实例的地址。",
+      "description": "使用 Tailscale 时留空。如果使用 Headscale，请输入您的 Headscale 地址。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "无法连接到 Tailnet。请检查 API 密钥。",
       "count_other": "{{count}} 台设备可访问",
       "refresh": "检查"
+    },
+    "provider": {
+      "label": "控制服务器",
+      "description": "如果您运行自己的 Headscale 服务器，请选择 Headscale。",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "加载中...",
     "noKey": "在插件设置中添加 Tailscale API 密钥以查看您的设备。",
     "online": "{{online}} / {{total}} 台设备在线"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet 设备"
+    },
+    "device": {
+      "title": "Tailnet 设备",
+      "address": "地址",
+      "os": "系统"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "连接 Tailscale"
+    },
+    "down": {
+      "title": "断开 Tailscale"
+    }
   }
 }

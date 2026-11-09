@@ -17,9 +17,13 @@
       "description": "Uporablja se za naštevaje naprav v vašem tailnetu. Deluje s ključem Tailscale ali Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Opozori, ko naprava izgubi povezavo",
+      "description": "Pošlje opozorilo skrbnikom, ko naprava v tailnetu, ki je bila povezana, izgubi povezavo. Zahteva API ključ."
+    },
     "apiBaseUrl": {
       "label": "Osnovni URL API-ja",
-      "description": "Pustite prazno za Tailscale. Nastavite to za povezavo s strežnikom Headscale.",
+      "description": "Pustite prazno za Tailscale. Za Headscale vnesite naslov vašega strežnika Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,6 +36,12 @@
       "count_few": "{{count}} dosegljive naprave",
       "count_other": "{{count}} dosegljivih naprav",
       "refresh": "Preveri"
+    },
+    "provider": {
+      "label": "Strežnik za nadzor",
+      "description": "Izberite Headscale, če upravljate svoj strežnik Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -96,5 +106,24 @@
     "loading": "Nalaganje...",
     "noKey": "Dodajte ključ za Tailscale API v nastavitve vtičnika, da vidite svoje naprave.",
     "online": "{{online}} od {{total}} naprav je povezanih"
+  },
+  "operations": {
+    "devices": {
+      "title": "Naprave v tailnetu"
+    },
+    "device": {
+      "title": "Naprave v tailnetu",
+      "address": "Naslov",
+      "os": "Sistem"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Poveži Tailscale"
+    },
+    "down": {
+      "title": "Prekini povezavo Tailscale"
+    }
   }
 }

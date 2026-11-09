@@ -17,9 +17,13 @@
       "description": "Používá se k výpisu zařízení ve vašem tailnetu. Funguje s klíčem Tailscale nebo Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Upozornit, když zařízení přejde do režimu offline",
+      "description": "Odeslat upozornění správci, když zařízení v tailnetu, které bylo online, přestane být dostupné. Vyžaduje API klíč."
+    },
     "apiBaseUrl": {
       "label": "Základní URL API",
-      "description": "Nechte prázdné pro Tailscale. Nastavte tuto hodnotu pro ukázání na instanci Headscale.",
+      "description": "Ponechte prázdné pro Tailscale. Pro Headscale zadejte adresu vašeho Headscale serveru.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,6 +36,12 @@
       "count_many": "{{count}} dosažitelných zařízení",
       "count_other": "{{count}} dosažitelných zařízení",
       "refresh": "Zkontrolovat"
+    },
+    "provider": {
+      "label": "Ovládací server",
+      "description": "Vyberte Headscale, pokud provozujete vlastní Headscale server.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -96,5 +106,24 @@
     "loading": "Načítání...",
     "noKey": "Přidejte klíč Tailscale API v nastavení pluginu, abyste viděli svá zařízení.",
     "online": "{{online}} z {{total}} zařízení je online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Zařízení v tailnetu"
+    },
+    "device": {
+      "title": "Zařízení v tailnetu",
+      "address": "Adresa",
+      "os": "Systém"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Připojit Tailscale"
+    },
+    "down": {
+      "title": "Odpojit Tailscale"
+    }
   }
 }

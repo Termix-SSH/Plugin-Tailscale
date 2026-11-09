@@ -17,9 +17,13 @@
       "description": "משמש לרשימת המכשירים ב-tailnet שלך. עובד עם מפתח של Tailscale או Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "התראה כאשר מכשיר יוצא מהרשת",
+      "description": "שלח התראה למנהלים כאשר מכשיר ברשת tailnet שהיה מחובר יוצא מהרשת. דורש מפתח API."
+    },
     "apiBaseUrl": {
       "label": "כתובת בסיס של API",
-      "description": "השאר ריק עבור Tailscale. הגדר זאת כדי להפנות למופע של Headscale.",
+      "description": "השאר ריק עבור Tailscale. עבור Headscale, הזן את כתובת ה-Headscale שלך.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_two": "{{count}} מכשירים נגישים",
       "count_other": "{{count}} מכשירים נגישים",
       "refresh": "בדיקה"
+    },
+    "provider": {
+      "label": "שרת בקרה",
+      "description": "בחר Headscale אם אתה מפעיל שרת Headscale משלך.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "טוען...",
     "noKey": "הוסף מפתח API של Tailscale בהגדרות התוסף כדי לראות את המכשירים שלך.",
     "online": "{{online}} מתוך {{total}} מכשירים מחוברים"
+  },
+  "operations": {
+    "devices": {
+      "title": "מכשירי Tailnet"
+    },
+    "device": {
+      "title": "מכשירי Tailnet",
+      "address": "כתובת",
+      "os": "מערכת"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "חבר ל-Tailscale"
+    },
+    "down": {
+      "title": "נתק מ-Tailscale"
+    }
   }
 }

@@ -17,9 +17,13 @@
       "description": "Koristi se za izlistavanje uređaja u vašem tailnetu. Radi s Tailscale ili Headscale ključem.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Upozori kada uređaj postane nedostupan",
+      "description": "Pošalji obavijest administratorima kada uređaj u tailnetu koji je bio dostupan postane nedostupan. Zahtijeva API ključ."
+    },
     "apiBaseUrl": {
       "label": "Osnovni URL API-ja",
-      "description": "Ostavite prazno za Tailscale. Postavite ovo za povezivanje na Headscale instancu.",
+      "description": "Ostavi prazno za Tailscale. Za Headscale, unesi adresu svog Headscale poslužitelja.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_few": "{{count}} uređaja dostupna",
       "count_other": "{{count}} uređaja dostupno",
       "refresh": "Provjeri"
+    },
+    "provider": {
+      "label": "Poslužitelj za upravljanje",
+      "description": "Odaberi Headscale ako pokrećeš vlastiti Headscale poslužitelj.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "Učitavanje...",
     "noKey": "Dodajte Tailscale API ključ u postavke dodatka kako biste vidjeli svoje uređaje.",
     "online": "{{online}} od {{total}} uređaja je online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Uređaji u tailnetu"
+    },
+    "device": {
+      "title": "Uređaji u tailnetu",
+      "address": "Adresa",
+      "os": "Sustav"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Poveži Tailscale"
+    },
+    "down": {
+      "title": "Isključi Tailscale"
+    }
   }
 }

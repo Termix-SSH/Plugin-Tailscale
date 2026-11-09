@@ -17,9 +17,13 @@
       "description": "Wird verwendet, um die Geräte in Ihrem Tailnet aufzulisten. Funktioniert mit einem Tailscale- oder Headscale-Schlüssel.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Benachrichtigung, wenn ein Gerät offline geht",
+      "description": "Sende eine Benachrichtigung an Administratoren, wenn ein zuvor online gewesenes Tailnet-Gerät die Verbindung verliert. Erfordert den API-Schlüssel."
+    },
     "apiBaseUrl": {
       "label": "API-Basis-URL",
-      "description": "Leer lassen für Tailscale. Geben Sie dies ein, um auf eine Headscale-Instanz zu verweisen.",
+      "description": "Leer lassen für Tailscale. Für Headscale die Adresse deines Headscale-Servers eingeben.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} Gerät erreichbar",
       "count_other": "{{count}} Geräte erreichbar",
       "refresh": "Überprüfen"
+    },
+    "provider": {
+      "label": "Steuerungsserver",
+      "description": "Wähle Headscale, wenn du deinen eigenen Headscale-Server betreibst.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Wird geladen...",
     "noKey": "Fügen Sie einen Tailscale-API-Schlüssel in den Plugin-Einstellungen hinzu, um Ihre Geräte anzuzeigen.",
     "online": "{{online}} von {{total}} Geräten online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet-Geräte"
+    },
+    "device": {
+      "title": "Tailnet-Geräte",
+      "address": "Adresse",
+      "os": "System"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale verbinden"
+    },
+    "down": {
+      "title": "Tailscale trennen"
+    }
   }
 }

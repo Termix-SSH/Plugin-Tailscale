@@ -17,9 +17,13 @@
       "description": "Folosită pentru a lista dispozitivele din tailnetul dvs. Funcționează cu o cheie Tailscale sau Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Alertează când un dispozitiv devine indisponibil",
+      "description": "Trimite o alertă administratorilor când un dispozitiv tailnet care era online se deconectează. Necesită cheia API."
+    },
     "apiBaseUrl": {
       "label": "URL de bază API",
-      "description": "Lăsați gol pentru Tailscale. Setează acest câmp pentru a indica o instanță Headscale.",
+      "description": "Lasă gol pentru Tailscale. Pentru Headscale, introdu adresa ta Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_few": "{{count}} dispozitive accesibile",
       "count_other": "{{count}} dispozitive accesibile",
       "refresh": "Verifică"
+    },
+    "provider": {
+      "label": "Server de control",
+      "description": "Alege Headscale dacă rulezi propriul server Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "Se încarcă...",
     "noKey": "Adăugați o cheie API Tailscale în setările pluginului pentru a vedea dispozitivele dvs.",
     "online": "{{online}} din {{total}} dispozitive online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Dispozitive Tailnet"
+    },
+    "device": {
+      "title": "Dispozitive Tailnet",
+      "address": "Adresă",
+      "os": "Sistem"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Conectează Tailscale"
+    },
+    "down": {
+      "title": "Deconectează Tailscale"
+    }
   }
 }

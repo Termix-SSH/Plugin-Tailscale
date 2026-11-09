@@ -17,9 +17,13 @@
       "description": "Se usa para listar los dispositivos de tu tailnet. Funciona con una clave de Tailscale o Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Avisar cuando un dispositivo se desconecte",
+      "description": "Enviar una notificación a los administradores cuando un dispositivo de la red tailnet que estaba conectado se desconecte. Requiere la clave API."
+    },
     "apiBaseUrl": {
       "label": "URL base de la API",
-      "description": "Déjalo vacío para Tailscale. Configúralo para apuntar a una instancia de Headscale.",
+      "description": "Déjalo vacío para Tailscale. Para Headscale, introduce la dirección de tu servidor Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_many": "{{count}} dispositivos accesibles",
       "count_other": "{{count}} dispositivos accesibles",
       "refresh": "Comprobar"
+    },
+    "provider": {
+      "label": "Servidor de control",
+      "description": "Selecciona Headscale si ejecutas tu propio servidor Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "Cargando...",
     "noKey": "Añade una clave API de Tailscale en la configuración del complemento para ver tus dispositivos.",
     "online": "{{online}} de {{total}} dispositivos en línea"
+  },
+  "operations": {
+    "devices": {
+      "title": "Dispositivos de la red tailnet"
+    },
+    "device": {
+      "title": "Dispositivos de la red tailnet",
+      "address": "Dirección",
+      "os": "Sistema"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Conectar Tailscale"
+    },
+    "down": {
+      "title": "Desconectar Tailscale"
+    }
   }
 }

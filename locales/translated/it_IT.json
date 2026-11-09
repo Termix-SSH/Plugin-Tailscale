@@ -17,9 +17,13 @@
       "description": "Utilizzata per elencare i dispositivi sulla tua tailnet. Funziona con una chiave Tailscale o Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Avvisa quando un dispositivo si disconnette",
+      "description": "Invia un avviso agli amministratori quando un dispositivo tailnet che era online si disconnette. Richiede la chiave API."
+    },
     "apiBaseUrl": {
       "label": "URL base API",
-      "description": "Lascia vuoto per Tailscale. Imposta questo valore per puntare a un'istanza Headscale.",
+      "description": "Lascia vuoto per Tailscale. Per Headscale, inserisci l'indirizzo del tuo server Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_many": "{{count}} dispositivi raggiungibili",
       "count_other": "{{count}} dispositivi raggiungibili",
       "refresh": "Verifica"
+    },
+    "provider": {
+      "label": "Server di controllo",
+      "description": "Seleziona Headscale se esegui il tuo server Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "Caricamento...",
     "noKey": "Aggiungi una chiave API di Tailscale nelle impostazioni del plugin per visualizzare i tuoi dispositivi.",
     "online": "{{online}} di {{total}} dispositivi online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Dispositivi tailnet"
+    },
+    "device": {
+      "title": "Dispositivi tailnet",
+      "address": "Indirizzo",
+      "os": "Sistema"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Connetti Tailscale"
+    },
+    "down": {
+      "title": "Disconnetti Tailscale"
+    }
   }
 }

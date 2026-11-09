@@ -17,9 +17,13 @@
       "description": "Word gebruik om die toestelle op jou tailnet te lys. Werk met 'n Tailscale- of Headscale-sleutel.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Waarskuwing wanneer 'n toestel aflyn gaan",
+      "description": "Stuur 'n waarskuwing aan administrateurs wanneer 'n tailnet-toestel wat aanlyn was, afval. Vereis die API-sleutel."
+    },
     "apiBaseUrl": {
       "label": "API-basis-URL",
-      "description": "Laat leeg vir Tailscale. Stel dit om na 'n Headscale-instansie te wys.",
+      "description": "Laat leeg vir Tailscale. Vir Headscale, voer jou Headscale-adres in.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} toestel bereikbaar",
       "count_other": "{{count}} toestelle bereikbaar",
       "refresh": "Kontroleer"
+    },
+    "provider": {
+      "label": "Beheerbediener",
+      "description": "Kies Headscale as jy jou eie Headscale-bediener uitvoer.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Laai tans...",
     "noKey": "Voeg 'n Tailscale API-sleutel by in die plugin-instellings om jou toestelle te sien.",
     "online": "{{online}} van {{total}} toestelle aanlyn"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet-toestelle"
+    },
+    "device": {
+      "title": "Tailnet-toestelle",
+      "address": "Adres",
+      "os": "Stelsel"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Maak Tailscale aan"
+    },
+    "down": {
+      "title": "Maak Tailscale af"
+    }
   }
 }

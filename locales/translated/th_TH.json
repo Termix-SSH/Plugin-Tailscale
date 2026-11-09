@@ -17,9 +17,13 @@
       "description": "ใช้สำหรับแสดงรายการอุปกรณ์ใน tailnet ของคุณ รองรับทั้งคีย์จาก Tailscale และ Headscale",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "แจ้งเตือนเมื่ออุปกรณ์ออฟไลน์",
+      "description": "ส่งการแจ้งเตือนไปยังผู้ดูแลระบบเมื่ออุปกรณ์ใน tailnet ที่ออนไลน์อยู่หลุดออกจากระบบ จำเป็นต้องใช้คีย์ API"
+    },
     "apiBaseUrl": {
       "label": "URL ฐานของ API",
-      "description": "ปล่อยว่างไว้หากใช้ Tailscale ตั้งค่านี้หากต้องการชี้ไปยังอินสแตนซ์ Headscale",
+      "description": "เว้นว่างไว้หากใช้ Tailscale หากใช้ Headscale ให้กรอกที่อยู่ Headscale ของคุณ",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "ไม่สามารถเข้าถึง tailnet ได้ กรุณาตรวจสอบคีย์ API",
       "count_other": "สามารถเข้าถึงอุปกรณ์ {{count}} เครื่อง",
       "refresh": "ตรวจสอบ"
+    },
+    "provider": {
+      "label": "เซิร์ฟเวอร์ควบคุม",
+      "description": "เลือก Headscale หากคุณใช้งานเซิร์ฟเวอร์ Headscale ของตัวเอง",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "กำลังโหลด...",
     "noKey": "เพิ่มคีย์ API ของ Tailscale ในการตั้งค่าปลั๊กอินเพื่อดูอุปกรณ์ของคุณ",
     "online": "{{online}} จาก {{total}} อุปกรณ์ออนไลน์"
+  },
+  "operations": {
+    "devices": {
+      "title": "อุปกรณ์ใน Tailnet"
+    },
+    "device": {
+      "title": "อุปกรณ์ใน Tailnet",
+      "address": "ที่อยู่",
+      "os": "ระบบ"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "เชื่อมต่อ Tailscale"
+    },
+    "down": {
+      "title": "ตัดการเชื่อมต่อ Tailscale"
+    }
   }
 }

@@ -6,16 +6,16 @@ Termix's server needs to be on the tailnet to reach those devices.
 
 1. Make an API key in the [Tailscale admin console](https://login.tailscale.com/admin/settings/keys), or with `headscale apikeys create` for Headscale.
 2. Install the plugin from the Plugins tab.
-3. Open Settings, Tailscale and paste the API key. For Headscale, also set API base URL to your Headscale server.
+3. Open Settings, Tailscale and paste the API key. For Headscale, set Control server to Headscale and API base URL to your Headscale address, like `https://headscale.example`.
 4. Press Check to see how many devices it can reach.
 
 Open the Tailscale panel from the sidebar to see your devices. Add host adds one as a host, and Copy Tailscale IP copies its `100.x` address. In the host editor, Select Tailscale device fills in a device's address.
 
-The key is stored encrypted. It is only used to list devices.
+The key is stored encrypted. It is only used to list devices. Headscale does not report a device's OS, so that column stays empty for it.
 
 ## On the dashboard
 
-Add the Tailnet card in the dashboard's edit mode. It shows how many devices are online, counting a device seen in the last five minutes as online, and lists them with the online ones first.
+Add the Tailnet card in the dashboard's edit mode. It shows how many devices are online and lists them with the online ones first.
 
 ## Tailscale SSH
 

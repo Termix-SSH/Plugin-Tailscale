@@ -17,9 +17,13 @@
       "description": "Tailnet'inizdeki cihazları listelemek için kullanılır. Tailscale veya Headscale anahtarı ile çalışır.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Bir cihaz çevrimdışı olduğunda uyar",
+      "description": "Çevrimiçi olan bir tailnet cihazı bağlantıyı kaybettiğinde yöneticilere uyarı gönderir. API anahtarı gerektirir."
+    },
     "apiBaseUrl": {
       "label": "API temel URL'si",
-      "description": "Tailscale için boş bırakın. Bir Headscale örneğine işaret etmek için bunu ayarlayın.",
+      "description": "Tailscale için boş bırakın. Headscale için Headscale adresinizi girin.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} cihaz erişilebilir",
       "count_other": "{{count}} cihaz erişilebilir",
       "refresh": "Kontrol et"
+    },
+    "provider": {
+      "label": "Kontrol sunucusu",
+      "description": "Kendi Headscale sunucunuzu çalıştırıyorsanız Headscale'i seçin.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Yükleniyor...",
     "noKey": "Cihazlarınızı görmek için eklenti ayarlarına bir Tailscale API anahtarı ekleyin.",
     "online": "{{total}} cihazdan {{online}}'ı çevrimiçi"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet cihazları"
+    },
+    "device": {
+      "title": "Tailnet cihazları",
+      "address": "Adres",
+      "os": "Sistem"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale'i bağla"
+    },
+    "down": {
+      "title": "Tailscale bağlantısını kes"
+    }
   }
 }

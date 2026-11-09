@@ -17,9 +17,13 @@
       "description": "Käytetään listataksesi tailnetissäsi olevat laitteet. Toimii sekä Tailscale- että Headscale-avaimen kanssa.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Ilmoita, kun laite menee offline-tilaan",
+      "description": "Lähetä ilmoitus ylläpitäjille, kun tailnet-laitteesta katkeaa yhteys. Vaatii API-avaimen."
+    },
     "apiBaseUrl": {
       "label": "API:n perus-URL",
-      "description": "Jätä tyhjäksi Tailscalessa. Aseta osoittamaan Headscale-palvelimeen.",
+      "description": "Jätä tyhjäksi Tailscalessa. Headscalessa syötä Headscale-osoitteesi.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} laite tavoitettavissa",
       "count_other": "{{count}} laitetta tavoitettavissa",
       "refresh": "Tarkista"
+    },
+    "provider": {
+      "label": "Ohjauspalvelin",
+      "description": "Valitse Headscale, jos käytät omaa Headscale-palvelinta.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Ladataan...",
     "noKey": "Lisää Tailscale API -avain lisäosan asetuksiin nähdäksesi laitteet.",
     "online": "{{online}}/{{total}} laitetta online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet-laitteet"
+    },
+    "device": {
+      "title": "Tailnet-laitteet",
+      "address": "Osoite",
+      "os": "Järjestelmä"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Yhdistä Tailscale"
+    },
+    "down": {
+      "title": "Katkaise Tailscale-yhteys"
+    }
   }
 }

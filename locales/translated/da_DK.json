@@ -17,9 +17,13 @@
       "description": "Bruges til at liste enhederne på dit tailnet. Fungerer med en Tailscale- eller Headscale-nøgle.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Advar, når en enhed går offline",
+      "description": "Send en advarsel til administratorer, når en tailnet-enhed, der var online, forsvinder. Kræver API-nøglen."
+    },
     "apiBaseUrl": {
       "label": "API-basis-URL",
-      "description": "Lad være tomt for Tailscale. Indstil dette for at pege på en Headscale-instans.",
+      "description": "Lad være tom for Tailscale. Indtast din Headscale-adresse for Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} enhed tilgængelig",
       "count_other": "{{count}} enheder tilgængelige",
       "refresh": "Tjek"
+    },
+    "provider": {
+      "label": "Kontrolserver",
+      "description": "Vælg Headscale, hvis du kører din egen Headscale-server.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Indlæser...",
     "noKey": "Tilføj en Tailscale API-nøgle i plugin-indstillingerne for at se dine enheder.",
     "online": "{{online}} af {{total}} enheder er online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet-enheder"
+    },
+    "device": {
+      "title": "Tailnet-enheder",
+      "address": "Adresse",
+      "os": "System"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Forbind Tailscale"
+    },
+    "down": {
+      "title": "Afbryd Tailscale"
+    }
   }
 }

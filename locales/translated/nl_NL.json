@@ -17,9 +17,13 @@
       "description": "Wordt gebruikt om de apparaten in je tailnet op te vragen. Werkt met een Tailscale- of Headscale-sleutel.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Waarschuwing wanneer een apparaat offline gaat",
+      "description": "Stuur een waarschuwing naar beheerders wanneer een tailnet-apparaat dat online was, offline gaat. Vereist de API-sleutel."
+    },
     "apiBaseUrl": {
       "label": "API-basis-URL",
-      "description": "Laat leeg voor Tailscale. Stel dit in om naar een Headscale-instantie te verwijzen.",
+      "description": "Laat leeg voor Tailscale. Voer voor Headscale uw Headscale-adres in.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} apparaat bereikbaar",
       "count_other": "{{count}} apparaten bereikbaar",
       "refresh": "Controleren"
+    },
+    "provider": {
+      "label": "Beheerserver",
+      "description": "Kies Headscale als u uw eigen Headscale-server draait.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Laden...",
     "noKey": "Voeg een Tailscale API-sleutel toe in de plug-ininstellingen om je apparaten te zien.",
     "online": "{{online}} van de {{total}} apparaten zijn online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet-apparaten"
+    },
+    "device": {
+      "title": "Tailnet-apparaten",
+      "address": "Adres",
+      "os": "Systeem"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale verbinden"
+    },
+    "down": {
+      "title": "Tailscale verbreken"
+    }
   }
 }

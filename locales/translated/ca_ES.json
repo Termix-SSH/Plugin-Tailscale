@@ -17,9 +17,13 @@
       "description": "S'utilitza per llistar els dispositius del vostre tailnet. Funciona amb una clau de Tailscale o Headscale.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Avisa quan un dispositiu es desconnecta",
+      "description": "Envia una alerta als administradors quan un dispositiu de la tailnet que estava en línia es desconnecta. Requereix la clau API."
+    },
     "apiBaseUrl": {
       "label": "URL base de l'API",
-      "description": "Deixeu-ho buit per a Tailscale. Establiu-ho per apuntar a una instància de Headscale.",
+      "description": "Deixa-ho buit per a Tailscale. Per a Headscale, introdueix la teva adreça de Headscale.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -31,6 +35,12 @@
       "count_many": "{{count}} dispositius accessibles",
       "count_other": "{{count}} dispositius accessibles",
       "refresh": "Comprovar"
+    },
+    "provider": {
+      "label": "Servidor de control",
+      "description": "Tria Headscale si executes el teu propi servidor Headscale.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -95,5 +105,24 @@
     "loading": "S'està carregant...",
     "noKey": "Afegeix una clau API de Tailscale a la configuració del complement per veure els teus dispositius.",
     "online": "{{online}} de {{total}} dispositius en línia"
+  },
+  "operations": {
+    "devices": {
+      "title": "Dispositius de la tailnet"
+    },
+    "device": {
+      "title": "Dispositius de la tailnet",
+      "address": "Adreça",
+      "os": "Sistema"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Connecta Tailscale"
+    },
+    "down": {
+      "title": "Desconnecta Tailscale"
+    }
   }
 }

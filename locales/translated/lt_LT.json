@@ -17,9 +17,13 @@
       "description": "Naudojama išvardinti įrenginius jūsų tailnet. Veikia su Tailscale arba Headscale raktu.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Įspėti, kai įrenginys atsijungia",
+      "description": "Siųsti pranešimą administratoriams, kai „tailnet“ įrenginys, kuris buvo prisijungęs, atsijungia. Reikalingas API raktas."
+    },
     "apiBaseUrl": {
       "label": "API bazinis URL",
-      "description": "Palikite tuščią, jei naudojate Tailscale. Nustatykite tai, jei norite nukreipti į Headscale egzempliorių.",
+      "description": "Palikite tuščią, jei naudojate „Tailscale“. Jei naudojate „Headscale“, įveskite savo „Headscale“ adresą.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -32,6 +36,12 @@
       "count_many": "{{count}} pasiekiamų įrenginių",
       "count_other": "{{count}} pasiekiamų įrenginių",
       "refresh": "Patikrinti"
+    },
+    "provider": {
+      "label": "Valdymo serveris",
+      "description": "Pasirinkite „Headscale“, jei naudojate savo „Headscale“ serverį.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -96,5 +106,24 @@
     "loading": "Įkeliama...",
     "noKey": "Norėdami matyti savo įrenginius, įskiepio nustatymuose pridėkite Tailscale API raktą.",
     "online": "{{online}} iš {{total}} įrenginių prisijungę"
+  },
+  "operations": {
+    "devices": {
+      "title": "„Tailnet“ įrenginiai"
+    },
+    "device": {
+      "title": "„Tailnet“ įrenginiai",
+      "address": "Adresas",
+      "os": "Sistema"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Prisijungti prie „Tailscale“"
+    },
+    "down": {
+      "title": "Atsijungti nuo „Tailscale“"
+    }
   }
 }

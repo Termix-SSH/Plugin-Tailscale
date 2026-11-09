@@ -17,9 +17,13 @@
       "description": "Används för att lista enheterna på ditt tailnet. Fungerar med en Tailscale- eller Headscale-nyckel.",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "Varna när en enhet blir offline",
+      "description": "Skicka en varning till administratörer när en tailnet-enhet som var online kopplas bort. Kräver API-nyckel."
+    },
     "apiBaseUrl": {
       "label": "API-bas-URL",
-      "description": "Lämna tomt för Tailscale. Ange detta för att peka på en Headscale-instans.",
+      "description": "Lämna tomt för Tailscale. För Headscale, ange din Headscale-adress.",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -30,6 +34,12 @@
       "count_one": "{{count}} enhet nåbar",
       "count_other": "{{count}} enheter nåbara",
       "refresh": "Kontrollera"
+    },
+    "provider": {
+      "label": "Kontrollserver",
+      "description": "Välj Headscale om du kör din egen Headscale-server.",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -94,5 +104,24 @@
     "loading": "Laddar...",
     "noKey": "Lägg till en Tailscale API-nyckel i inställningarna för tillägget för att se dina enheter.",
     "online": "{{online}} av {{total}} enheter är online"
+  },
+  "operations": {
+    "devices": {
+      "title": "Tailnet-enheter"
+    },
+    "device": {
+      "title": "Tailnet-enheter",
+      "address": "Adress",
+      "os": "System"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Anslut Tailscale"
+    },
+    "down": {
+      "title": "Koppla bort Tailscale"
+    }
   }
 }

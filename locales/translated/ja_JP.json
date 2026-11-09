@@ -17,9 +17,13 @@
       "description": "Tailnet 上のデバイスをリストするために使用されます。Tailscale キーまたは Headscale キーの両方に対応しています。",
       "placeholder": "tskey-api-... / hskey-api-..."
     },
+    "alertOffline": {
+      "label": "デバイスがオフラインになったときに通知する",
+      "description": "オンラインだったテールネットデバイスが切断された場合、管理者に通知を送信します。API キーが必要です。"
+    },
     "apiBaseUrl": {
       "label": "API ベース URL",
-      "description": "Tailscale の場合は空のままにしてください。Headscale インスタンスを指定する場合は、ここに設定します。",
+      "description": "Tailscale の場合は空のままにしてください。Headscale の場合は、Headscale のアドレスを入力してください。",
       "placeholder": "https://api.tailscale.com/api/v2"
     },
     "devices": {
@@ -29,6 +33,12 @@
       "error": "Tailnet に到達できません。API キーを確認してください。",
       "count_other": "{{count}} 台のデバイスに接続可能",
       "refresh": "確認"
+    },
+    "provider": {
+      "label": "コントロールサーバー",
+      "description": "独自の Headscale サーバーを運用している場合は Headscale を選択してください。",
+      "tailscale": "Tailscale",
+      "headscale": "Headscale"
     }
   },
   "nav": {
@@ -93,5 +103,24 @@
     "loading": "読み込み中...",
     "noKey": "デバイスを表示するには、プラグイン設定に Tailscale API キーを追加してください。",
     "online": "{{total}} 台のうち {{online}} 台がオンライン"
+  },
+  "operations": {
+    "devices": {
+      "title": "テールネットデバイス"
+    },
+    "device": {
+      "title": "テールネットデバイス",
+      "address": "アドレス",
+      "os": "システム"
+    },
+    "status": {
+      "title": "Tailscale"
+    },
+    "up": {
+      "title": "Tailscale に接続"
+    },
+    "down": {
+      "title": "Tailscale から切断"
+    }
   }
 }
