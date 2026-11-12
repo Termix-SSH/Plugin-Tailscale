@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix/main/scripts/authz/authz.schema.json",
+  "seed": [],
+  "routes": {
+    "GET /plugin-api/tailscale/devices": {
+      "access": "user",
+      "permission": "devices.view"
+    },
+    "GET /plugin-api/tailscale/host-metrics-manager/:id": {
+      "access": "user",
+      "resource": {
+        "kind": "own",
+        "fixture": "host"
+      },
+      "params": {
+        "id": "host"
+      }
+    },
+    "POST /plugin-api/tailscale/host-metrics-manager/:id/action": {
+      "access": "user",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "id": "host"
+      }
+    }
+  }
+}
