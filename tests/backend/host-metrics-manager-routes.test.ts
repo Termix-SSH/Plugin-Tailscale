@@ -17,7 +17,7 @@ afterEach(async () => {
 
 /** The routes for a user the host was shared with at `level`. */
 async function start(level: "none" | "connect" | "edit") {
-  const mock = createMockCtx({ pluginId: "tailscale" });
+  const mock = createMockCtx({ sandbox: true, pluginId: "tailscale" });
   const ranks = { none: 0, connect: 1, view: 2, edit: 3, manage: 4 };
   mock.ctx.hosts.checkAccess = async (_hostId, wanted) => ({
     hasAccess: ranks[level] >= ranks[wanted],

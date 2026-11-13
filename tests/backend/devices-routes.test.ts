@@ -24,6 +24,7 @@ async function start(status = 200, allowed = true, thrown?: Error) {
     return new Response(JSON.stringify(fixture), { status });
   });
   const mock = createMockCtx({
+    sandbox: true,
     pluginId: "tailscale",
     capabilities: ["network:outbound"],
     permissions: allowed ? ["tailscale.devices.view"] : [],

@@ -14,6 +14,7 @@ function setup(
       new Response(JSON.stringify(body), { status }),
   );
   const mock = createMockCtx({
+    sandbox: true,
     pluginId: "tailscale",
     capabilities: ["network:outbound"],
     settings: {
