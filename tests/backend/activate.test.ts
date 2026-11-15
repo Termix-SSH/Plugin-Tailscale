@@ -16,21 +16,6 @@ describe("activate in a plugin process", () => {
       capabilities: manifest.capabilities,
       router: () => express.Router(),
     });
-    // SDK 2.2.1's sandbox mock still refuses onBanner; 2.2.2 takes it. Drop
-    // this once the lock moves to 2.2.2.
-    const auth = mock.ctx.auth as unknown as Record<string, unknown>;
-    const register = auth.registerSshAuthProvider as (p: unknown) => void;
-    auth.registerSshAuthProvider = (provider: never) => {
-      try {
-        register(provider);
-      } catch (error) {
-        if ((error as { code?: string }).code !== "SANDBOX_UNSUPPORTED") {
-          throw error;
-        }
-        mock.auth.sshAuthProviders.push(provider);
-      }
-    };
-
     await activate(mock.ctx);
     const provider = mock.auth.sshAuthProviders.find(
       (p) => p.type === "tailscale",
