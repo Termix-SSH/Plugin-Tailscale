@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0
+
+### Changed
+
+- Runs in its own process on Termix 26.11.2 and later, with no access to the server beyond what Termix allows it
+- Terminals load its approval prompt only for hosts that use it or go through a jump host, so they open faster and use less memory
+- Form fields use the same background as the rest of Termix
+
 ## 1.2.0
 
 ### Added

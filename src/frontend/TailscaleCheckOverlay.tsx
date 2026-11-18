@@ -5,9 +5,10 @@ import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 interface TerminalOverlayProps {
   host: { id: number | string; [key: string]: unknown } | undefined;
   backgroundColor?: string;
+  // In a frame this call crosses to the shell, so it answers with a Promise.
   subscribe: (
     listener: (message: { type: string; [key: string]: unknown }) => void,
-  ) => () => void;
+  ) => (() => void) | Promise<() => void>;
   holdConnectTimeout: (held: boolean) => void;
   fail: (message: string) => void;
   disconnect: () => void;
@@ -51,7 +52,7 @@ export function TailscaleCheckOverlay({
       setCheck(null);
     };
 
-    const unsubscribe = subscribe((message) => {
+    const subscribed = subscribe((message) => {
       if (message.type === "tailscale_check_required") {
         if (!heldRef.current) {
           heldRef.current = true;
@@ -77,7 +78,11 @@ export function TailscaleCheckOverlay({
     });
 
     return () => {
-      unsubscribe();
+      void Promise.resolve(subscribed)
+        .then((unsubscribe) => {
+          if (typeof unsubscribe === "function") unsubscribe();
+        })
+        .catch(() => {});
       release();
     };
   }, [subscribe, holdConnectTimeout, fail, t]);

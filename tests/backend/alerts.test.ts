@@ -26,6 +26,7 @@ describe("tailnet alerts", () => {
   it("alerts once when an online device goes offline", async () => {
     let devices = [{ id: "nas", seen: 1000 }];
     const mock = createMockCtx({
+      sandbox: true,
       pluginId: manifest.id,
       manifest,
       capabilities: manifest.capabilities,
@@ -51,6 +52,7 @@ describe("tailnet alerts", () => {
 
   it("does nothing while the setting is off", async () => {
     const mock = createMockCtx({
+      sandbox: true,
       pluginId: manifest.id,
       manifest,
       capabilities: manifest.capabilities,
@@ -64,6 +66,7 @@ describe("tailnet alerts", () => {
 
 it("does not log credential-bearing transport errors from scheduled Headscale checks", async () => {
   const mock = createMockCtx({
+    sandbox: true,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,

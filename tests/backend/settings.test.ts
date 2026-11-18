@@ -71,6 +71,7 @@ describe("reading its own settings", () => {
     // Nothing granted at all: a plugin reading its own configuration must not
     // have to declare anything for it.
     const { ctx } = createMockCtx({
+      sandbox: true,
       pluginId: "tailscale",
       capabilities: [],
       settings: { apiKey: "tskey-api-test", apiBaseUrl: "" },
@@ -80,7 +81,11 @@ describe("reading its own settings", () => {
   });
 
   it("can write and read a value back", async () => {
-    const { ctx } = createMockCtx({ pluginId: "tailscale", capabilities: [] });
+    const { ctx } = createMockCtx({
+      sandbox: true,
+      pluginId: "tailscale",
+      capabilities: [],
+    });
 
     await ctx.settings.set("apiBaseUrl", "https://headscale.example");
 
@@ -90,7 +95,11 @@ describe("reading its own settings", () => {
   });
 
   it("still needs settings:read-core to reach a core key", async () => {
-    const { ctx } = createMockCtx({ pluginId: "tailscale", capabilities: [] });
+    const { ctx } = createMockCtx({
+      sandbox: true,
+      pluginId: "tailscale",
+      capabilities: [],
+    });
 
     await expect(ctx.settings.readCore("app_name")).rejects.toThrow(
       /settings:read-core/,

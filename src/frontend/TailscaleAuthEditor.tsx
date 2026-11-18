@@ -93,7 +93,7 @@ export function TailscaleAuthEditor({ form, setField }: SshAuthEditorProps) {
       ) : (
         <>
           <Select2
-            className="w-full border border-border bg-background text-foreground text-xs px-2 py-1.5 focus:outline-none focus:border-accent-brand/50"
+            className="w-full border border-border bg-(--field) text-foreground text-xs px-2 py-1.5 focus:outline-none focus:border-accent-brand/50"
             value={
               devices.find((device) => device.addresses.includes(ip))?.id ?? ""
             }

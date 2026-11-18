@@ -28,6 +28,13 @@ function Panel({ shell }: PanelProps) {
   );
 }
 
+/** Only hosts that use this auth, or reach it through a jump host, need it. */
+function needsSignIn(context: Record<string, unknown>, authType: string) {
+  const host = context.host as
+    { authType?: string; jumpHosts?: unknown[] } | undefined;
+  return host?.authType === authType || (host?.jumpHosts?.length ?? 0) > 0;
+}
+
 export function activate(app: TermixApp): void {
   setTailscaleApi(app.api);
   app.onDispose(() => setTailscaleApi(null));
@@ -61,6 +68,7 @@ export function activate(app: TermixApp): void {
   // Approval prompts while Tailscale SSH holds a connection open.
   app.registerSlotContribution("terminal.overlay", {
     actionId: "tailscale.check",
+    when: (context) => needsSignIn(context, "tailscale"),
     titleKey: "terminal.tailscaleCheckRequired",
     kind: "component",
     component: TailscaleCheckOverlay as unknown as ComponentType<

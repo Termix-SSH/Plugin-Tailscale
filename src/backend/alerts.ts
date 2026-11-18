@@ -41,7 +41,7 @@ export function startTailscaleAlerts(ctx: PluginContext) {
         tick().catch((error) =>
           ctx.log.debug(`Tailnet check failed: ${String(error)}`),
         ),
-      { jitterMs: 10_000 },
+      { jitterMs: 10_000, id: "tailnet-check" },
     ),
   );
   return { tick };
